@@ -3,6 +3,6 @@ authors = ["ShapeDiver"]
 language = "en"
 multilingual = false
 src = "src"
-title = "ShapeDiver Tutorials"
+title = "Tutorial Grasshopper definitions for ShapeDiver"
 
 [preprocessor.external-links]
