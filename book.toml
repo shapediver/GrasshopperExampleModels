@@ -1,0 +1,8 @@
+[book]
+authors = ["ShapeDiver"]
+language = "en"
+multilingual = false
+src = "src"
+title = "ShapeDiver Tutorials"
+
+[preprocessor.external-links]
