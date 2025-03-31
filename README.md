@@ -11,6 +11,10 @@ You can clone this repository to download all models at once.
 
 This repository uses [mdBook](https://rust-lang.github.io/mdBook/) to auto-generate documentation based on [Markdown](https://rust-lang.github.io/mdBook/format/markdown.html). A [GitHub action](.github/workflows/static.yml) is used to deploy to [GitHub pages](https://shapediver.github.io/GrasshopperExampleModels/). 
 
+### Guidelines
+
+  * Use the `ghx` XML file format of Grasshopper.
+
 ### Local testing
 
 Take the following setup steps to locally test auto-generation of the documentation. 
