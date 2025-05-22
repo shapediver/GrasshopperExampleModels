@@ -1,0 +1,47 @@
+:root {
+    --content-max-width: 1000px;  /* ← your desired width */
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+table {
+    max-width:950px;
+    margin:20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+th {
+	background-color: #e2e5eb;
+}
+
+td {
+	padding: 15px!important;
+}
+
+
+.navbar, .sidebar {
+    background-color: #9C9FD5; /* dark navy */
+}
+
+/* Navigation links */
+
+/* Hover and active states */
+.sidebar a:hover {
+    color: #00BFFF;
+}
+
+/* Chapter titles (Summary headers) */
+.chapter li a {
+    color: #ffffff;
+}
+
+.sidebar a.active {
+    font-weight: bold;
+    color: white;
+    border-left: 3px solid var(--sidebar-active);
+    padding-left: 4px;
+}
+

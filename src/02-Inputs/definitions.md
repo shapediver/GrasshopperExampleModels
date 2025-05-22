@@ -1,10 +1,15 @@
 # Inputs
 
 
-|  | Tutorial | ShapeDiver model | Grasshopper definition |
-|---------|---------|---------|---------|
-| 2A | Direct Text Input | [Model](https://www.shapediver.com/app/m/2a-directtextinput-27) | [Download](2A-DirectTextInput.ghx) | 
-| 2B | File Imports | [Model](https://www.shapediver.com/app/m/2b-fileimports) | [Download](2B-FileImports.ghx) | 
-| 2C | Import document properties and User Text using ShapeDiver Attributes. | [Model](https://www.shapediver.com/app/m/2c-importwithattributes) | [Download](2C-ImportWithAttributes.ghx) / [Input](2C-ImportWithAttributes.3dm) |
-| 2D | Selection Input basic tutorial | [Model]() / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2d-selectioninput-tutorial1) | [Download](2D-SelectionInput_Basic.ghx) | 
-| 2E | Use a Selection Input to influence both geometry and build a contextual App user interface | [Model]() / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2e-selectioninput-tutorial2) | [Download](2E-SelectionInput_Advanced.ghx) | 
+| Tutorial | Description | ShapeDiver model | Grasshopper definition | Level&nbsp;&nbsp;&nbsp;&nbsp; |
+|---------|---------|---------|---------|---------|
+| **2A** | Direct Text Input | [Model](https://www.shapediver.com/app/m/2a-directtextinput-27) | [Download](2A-DirectTextInput.ghx) |  ★ ☆ ☆ |
+| **2B** | File Imports | [Model](https://www.shapediver.com/app/m/2b-fileimports) | [Download](2B-FileImports.ghx) |  ★ ☆ ☆ |
+| **2C** | Import document properties and User Text using ShapeDiver Attributes. | [Model](https://www.shapediver.com/app/m/2c-importwithattributes) | [Download](2C-ImportWithAttributes.ghx) / [Input](2C-ImportWithAttributes.3dm) | ★ ★ ☆ |
+| **2D** | Selection Input basic tutorial | [Model]() / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2d-selectioninput-tutorial1) | [Download](2D-SelectionInput_Basic.ghx) |  ★ ☆ ☆ |
+| **2E** | Use a Selection Input to influence both geometry and build a contextual App user interface | [Model]() / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2e-selectioninput-tutorial2) | [Download](2E-SelectionInput_Advanced.ghx) |  ★ ★ ☆ |
+| **2F** | Gumball Input basic tutorial | [Model](https://www.shapediver.com/app/m/2f-minimalgumballexample) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2f-minimalgumballexample) | [Download](2F-GumballInput_Basic.ghx) |  ★ ☆ ☆ |
+| **2G** | Use a Gumball Input to transform geometry in the viewer and apply the transformations in Grasshopper | [Model](https://www.shapediver.com/app/m/2g-gumballinput-tutorial1) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2g-gumballinput-tutorial1) | [Download](2G-GumballInput_Tutorial1.ghx) |  ★ ★ ☆ |
+| **2H** | Advanced Gumball example with dynamic transformable objects. | *Coming soon* | *Coming soon* |  ★ ★ ★ |
+| **2I** | Points Input basic tutorial | [Model](https://www.shapediver.com/m/2i-pointsinputsimpleexample) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2i-pointsinputsimpleexample) | [Download](2I-PointsInputBasicTutorial.ghx) |  ★ ★ ☆ |
+| **2J** | Points Input with geometry constraints | [Model](https://www.shapediver.com/m/2j-pointsinputgeometryconstraints) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2j-pointsinputgeometryconstraints) | [Download](2J-PointsInputGeometryConstraints.ghx) |  ★ ★ ☆ |
