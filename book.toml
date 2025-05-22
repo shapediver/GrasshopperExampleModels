@@ -5,4 +5,8 @@ multilingual = false
 src = "src"
 title = "Tutorial Grasshopper definitions for ShapeDiver"
 
+[output.html]
+default-theme = "light"
+additional-css = ["theme/custom.css"]
+
 [preprocessor.external-links]
