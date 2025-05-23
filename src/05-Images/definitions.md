@@ -1,7 +1,7 @@
 # Basics
 
 
-| Tutorial | Description | ShapeDiver model | Grasshopper definition | Level&nbsp;&nbsp;&nbsp;&nbsp; |
+| Ref | Description | ShapeDiver model | Grasshopper definition | Level&nbsp;&nbsp;&nbsp;&nbsp; |
 |---------|---------|---------|---------|---------|
 | **5A** | Introduction to Grasshopper Bitmaps | [Model](https://www.shapediver.com/app/m/5a-grasshopperbitmap-8) | [Download](5A-GrasshopperBitmap.ghx) | ★ ☆ ☆ |
 | **5B** | ShapeDiver Image Sampler | [Model](https://www.shapediver.com/app/m/5b-shapediverimagesampler-4) | [Download](5B-ShapeDiverImageSampler.ghx) | ★ ☆ ☆ |
