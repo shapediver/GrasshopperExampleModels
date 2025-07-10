@@ -9,3 +9,4 @@
 [JSON](./06-JSON/definitions.md)
 [App Builder](./11-AppBuilder/definitions.md)
 [Webinars](./Webinars/definitions.md)
+[BETA](./BETA/definitions.md)
