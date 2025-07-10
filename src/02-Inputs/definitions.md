@@ -1,7 +1,7 @@
 # Inputs
 
 
-| Ref | Links&nbsp; | Description | ShapeDiver model | Grasshopper definition | Level&nbsp;&nbsp;&nbsp;&nbsp; |
+| Ref | Resources | Description | ShapeDiver links | Grasshopper definition | Level&nbsp;&nbsp;&nbsp;&nbsp; |
 |---------|---------|---------|---------|---------|---------|
 | **2A** | | Direct Text Input | [Model](https://www.shapediver.com/app/m/2a-directtextinput-27) | [Download](2A-DirectTextInput.ghx) |  ★ ☆ ☆ |
 | **2B** | [📖](https://help.shapediver.com/doc/import-components) [🎥](https://www.youtube.com/watch?v=6rZiZflGrRo) | File Imports | [Model](https://www.shapediver.com/app/m/2b-fileimports) | [Download](2B-FileImports.ghx) |  ★ ☆ ☆ |
@@ -11,5 +11,5 @@
 | **2F** | | Gumball Input basic tutorial | [Model](https://www.shapediver.com/app/m/2f-minimalgumballexample) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2f-minimalgumballexample) | [Download](2F-GumballInput_Basic.ghx) |  ★ ☆ ☆ |
 | **2G** | | Use a Gumball Input to transform geometry in the viewer and apply the transformations in Grasshopper | [Model](https://www.shapediver.com/app/m/2g-gumballinput-tutorial1) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2g-gumballinput-tutorial1) | [Download](2G-GumballInput_Tutorial1.ghx) |  ★ ★ ☆ |
 | **2H** | | Advanced Gumball example with dynamic transformable objects. | [Model](https://www.shapediver.com/app/m/2h-gumballinput-tutorial2-3) / [App](https://www.shapediver.com/app/builder/v1/main/latest/?slug=2h-gumballinput-tutorial2-3&redirect=0) | [Download](2H-Gumballinput_Tutorial2.ghx) |  ★ ★ ★ |
-| **2I** | | Points Input basic tutorial | [Model](https://www.shapediver.com/m/2i-pointsinputsimpleexample) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2i-pointsinputsimpleexample) | [Download](2I-PointsInputBasicTutorial.ghx) |  ★ ★ ☆ |
+| **2I** | [📖](https://help.shapediver.com/doc/points-input) [🎥](https://www.youtube.com/watch?v=vXmEo7hJ5T0) | Points Input basic tutorial | [Model](https://www.shapediver.com/m/2i-pointsinputsimpleexample) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2i-pointsinputsimpleexample) | [Download](2I-PointsInputBasicTutorial.ghx) |  ★ ★ ☆ |
 | **2J** | | Points Input with geometry constraints | [Model](https://www.shapediver.com/m/2j-pointsinputgeometryconstraints) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2j-pointsinputgeometryconstraints) | [Download](2J-PointsInputGeometryConstraints.ghx) |  ★ ★ ☆ |
