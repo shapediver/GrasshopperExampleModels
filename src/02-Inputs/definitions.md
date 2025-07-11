@@ -3,7 +3,7 @@
 
 | Ref | Resources | Description | ShapeDiver links | Grasshopper definition | Level&nbsp;&nbsp;&nbsp;&nbsp; |
 |---------|---------|---------|---------|---------|---------|
-| **2A** | | Direct Text Input | [Model](https://www.shapediver.com/app/m/2a-directtextinput-27) | [Download](2A-DirectTextInput.ghx) |  ★ ☆ ☆ |
+| **2A** | [📖](https://help.shapediver.com/doc/direct-text-input) | Direct Text Input | [Model](https://www.shapediver.com/app/m/2a-directtextinput-27) | [Download](2A-DirectTextInput.ghx) |  ★ ☆ ☆ |
 | **2B** | [📖](https://help.shapediver.com/doc/import-components) [🎥](https://www.youtube.com/watch?v=6rZiZflGrRo) | File Imports | [Model](https://www.shapediver.com/app/m/2b-fileimports) | [Download](2B-FileImports.ghx) |  ★ ☆ ☆ |
 | **2C** | | Import document properties and User Text using ShapeDiver Attributes. | [Model](https://www.shapediver.com/app/m/2c-importwithattributes) | [Download](2C-ImportWithAttributes.ghx) / [Input](2C-ImportWithAttributes.3dm) | ★ ★ ☆ |
 | **2D** | | Selection Input basic tutorial | [Model]() / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2d-selectioninput-tutorial1) | [Download](2D-SelectionInput_Basic.ghx) |  ★ ☆ ☆ |
