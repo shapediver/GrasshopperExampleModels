@@ -16,7 +16,7 @@ Some examples using [App Builder](https://help.shapediver.com/doc/shapediver-app
 
 | Ref | Resources | Description | ShapeDiver model | Grasshopper definition | Level&nbsp;&nbsp;&nbsp;&nbsp; |
 |---------|---------|---------|---------|---------|---------|
-| **2D** | | Selection Input basic tutorial | [Model]() / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2d-selectioninput-tutorial1) | [Download](2D-SelectionInput_Basic.ghx) |  ★ ☆ ☆ |
+| **2D** | | Selection Input basic tutorial | [Model]() / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2d-selectioninput-tutorial1) | [Download](../02-Inputs/2D-SelectionInput_Basic.ghx) |  ★ ☆ ☆ |
 | **2E** | | Use a Selection Input to influence both geometry and build a contextual App user interface | [Model]() / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2e-selectioninput-tutorial2) | [Download](../02-Inputs/2E-SelectionInput_Advanced.ghx) |  ★ ★ ☆ |
 | **2F** | | Gumball Input basic tutorial | [Model](https://www.shapediver.com/app/m/2f-minimalgumballexample) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2f-minimalgumballexample) | [Download](../02-Inputs/2F-GumballInput_Basic.ghx) |  ★ ☆ ☆ |
 | **2G** | | Use a Gumball Input to transform geometry in the viewer and apply the transformations in Grasshopper | [Model](https://www.shapediver.com/app/m/2g-gumballinput-tutorial1) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=2g-gumballinput-tutorial1) | [Download](../02-Inputs/2G-GumballInput_Tutorial1.ghx) |  ★ ★ ☆ |
