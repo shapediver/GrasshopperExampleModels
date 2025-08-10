@@ -1,4 +1,4 @@
-# Inputs
+# Plugins
 
 
 | Ref | Resources | Description | ShapeDiver links | Grasshopper definition | Level&nbsp;&nbsp;&nbsp;&nbsp; |
