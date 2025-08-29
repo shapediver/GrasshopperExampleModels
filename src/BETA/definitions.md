@@ -10,3 +10,4 @@ Note that the final components and component flow might differ from the current 
 |---------|---------|---------|---------|---------|
 | BETA | Dynamic Sliders Tutorial | [Model](https://www.shapediver.com/app/m/beta-dynamicsliderstutorial) / [App](https://www.shapediver.com/app/builder/v1/main/latest/?slug=beta-dynamicsliderstutorial&redirect=0) | [Download](BETA-DynamicSlidersTutorial.ghx) | ★ ★ ☆ |
 | BETA | Define various types of value lists with images | [Model](https://www.shapediver.com/app/m/beta-valuelistwithimages) / [App](https://www.shapediver.com/app/builder/v1/main/latest/?slug=beta-valuelistwithimages&redirect=0) | [Download](BETA-ValueListWithImages.ghx) | ★ ★ ☆ |
+| BETA | Define sliders with a custom step | [Model](https://www.shapediver.com/app/m/250829-stepexample) / [App](https://www.shapediver.com/app/builder/v1/main/latest/?slug=250829-stepexample&redirect=0) | [Download](BETA-NumberInputWithStep.ghx) | ★ ★ ☆ |
