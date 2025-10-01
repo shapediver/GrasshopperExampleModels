@@ -2,14 +2,19 @@
 
 Some examples using [App Builder](https://help.shapediver.com/doc/shapediver-app-builder). 
 
-## General examples
+## Full workflows
 
 | Ref | Description | ShapeDiver links | Grasshopper definition | Level&nbsp;&nbsp;&nbsp;&nbsp; |
 |---------|---------|---------|---------|---------|
-| 11A | Build a static user interface | [Model](https://www.shapediver.com/app/m/appbuilder-tutorial1-simpleexample) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=appbuilder-tutorial1-simpleexample) | [Download](11A-AppBuilder_Tutorial1.ghx) |  ★ ☆ ☆ |
+| 11A | Build a simple user interface with controls and text widgets | [Model](https://www.shapediver.com/app/m/appbuilder-tutorial1-simpleexample) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=appbuilder-tutorial1-simpleexample) | [Download](11A-AppBuilder_Tutorial1.ghx) |  ★ ☆ ☆ |
 | 11B | Use parametric logic to build a contextual interface | [Model](https://www.shapediver.com/app/m/appbuilder-tutorial2-contextualui) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=appbuilder-tutorial2-contextualui) | [Download](11B-AppBuilder_Tutorial2.ghx) / [Input](11B-AppBuilder_Tutorial2_ExampleInput.3dm) |  ★ ☆ ☆ |
 | 11C | Link Export components to image widgets in your apps. | [Model](https://www.shapediver.com/app/m/appbuilder-tutorial3-imagewidget) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=appbuilder-tutorial3-imagewidget) | [Download](11C-AppBuilder_Tutorial3.ghx) / [Input](11B-AppBuilder_Tutorial2_ExampleInput.3dm) |  ★ ★ ☆ |
 | 11D | Define charts and graphs | [Model](https://www.shapediver.com/app/m/appbuilder-tutorial4-charts) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=appbuilder-tutorial4-charts) | [Download](11D-AppBuilder_Tutorial4.ghx) |  ★ ★ ★ |
+
+## Components
+
+| 11E | Parameter and Export Controls | [Model](https://www.shapediver.com/app/m/11e-parameterandexportcontrols) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=11e-parameterandexportcontrols&redirect=0) | [Download](11E_ParameterAndExportControls.ghx) |  ★ ☆ ☆ |
+| 11F | Action Control | [Model](https://www.shapediver.com/app/m/11f-actioncontrol) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=11f-actioncontrol) | [Download](11F_ActionControl.ghx) |  ★ ☆ ☆ |
 
 
 ## Interaction inputs in App Builder
