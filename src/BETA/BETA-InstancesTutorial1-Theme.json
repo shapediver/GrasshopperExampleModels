@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "sessions": [
+    {
+      "id": "single_box",
+      "slug": "beta-parametricboxinstance",
+      "instance": true
+    }
+  ]
+}
