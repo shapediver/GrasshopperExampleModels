@@ -4,11 +4,12 @@ The features showcased in the following models are already available in App Buil
 
 Note that the final components and component flow might differ from the current JSON version of these definitions.
 
-> Some of the examples below make use of the JSwan Grasshopper plugin (version 1.1.0).
+> Some of the examples below make use of the JSwan Grasshopper plugin (version 1.2.0).
 
 | Ref | Description | ShapeDiver links | Grasshopper definition | Level&nbsp;&nbsp;&nbsp;&nbsp; |
 |---------|---------|---------|---------|---------|
 | BETA | Dynamic Sliders Tutorial | [Model](https://www.shapediver.com/app/m/beta-dynamicsliderstutorial) / [App](https://www.shapediver.com/app/builder/v1/main/latest/?slug=beta-dynamicsliderstutorial&redirect=0) | [Download](BETA-DynamicSlidersTutorial.ghx) | ★ ★ ☆ |
+| BETA | Dynamic Value Lists Tutorial | [Model](https://www.shapediver.com/app/m/beta-dynamicvalueliststutorial) / [App](https://www.shapediver.com/app/builder/v1/main/latest/?slug=beta-dynamicvalueliststutorial&redirect=0) | [Download](BETA-DynamicValueListsTutorial.ghx) | ★ ★ ☆ |
 | BETA | Define sliders with a custom step | [Model](https://www.shapediver.com/app/m/250829-stepexample) / [App](https://www.shapediver.com/app/builder/v1/main/latest/?slug=250829-stepexample&redirect=0) | [Download](BETA-NumberInputWithStep.ghx) | ★ ☆ ☆ |
 | BETA | Define searchable value lists | [Model](https://www.shapediver.com/app/m/beta-searchablevaluelist-1) / [App](https://www.shapediver.com/app/builder/v1/main/latest/?slug=beta-searchablevaluelist-1&redirect=0) | [Download](BETA-SearchableValueList.ghx) | ★ ☆ ☆ |
 | BETA | Define multiline text inputs | [Model](https://www.shapediver.com/app/m/beta-multilinetextinput) / [App](https://www.shapediver.com/app/builder/v1/main/latest/?slug=beta-multilinetextinput&redirect=0) | [Download](BETA-MultilineTextInput.ghx) | ★ ☆ ☆ |
