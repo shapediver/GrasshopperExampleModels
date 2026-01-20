@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this library, you will find Grasshopper definitions demonstrating various ShapeDiver features. Before you get started, here are some links that you might find helpful:
+In this library, you will find Grasshopper definitions demonstrating various ShapeDiver features. Before you get started, here are some helpful links:
 
 - ❓ [What is ShapeDiver?](https://shapediver.com/)
 - 👤 [Create an account](https://www.shapediver.com/app/register) to the platform and start exploring.
