@@ -48,10 +48,10 @@
             <chunk name="Projection">
               <items count="2">
                 <item name="Target" type_name="gh_drawing_point" type_code="30">
-                  <X>69</X>
-                  <Y>178</Y>
+                  <X>-322</X>
+                  <Y>-340</Y>
                 </item>
-                <item name="Zoom" type_name="gh_single" type_code="5">0.289521366</item>
+                <item name="Zoom" type_name="gh_single" type_code="5">2.03541613</item>
               </items>
             </chunk>
             <chunk name="Views">
@@ -88,12 +88,12 @@
           <chunks count="1">
             <chunk name="Library" index="0">
               <items count="6">
-                <item name="AssemblyFullName" type_name="gh_string" type_code="10">ShapeDiverForGrasshopper, Version=1.30.0.0, Culture=neutral, PublicKeyToken=null</item>
-                <item name="AssemblyVersion" type_name="gh_string" type_code="10">1.30.0.0</item>
+                <item name="AssemblyFullName" type_name="gh_string" type_code="10">ShapeDiverForGrasshopper, Version=1.31.2.0, Culture=neutral, PublicKeyToken=null</item>
+                <item name="AssemblyVersion" type_name="gh_string" type_code="10">1.31.2.0</item>
                 <item name="Author" type_name="gh_string" type_code="10">ShapeDiver</item>
                 <item name="Id" type_name="gh_guid" type_code="9">b9116316-c87d-4212-a382-bc40035939bb</item>
                 <item name="Name" type_name="gh_string" type_code="10">ShapeDiverForGrasshopper</item>
-                <item name="Version" type_name="gh_string" type_code="10">1.30.0</item>
+                <item name="Version" type_name="gh_string" type_code="10">1.31.2</item>
               </items>
             </chunk>
           </chunks>
@@ -1009,47 +1009,47 @@
                         </item>
                         <item name="V" index="19" type_name="gh_point2d" type_code="50">
                           <X>796.653438272193</X>
-                          <Y>-98.678828371109</Y>
+                          <Y>-98.6788283711088</Y>
                         </item>
                         <item name="V" index="20" type_name="gh_point2d" type_code="50">
                           <X>804.44676207412</X>
-                          <Y>-89.085006703024</Y>
+                          <Y>-89.0850067030238</Y>
                         </item>
                         <item name="V" index="21" type_name="gh_point2d" type_code="50">
                           <X>814.040583742204</X>
-                          <Y>-81.291682901097</Y>
+                          <Y>-81.2916829010968</Y>
                         </item>
                         <item name="V" index="22" type_name="gh_point2d" type_code="50">
                           <X>824.7874863716</X>
-                          <Y>-75.7241155104708</Y>
+                          <Y>-75.7241155104706</Y>
                         </item>
                         <item name="V" index="23" type_name="gh_point2d" type_code="50">
                           <X>835.955385800584</X>
-                          <Y>-72.5130914692218</Y>
+                          <Y>-72.5130914692216</Y>
                         </item>
                         <item name="V" index="24" type_name="gh_point2d" type_code="50">
                           <X>846.873168945313</X>
-                          <Y>-71.5114135742168</Y>
+                          <Y>-71.5114135742166</Y>
                         </item>
                         <item name="V" index="25" type_name="gh_point2d" type_code="50">
                           <X>857.790952090041</X>
-                          <Y>-72.5130914692218</Y>
+                          <Y>-72.5130914692216</Y>
                         </item>
                         <item name="V" index="26" type_name="gh_point2d" type_code="50">
                           <X>868.958851519025</X>
-                          <Y>-75.7241155104708</Y>
+                          <Y>-75.7241155104706</Y>
                         </item>
                         <item name="V" index="27" type_name="gh_point2d" type_code="50">
                           <X>879.705754148421</X>
-                          <Y>-81.291682901097</Y>
+                          <Y>-81.2916829010968</Y>
                         </item>
                         <item name="V" index="28" type_name="gh_point2d" type_code="50">
                           <X>889.299575816505</X>
-                          <Y>-89.085006703024</Y>
+                          <Y>-89.0850067030238</Y>
                         </item>
                         <item name="V" index="29" type_name="gh_point2d" type_code="50">
                           <X>897.092899618431</X>
-                          <Y>-98.678828371109</Y>
+                          <Y>-98.6788283711088</Y>
                         </item>
                         <item name="V" index="30" type_name="gh_point2d" type_code="50">
                           <X>902.660467009058</X>
@@ -1074,51 +1074,51 @@
                         </item>
                         <item name="V" index="1" type_name="gh_point2d" type_code="50">
                           <X>1597.56838630859</X>
-                          <Y>-95.29227282617</Y>
+                          <Y>-95.2922728261698</Y>
                         </item>
                         <item name="V" index="2" type_name="gh_point2d" type_code="50">
                           <X>1591.53477660156</X>
-                          <Y>-89.242216964841</Y>
+                          <Y>-89.2422169648408</Y>
                         </item>
                         <item name="V" index="3" type_name="gh_point2d" type_code="50">
                           <X>1584.65295837891</X>
-                          <Y>-84.004437939451</Y>
+                          <Y>-84.0044379394508</Y>
                         </item>
                         <item name="V" index="4" type_name="gh_point2d" type_code="50">
                           <X>1577.10879019531</X>
-                          <Y>-79.6221276992158</Y>
+                          <Y>-79.6221276992156</Y>
                         </item>
                         <item name="V" index="5" type_name="gh_point2d" type_code="50">
                           <X>1560.77683816406</X>
-                          <Y>-73.5966813710918</Y>
+                          <Y>-73.5966813710916</Y>
                         </item>
                         <item name="V" index="6" type_name="gh_point2d" type_code="50">
                           <X>1552.36077142578</X>
-                          <Y>-72.0399291816378</Y>
+                          <Y>-72.0399291816376</Y>
                         </item>
                         <item name="V" index="7" type_name="gh_point2d" type_code="50">
                           <X>1544.02578894531</X>
-                          <Y>-71.5114135742168</Y>
+                          <Y>-71.5114135742166</Y>
                         </item>
                         <item name="V" index="8" type_name="gh_point2d" type_code="50">
                           <X>1533.42100317383</X>
-                          <Y>-72.0422973632788</Y>
+                          <Y>-72.0422973632786</Y>
                         </item>
                         <item name="V" index="9" type_name="gh_point2d" type_code="50">
                           <X>1523.27625433594</X>
-                          <Y>-73.5975463867158</Y>
+                          <Y>-73.5975463867156</Y>
                         </item>
                         <item name="V" index="10" type_name="gh_point2d" type_code="50">
                           <X>1513.62247014648</X>
-                          <Y>-76.1210571289038</Y>
+                          <Y>-76.1210571289036</Y>
                         </item>
                         <item name="V" index="11" type_name="gh_point2d" type_code="50">
                           <X>1504.49057832031</X>
-                          <Y>-79.5567260742158</Y>
+                          <Y>-79.5567260742156</Y>
                         </item>
                         <item name="V" index="12" type_name="gh_point2d" type_code="50">
                           <X>1487.91618261719</X>
-                          <Y>-88.940124511717</Y>
+                          <Y>-88.9401245117168</Y>
                         </item>
                         <item name="V" index="13" type_name="gh_point2d" type_code="50">
                           <X>1473.80048894531</X>
@@ -1218,11 +1218,11 @@
                         </item>
                         <item name="V" index="37" type_name="gh_point2d" type_code="50">
                           <X>1646.87316894531</X>
-                          <Y>-76.3971275742168</Y>
+                          <Y>-76.3971275742166</Y>
                         </item>
                         <item name="V" index="38" type_name="gh_point2d" type_code="50">
                           <X>1602.56792894531</X>
-                          <Y>-76.3971275742168</Y>
+                          <Y>-76.3971275742166</Y>
                         </item>
                         <item name="V" index="39" type_name="gh_point2d" type_code="50">
                           <X>1602.56792894531</X>
@@ -1311,55 +1311,55 @@
                         </item>
                         <item name="V" index="19" type_name="gh_point2d" type_code="50">
                           <X>2087.54412640625</X>
-                          <Y>-99.565263964843</Y>
+                          <Y>-99.5652639648428</Y>
                         </item>
                         <item name="V" index="20" type_name="gh_point2d" type_code="50">
                           <X>2077.25441894531</X>
-                          <Y>-90.282842074217</Y>
+                          <Y>-90.2828420742168</Y>
                         </item>
                         <item name="V" index="21" type_name="gh_point2d" type_code="50">
                           <X>2064.88801960938</X>
-                          <Y>-82.529884496092</Y>
+                          <Y>-82.5298844960918</Y>
                         </item>
                         <item name="V" index="22" type_name="gh_point2d" type_code="50">
                           <X>2050.52498925781</X>
-                          <Y>-76.6127528242158</Y>
+                          <Y>-76.6127528242156</Y>
                         </item>
                         <item name="V" index="23" type_name="gh_point2d" type_code="50">
                           <X>2034.24538875</X>
-                          <Y>-72.8378086523418</Y>
+                          <Y>-72.8378086523416</Y>
                         </item>
                         <item name="V" index="24" type_name="gh_point2d" type_code="50">
                           <X>2016.12927894531</X>
-                          <Y>-71.5114135742168</Y>
+                          <Y>-71.5114135742166</Y>
                         </item>
                         <item name="V" index="25" type_name="gh_point2d" type_code="50">
                           <X>2003.99444830322</X>
-                          <Y>-72.0647408605938</Y>
+                          <Y>-72.0647408605936</Y>
                         </item>
                         <item name="V" index="26" type_name="gh_point2d" type_code="50">
                           <X>1992.66483865234</X>
-                          <Y>-73.6813354433568</Y>
+                          <Y>-73.6813354433566</Y>
                         </item>
                         <item name="V" index="27" type_name="gh_point2d" type_code="50">
                           <X>1982.13736903076</X>
-                          <Y>-76.2961164079568</Y>
+                          <Y>-76.2961164079566</Y>
                         </item>
                         <item name="V" index="28" type_name="gh_point2d" type_code="50">
                           <X>1972.40895847656</X>
-                          <Y>-79.8440028398408</Y>
+                          <Y>-79.8440028398406</Y>
                         </item>
                         <item name="V" index="29" type_name="gh_point2d" type_code="50">
                           <X>1963.47652602783</X>
-                          <Y>-84.25991382446</Y>
+                          <Y>-84.2599138244598</Y>
                         </item>
                         <item name="V" index="30" type_name="gh_point2d" type_code="50">
                           <X>1955.33699072266</X>
-                          <Y>-89.478768447264</Y>
+                          <Y>-89.4787684472638</Y>
                         </item>
                         <item name="V" index="31" type_name="gh_point2d" type_code="50">
                           <X>1947.98727159912</X>
-                          <Y>-95.4354857937</Y>
+                          <Y>-95.4354857936998</Y>
                         </item>
                         <item name="V" index="32" type_name="gh_point2d" type_code="50">
                           <X>1941.42428769531</X>
@@ -1524,11 +1524,11 @@
                         </item>
                         <item name="V" index="11" type_name="gh_point2d" type_code="50">
                           <X>2906.29845894531</X>
-                          <Y>-71.5114135742168</Y>
+                          <Y>-71.5114135742166</Y>
                         </item>
                         <item name="V" index="12" type_name="gh_point2d" type_code="50">
                           <X>2876.87316894531</X>
-                          <Y>-71.5114135742168</Y>
+                          <Y>-71.5114135742166</Y>
                         </item>
                         <item name="V" index="13" type_name="gh_point2d" type_code="50">
                           <X>2876.87316894531</X>
@@ -1762,75 +1762,75 @@
                         </item>
                         <item name="V" index="23" type_name="gh_point2d" type_code="50">
                           <X>1879.94256644531</X>
-                          <Y>-95.767153574218</Y>
+                          <Y>-95.7671535742178</Y>
                         </item>
                         <item name="V" index="24" type_name="gh_point2d" type_code="50">
                           <X>1865.82626953125</X>
-                          <Y>-83.006714535154</Y>
+                          <Y>-83.0067145351538</Y>
                         </item>
                         <item name="V" index="25" type_name="gh_point2d" type_code="50">
                           <X>1857.83088168457</X>
-                          <Y>-77.7495647001928</Y>
+                          <Y>-77.7495647001926</Y>
                         </item>
                         <item name="V" index="26" type_name="gh_point2d" type_code="50">
                           <X>1849.25195425781</X>
-                          <Y>-73.3183637617168</Y>
+                          <Y>-73.3183637617166</Y>
                         </item>
                         <item name="V" index="27" type_name="gh_point2d" type_code="50">
                           <X>1840.12045226074</X>
-                          <Y>-69.7710385498024</Y>
+                          <Y>-69.7710385498022</Y>
                         </item>
                         <item name="V" index="28" type_name="gh_point2d" type_code="50">
                           <X>1830.46734070313</X>
-                          <Y>-67.1655158945284</Y>
+                          <Y>-67.1655158945282</Y>
                         </item>
                         <item name="V" index="29" type_name="gh_point2d" type_code="50">
                           <X>1820.32358459473</X>
-                          <Y>-65.5597226259734</Y>
+                          <Y>-65.5597226259732</Y>
                         </item>
                         <item name="V" index="30" type_name="gh_point2d" type_code="50">
                           <X>1809.72014894531</X>
-                          <Y>-65.0115855742164</Y>
+                          <Y>-65.0115855742162</Y>
                         </item>
                         <item name="V" index="31" type_name="gh_point2d" type_code="50">
                           <X>1801.39102089844</X>
-                          <Y>-65.5572774960914</Y>
+                          <Y>-65.5572774960912</Y>
                         </item>
                         <item name="V" index="32" type_name="gh_point2d" type_code="50">
                           <X>1792.97948707031</X>
-                          <Y>-67.1646228242154</Y>
+                          <Y>-67.1646228242152</Y>
                         </item>
                         <item name="V" index="33" type_name="gh_point2d" type_code="50">
                           <X>1784.67137917969</X>
-                          <Y>-69.7890259023414</Y>
+                          <Y>-69.7890259023412</Y>
                         </item>
                         <item name="V" index="34" type_name="gh_point2d" type_code="50">
                           <X>1776.65252894531</X>
-                          <Y>-73.3858910742168</Y>
+                          <Y>-73.3858910742166</Y>
                         </item>
                         <item name="V" index="35" type_name="gh_point2d" type_code="50">
                           <X>1769.10876808594</X>
-                          <Y>-77.9106226835918</Y>
+                          <Y>-77.9106226835916</Y>
                         </item>
                         <item name="V" index="36" type_name="gh_point2d" type_code="50">
                           <X>1762.22592832031</X>
-                          <Y>-83.318625074216</Y>
+                          <Y>-83.3186250742158</Y>
                         </item>
                         <item name="V" index="37" type_name="gh_point2d" type_code="50">
                           <X>1756.18984136719</X>
-                          <Y>-89.565302589841</Y>
+                          <Y>-89.5653025898408</Y>
                         </item>
                         <item name="V" index="38" type_name="gh_point2d" type_code="50">
                           <X>1751.18633894531</X>
-                          <Y>-96.606059574218</Y>
+                          <Y>-96.6060595742178</Y>
                         </item>
                         <item name="V" index="39" type_name="gh_point2d" type_code="50">
                           <X>1751.18633894531</X>
-                          <Y>28.4885864257847</Y>
+                          <Y>28.4885864257849</Y>
                         </item>
                         <item name="V" index="40" type_name="gh_point2d" type_code="50">
                           <X>1706.87316894531</X>
-                          <Y>28.4885864257847</Y>
+                          <Y>28.4885864257849</Y>
                         </item>
                         <item name="V" index="41" type_name="gh_point2d" type_code="50">
                           <X>1706.87316894531</X>
@@ -2181,27 +2181,27 @@
                         </item>
                         <item name="V" index="28" type_name="gh_point2d" type_code="50">
                           <X>2292.47710050781</X>
-                          <Y>-93.864299636718</Y>
+                          <Y>-93.8642996367178</Y>
                         </item>
                         <item name="V" index="29" type_name="gh_point2d" type_code="50">
                           <X>2278.32877630371</X>
-                          <Y>-88.614042591795</Y>
+                          <Y>-88.6140425917948</Y>
                         </item>
                         <item name="V" index="30" type_name="gh_point2d" type_code="50">
                           <X>2263.16925273437</X>
-                          <Y>-84.736640074216</Y>
+                          <Y>-84.7366400742158</Y>
                         </item>
                         <item name="V" index="31" type_name="gh_point2d" type_code="50">
                           <X>2247.01641516113</X>
-                          <Y>-82.334845822263</Y>
+                          <Y>-82.3348458222628</Y>
                         </item>
                         <item name="V" index="32" type_name="gh_point2d" type_code="50">
                           <X>2229.88814894531</X>
-                          <Y>-81.511413574217</Y>
+                          <Y>-81.5114135742168</Y>
                         </item>
                         <item name="V" index="33" type_name="gh_point2d" type_code="50">
                           <X>2146.87316894531</X>
-                          <Y>-81.511413574217</Y>
+                          <Y>-81.5114135742168</Y>
                         </item>
                         <item name="V" index="34" type_name="gh_point2d" type_code="50">
                           <X>2146.87316894531</X>
@@ -2443,51 +2443,51 @@
                         </item>
                         <item name="V" index="19" type_name="gh_point2d" type_code="50">
                           <X>89.4662170203125</X>
-                          <Y>-93.290266636718</Y>
+                          <Y>-93.2902666367178</Y>
                         </item>
                         <item name="V" index="20" type_name="gh_point2d" type_code="50">
                           <X>92.5704784328125</X>
-                          <Y>-87.121414355467</Y>
+                          <Y>-87.1214143554668</Y>
                         </item>
                         <item name="V" index="21" type_name="gh_point2d" type_code="50">
                           <X>96.7580770453125</X>
-                          <Y>-81.812724324217</Y>
+                          <Y>-81.8127243242168</Y>
                         </item>
                         <item name="V" index="22" type_name="gh_point2d" type_code="50">
                           <X>101.937647070312</X>
-                          <Y>-77.4807878867158</Y>
+                          <Y>-77.4807878867156</Y>
                         </item>
                         <item name="V" index="23" type_name="gh_point2d" type_code="50">
                           <X>108.017822720312</X>
-                          <Y>-74.2421963867158</Y>
+                          <Y>-74.2421963867156</Y>
                         </item>
                         <item name="V" index="24" type_name="gh_point2d" type_code="50">
                           <X>114.907238207812</X>
-                          <Y>-72.2135411679658</Y>
+                          <Y>-72.2135411679656</Y>
                         </item>
                         <item name="V" index="25" type_name="gh_point2d" type_code="50">
                           <X>122.514527745313</X>
-                          <Y>-71.5114135742168</Y>
+                          <Y>-71.5114135742166</Y>
                         </item>
                         <item name="V" index="26" type_name="gh_point2d" type_code="50">
                           <X>133.126504512891</X>
-                          <Y>-72.5140476562478</Y>
+                          <Y>-72.5140476562476</Y>
                         </item>
                         <item name="V" index="27" type_name="gh_point2d" type_code="50">
                           <X>143.211344185938</X>
-                          <Y>-75.4246184804668</Y>
+                          <Y>-75.4246184804666</Y>
                         </item>
                         <item name="V" index="28" type_name="gh_point2d" type_code="50">
                           <X>152.871202419922</X>
-                          <Y>-80.09712891406</Y>
+                          <Y>-80.0971289140598</Y>
                         </item>
                         <item name="V" index="29" type_name="gh_point2d" type_code="50">
                           <X>162.208234870312</X>
-                          <Y>-86.385581824216</Y>
+                          <Y>-86.3855818242158</Y>
                         </item>
                         <item name="V" index="30" type_name="gh_point2d" type_code="50">
                           <X>171.324597192578</X>
-                          <Y>-94.143980078124</Y>
+                          <Y>-94.1439800781238</Y>
                         </item>
                         <item name="V" index="31" type_name="gh_point2d" type_code="50">
                           <X>180.322445042188</X>
@@ -2592,35 +2592,35 @@
                         </item>
                         <item name="V" index="5" type_name="gh_point2d" type_code="50">
                           <X>2720.07325158203</X>
-                          <Y>-97.772557255858</Y>
+                          <Y>-97.7725572558578</Y>
                         </item>
                         <item name="V" index="6" type_name="gh_point2d" type_code="50">
                           <X>2731.32226035156</X>
-                          <Y>-91.243017058592</Y>
+                          <Y>-91.2430170585918</Y>
                         </item>
                         <item name="V" index="7" type_name="gh_point2d" type_code="50">
                           <X>2744.70389435547</X>
-                          <Y>-87.107108962888</Y>
+                          <Y>-87.1071089628878</Y>
                         </item>
                         <item name="V" index="8" type_name="gh_point2d" type_code="50">
                           <X>2760.25419894531</X>
-                          <Y>-85.662356574216</Y>
+                          <Y>-85.6623565742158</Y>
                         </item>
                         <item name="V" index="9" type_name="gh_point2d" type_code="50">
                           <X>2771.57570714844</X>
-                          <Y>-86.403099519529</Y>
+                          <Y>-86.4030995195288</Y>
                         </item>
                         <item name="V" index="10" type_name="gh_point2d" type_code="50">
                           <X>2781.58278457031</X>
-                          <Y>-88.517545324216</Y>
+                          <Y>-88.5175453242158</Y>
                         </item>
                         <item name="V" index="11" type_name="gh_point2d" type_code="50">
                           <X>2790.32022542969</X>
-                          <Y>-91.844019441405</Y>
+                          <Y>-91.8440194414048</Y>
                         </item>
                         <item name="V" index="12" type_name="gh_point2d" type_code="50">
                           <X>2797.83282394531</X>
-                          <Y>-96.220847324217</Y>
+                          <Y>-96.2208473242168</Y>
                         </item>
                         <item name="V" index="13" type_name="gh_point2d" type_code="50">
                           <X>2804.16537433594</X>
@@ -2648,63 +2648,63 @@
                         </item>
                         <item name="V" index="19" type_name="gh_point2d" type_code="50">
                           <X>2834.89071066406</X>
-                          <Y>-98.426271730467</Y>
+                          <Y>-98.4262717304668</Y>
                         </item>
                         <item name="V" index="20" type_name="gh_point2d" type_code="50">
                           <X>2827.12742927734</X>
-                          <Y>-88.34587675781</Y>
+                          <Y>-88.3458767578098</Y>
                         </item>
                         <item name="V" index="21" type_name="gh_point2d" type_code="50">
                           <X>2817.38550269531</X>
-                          <Y>-79.4529228242168</Y>
+                          <Y>-79.4529228242166</Y>
                         </item>
                         <item name="V" index="22" type_name="gh_point2d" type_code="50">
                           <X>2805.72442314453</X>
-                          <Y>-72.0352047343728</Y>
+                          <Y>-72.0352047343726</Y>
                         </item>
                         <item name="V" index="23" type_name="gh_point2d" type_code="50">
                           <X>2792.20368285156</X>
-                          <Y>-66.3805172929664</Y>
+                          <Y>-66.3805172929662</Y>
                         </item>
                         <item name="V" index="24" type_name="gh_point2d" type_code="50">
                           <X>2776.88277404297</X>
-                          <Y>-62.7766553046844</Y>
+                          <Y>-62.7766553046842</Y>
                         </item>
                         <item name="V" index="25" type_name="gh_point2d" type_code="50">
                           <X>2759.82118894531</X>
-                          <Y>-61.5114135742164</Y>
+                          <Y>-61.5114135742162</Y>
                         </item>
                         <item name="V" index="26" type_name="gh_point2d" type_code="50">
                           <X>2748.51901342773</X>
-                          <Y>-62.0668049384734</Y>
+                          <Y>-62.0668049384732</Y>
                         </item>
                         <item name="V" index="27" type_name="gh_point2d" type_code="50">
                           <X>2737.95504574219</X>
-                          <Y>-63.6903935351534</Y>
+                          <Y>-63.6903935351532</Y>
                         </item>
                         <item name="V" index="28" type_name="gh_point2d" type_code="50">
                           <X>2728.12803918945</X>
-                          <Y>-66.3183011201144</Y>
+                          <Y>-66.3183011201142</Y>
                         </item>
                         <item name="V" index="29" type_name="gh_point2d" type_code="50">
                           <X>2719.03674707031</X>
-                          <Y>-69.8866494492164</Y>
+                          <Y>-69.8866494492162</Y>
                         </item>
                         <item name="V" index="30" type_name="gh_point2d" type_code="50">
                           <X>2710.67992268555</X>
-                          <Y>-74.3315602783178</Y>
+                          <Y>-74.3315602783176</Y>
                         </item>
                         <item name="V" index="31" type_name="gh_point2d" type_code="50">
                           <X>2703.05631933594</X>
-                          <Y>-79.5891553632788</Y>
+                          <Y>-79.5891553632786</Y>
                         </item>
                         <item name="V" index="32" type_name="gh_point2d" type_code="50">
                           <X>2696.16469032227</X>
-                          <Y>-85.595556459959</Y>
+                          <Y>-85.5955564599588</Y>
                         </item>
                         <item name="V" index="33" type_name="gh_point2d" type_code="50">
                           <X>2690.00378894531</X>
-                          <Y>-92.286885324217</Y>
+                          <Y>-92.2868853242168</Y>
                         </item>
                         <item name="V" index="34" type_name="gh_point2d" type_code="50">
                           <X>2679.86918230469</X>
@@ -2885,11 +2885,11 @@
                         </item>
                         <item name="V" index="20" type_name="gh_point2d" type_code="50">
                           <X>1426.87316894531</X>
-                          <Y>-81.511413574217</Y>
+                          <Y>-81.5114135742168</Y>
                         </item>
                         <item name="V" index="21" type_name="gh_point2d" type_code="50">
                           <X>1381.29558894531</X>
-                          <Y>-81.511413574217</Y>
+                          <Y>-81.5114135742168</Y>
                         </item>
                         <item name="V" index="22" type_name="gh_point2d" type_code="50">
                           <X>1381.29558894531</X>
@@ -2961,11 +2961,11 @@
                         </item>
                         <item name="V" index="39" type_name="gh_point2d" type_code="50">
                           <X>1292.33376894531</X>
-                          <Y>-81.511413574217</Y>
+                          <Y>-81.5114135742168</Y>
                         </item>
                         <item name="V" index="40" type_name="gh_point2d" type_code="50">
                           <X>1246.87316894531</X>
-                          <Y>-81.511413574217</Y>
+                          <Y>-81.5114135742168</Y>
                         </item>
                         <item name="V" index="41" type_name="gh_point2d" type_code="50">
                           <X>1246.87316894531</X>
@@ -3877,31 +3877,31 @@
                         </item>
                         <item name="V" index="88" type_name="gh_point2d" type_code="50">
                           <X>1162.41131201172</X>
-                          <Y>-94.443022546874</Y>
+                          <Y>-94.4430225468738</Y>
                         </item>
                         <item name="V" index="89" type_name="gh_point2d" type_code="50">
                           <X>1145.47937503906</X>
-                          <Y>-87.284291542966</Y>
+                          <Y>-87.2842915429658</Y>
                         </item>
                         <item name="V" index="90" type_name="gh_point2d" type_code="50">
                           <X>1126.89085845703</X>
-                          <Y>-82.961007117185</Y>
+                          <Y>-82.9610071171848</Y>
                         </item>
                         <item name="V" index="91" type_name="gh_point2d" type_code="50">
                           <X>1107.08430894531</X>
-                          <Y>-81.511413574217</Y>
+                          <Y>-81.5114135742168</Y>
                         </item>
                         <item name="V" index="92" type_name="gh_point2d" type_code="50">
                           <X>1087.61497302148</X>
-                          <Y>-83.200145902342</Y>
+                          <Y>-83.2001459023418</Y>
                         </item>
                         <item name="V" index="93" type_name="gh_point2d" type_code="50">
                           <X>1069.14542092969</X>
-                          <Y>-88.199023949217</Y>
+                          <Y>-88.1990239492168</Y>
                         </item>
                         <item name="V" index="94" type_name="gh_point2d" type_code="50">
                           <X>1052.16760981445</X>
-                          <Y>-96.407069308592</Y>
+                          <Y>-96.4070693085918</Y>
                         </item>
                         <item name="V" index="95" type_name="gh_point2d" type_code="50">
                           <X>1037.17349682031</X>
@@ -3962,11 +3962,11 @@
                         </item>
                         <item name="V" index="4" type_name="gh_point2d" type_code="50">
                           <X>2570.86439894531</X>
-                          <Y>-71.5114135742168</Y>
+                          <Y>-71.5114135742166</Y>
                         </item>
                         <item name="V" index="5" type_name="gh_point2d" type_code="50">
                           <X>2551.66848894531</X>
-                          <Y>-71.5114135742168</Y>
+                          <Y>-71.5114135742166</Y>
                         </item>
                         <item name="V" index="6" type_name="gh_point2d" type_code="50">
                           <X>2466.87316894531</X>
@@ -3991,11 +3991,11 @@
                         </item>
                         <item name="V" index="2" type_name="gh_point2d" type_code="50">
                           <X>2437.80119894531</X>
-                          <Y>-81.511413574217</Y>
+                          <Y>-81.5114135742168</Y>
                         </item>
                         <item name="V" index="3" type_name="gh_point2d" type_code="50">
                           <X>2415.97027894531</X>
-                          <Y>-81.511413574217</Y>
+                          <Y>-81.5114135742168</Y>
                         </item>
                         <item name="V" index="4" type_name="gh_point2d" type_code="50">
                           <X>2415.97027894531</X>
@@ -10474,7 +10474,7 @@ A Multiple Accordion Widget is also available for organizing widgets in separate
                     <item name="Name" type_name="gh_string" type_code="10">Points Input</item>
                     <item name="NickName" type_name="gh_string" type_code="10">Floor Plan</item>
                   </items>
-                  <chunks count="4">
+                  <chunks count="5">
                     <chunk name="PlaneConstraint">
                       <items count="1">
                         <item name="plane" type_name="gh_plane" type_code="72">
@@ -10495,8 +10495,17 @@ A Multiple Accordion Widget is also available for organizing widgets in separate
                         <item name="Count" type_name="gh_int32" type_code="3">0</item>
                       </items>
                     </chunk>
+                    <chunk name="DefaultValue">
+                      <items count="3">
+                        <item name="EdgeIndex" type_name="gh_int32" type_code="3">-1</item>
+                        <item name="ON_Data" type_name="gh_bytearray" type_code="20">
+                          <stream length="357">Y2BkYGD4DwQgGgR4mIBEeFBGZl6+c35ubn6ejkJYalFxZn6erbmesYWekYkxkDQ0NzAw1FFwLs0pKS1Ktc1LLS0pSszRUQgoTcrJTPZOrQzJz07NszU1NTKyMEy1NE82NzU1NTZgBdkiAzZczz01Pze1pKhSLyA/pzInMy/VubSoLJUFqIC9DGIhV2JRckZmWapxSi5nfkFqXl5pUVIxS0piSSJIEQcHBxPIrQLqDAxGQJp1ggAPJzOQwQ8iRIE2Mf2qZ2LghHrs938mBhGoH59due7n/vKy4P6nDALNjEof/Obsvv0HKH8RKi/ABiQWzTq1ulxV20EhzedCx6TD9lA5hpOX/68WXCvtsMDkmbNrtPoBmHhL4tTVd+dKHTBPU0/vX4kQh5pzoCEVbM5+mPhxiDkHoOY4wMRrIeY4WELMgYuzMaCDDzA3QdVwQGkBKC3iAAqJTYfLl/2vZ2qA6eJGMQMA</stream>
+                        </item>
+                        <item name="RefID" type_name="gh_guid" type_code="9">00000000-0000-0000-0000-000000000000</item>
+                      </items>
+                    </chunk>
                     <chunk name="Attributes">
-                      <items count="2">
+                      <items count="3">
                         <item name="Bounds" type_name="gh_drawing_rectanglef" type_code="35">
                           <X>226</X>
                           <Y>272</Y>
@@ -10507,6 +10516,7 @@ A Multiple Accordion Widget is also available for organizing widgets in separate
                           <X>240</X>
                           <Y>286</Y>
                         </item>
+                        <item name="Selected" type_name="gh_bool" type_code="1">true</item>
                       </items>
                     </chunk>
                     <chunk name="param_output" index="0">
@@ -10521,7 +10531,7 @@ A Multiple Accordion Widget is also available for organizing widgets in separate
                       </items>
                       <chunks count="1">
                         <chunk name="Attributes">
-                          <items count="2">
+                          <items count="3">
                             <item name="Bounds" type_name="gh_drawing_rectanglef" type_code="35">
                               <X>255</X>
                               <Y>274</Y>
@@ -10532,6 +10542,7 @@ A Multiple Accordion Widget is also available for organizing widgets in separate
                               <X>263</X>
                               <Y>286</Y>
                             </item>
+                            <item name="Selected" type_name="gh_bool" type_code="1">true</item>
                           </items>
                         </chunk>
                       </chunks>
@@ -10880,7 +10891,7 @@ A Multiple Accordion Widget is also available for organizing widgets in separate
                             <item name="InstanceGuid" type_name="gh_guid" type_code="9">01c5cd46-1dc0-437b-8a79-9a631458a89d</item>
                             <item name="Mutable" type_name="gh_bool" type_code="1">false</item>
                             <item name="Name" type_name="gh_string" type_code="10">Stream</item>
-                            <item name="NickName" type_name="gh_string" type_code="10">S(1)</item>
+                            <item name="NickName" type_name="gh_string" type_code="10">S(0)</item>
                             <item name="Optional" type_name="gh_bool" type_code="1">false</item>
                             <item name="SourceCount" type_name="gh_int32" type_code="3">0</item>
                           </items>
@@ -11234,7 +11245,7 @@ A Multiple Accordion Widget is also available for organizing widgets in separate
                             <item name="InstanceGuid" type_name="gh_guid" type_code="9">fa0b2e94-3724-41ee-bc0f-d005686526b1</item>
                             <item name="Mutable" type_name="gh_bool" type_code="1">false</item>
                             <item name="Name" type_name="gh_string" type_code="10">Stream</item>
-                            <item name="NickName" type_name="gh_string" type_code="10">S(1)</item>
+                            <item name="NickName" type_name="gh_string" type_code="10">S(0)</item>
                             <item name="Optional" type_name="gh_bool" type_code="1">false</item>
                             <item name="SourceCount" type_name="gh_int32" type_code="3">0</item>
                           </items>
@@ -11395,7 +11406,7 @@ Change the nickname of this component to create a named output, which can be use
     <chunk name="Thumbnail">
       <items count="1">
         <item name="Thumbnail" type_name="gh_drawing_bitmap" type_code="37">
-          <bitmap length="15467">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</bitmap>
+          <bitmap length="11353">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</bitmap>
         </item>
       </items>
     </chunk>
