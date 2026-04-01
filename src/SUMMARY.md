@@ -10,5 +10,6 @@
 [Attributes](./07-Attributes/definitions.md)
 [Plugins](./08-Plugins/definitions.md)
 [App Builder](./11-AppBuilder/definitions.md)
+[Desktop Clients](./12-DesktopClients/definitions.md)
 [Webinars](./Webinars/definitions.md)
 [BETA](./BETA/definitions.md)
