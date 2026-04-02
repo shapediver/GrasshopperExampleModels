@@ -4,4 +4,4 @@ ShapeDiver Apps can interact with so-called "Desktop Clients", allowing to send 
 
 | Ref | Resources | Description | ShapeDiver links | Grasshopper definition | Level&nbsp;&nbsp;&nbsp;&nbsp; |
 |---------|---------|---------|---------|---------|---------|
-| **2A** | _Soon_ | Introduction to Desktop Clients | [Model](https://www.shapediver.com/app/m/12a-desktopclientstutorial) | [Download](12A-DesktopClientsTutorial.ghx) |  ★ ☆ ☆ |
+| **2A** | _Soon_ | Introduction to Desktop Clients | [Model](https://www.shapediver.com/app/m/12a-desktopclientstutorial) / [App](https://appbuilder.shapediver.com/v1/main/latest/?slug=12a-desktopclientstutorial) | [Download](12A-DesktopClientsTutorial.ghx) |  ★ ☆ ☆ |
