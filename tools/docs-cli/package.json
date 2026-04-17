@@ -1,0 +1,16 @@
+{
+    "name": "@shapediver/docs-cli",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "validate": "tsx src/validate.ts"
+    },
+    "dependencies": {
+        "zod": "4.3.6"
+    },
+    "devDependencies": {
+        "@types/node": "24.1.0",
+        "tsx": "4.21.0",
+        "typescript": "6.0.2"
+    }
+}
