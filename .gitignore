@@ -1,1 +1,8 @@
 book
+
+# TypeScript
+node_modules
+dist
+.npmrc
+.nx
+*.tsbuildinfo

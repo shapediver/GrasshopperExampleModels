@@ -1,0 +1,11 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "search.exclude": {
+        "**/.git": true,
+    },
+    "terminal.integrated.defaultProfile.osx": "zsh - work",
+    "js/ts.preferences.includePackageJsonAutoImports": "on",
+    "cSpell.words": [
+        "mdbook"
+    ]
+}
