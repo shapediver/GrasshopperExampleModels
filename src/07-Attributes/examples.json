@@ -1,0 +1,14 @@
+{
+    "7A-AttributeVisualization.ghx": {
+        "anchor": "attributes",
+        "slug": "7a-attributevisualization-3",
+        "title": "Basic attribute visualization setup.",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 1,
+        "docLink": "https://shapediver.atlassian.net/wiki/spaces/DOC/pages/2104721409/ShapeDiver+Output",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    }
+}

@@ -1,2 +1,4 @@
 packages:
     - 'tools/docs-cli/'
+allowBuilds:
+    esbuild: true

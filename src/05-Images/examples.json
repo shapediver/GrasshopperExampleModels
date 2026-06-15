@@ -1,0 +1,62 @@
+{
+    "5A-GrasshopperBitmap.ghx": {
+        "anchor": "images",
+        "slug": "5a-grasshopperbitmap-8",
+        "title": "Introduction to Grasshopper Bitmaps",
+        "modelLink": true,
+        "appLink": false,
+        "rating": 1,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "5B-ShapeDiverImageSampler.ghx": {
+        "anchor": "images",
+        "slug": "5b-shapediverimagesampler-4",
+        "title": "ShapeDiver Image Sampler",
+        "modelLink": true,
+        "appLink": false,
+        "rating": 1,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "5C-ShapeDiverImageToMesh.ghx": {
+        "anchor": "images",
+        "slug": "5c-shapediverimagetomesh-40",
+        "title": "ShapeDiver Image to Mesh",
+        "modelLink": true,
+        "appLink": false,
+        "rating": 1,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "5D-SquidShapeDiverEdition.ghx": {
+        "anchor": "images",
+        "slug": "5d-squidshapediveredition",
+        "title": "Use the Squid plugin to generate bitmaps in Grasshopper",
+        "modelLink": true,
+        "appLink": false,
+        "rating": 2,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "5Dbis-SquidShapeDiverEditionPDF.ghx": {
+        "anchor": "images",
+        "slug": "5dbis-squidshapedivereditionpdf",
+        "title": "Use the Squid plugin to generate pdfs in Grasshopper",
+        "modelLink": true,
+        "appLink": false,
+        "rating": 2,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    }
+}

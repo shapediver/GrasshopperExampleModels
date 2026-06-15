@@ -1,0 +1,26 @@
+{
+    "1A-ExampleWithoutShapeDiverPlugin.ghx": {
+        "anchor": "basics",
+        "slug": "1a-examplewithoutshapediverplugin-110",
+        "title": "Basic example without the ShapeDiver plugin",
+        "modelLink": true,
+        "appLink": false,
+        "rating": 1,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "1B-ExampleWithShapeDiverPlugin.ghx": {
+        "anchor": "basics",
+        "slug": "1b-examplewithshapediverplugin-108",
+        "title": "Basic example with the ShapeDiver plugin",
+        "modelLink": true,
+        "appLink": false,
+        "rating": 1,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    }
+}

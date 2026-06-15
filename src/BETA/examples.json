@@ -1,0 +1,160 @@
+{
+    "BETA-DynamicSlidersTutorial.ghx": {
+        "anchor": "beta",
+        "slug": "beta-dynamicsliderstutorial",
+        "title": "Dynamic Sliders Tutorial",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 2,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "BETA-DynamicValueListsTutorial.ghx": {
+        "anchor": "beta",
+        "slug": "beta-dynamicvalueliststutorial",
+        "title": "Dynamic Value Lists Tutorial",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 2,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "BETA-SearchableValueList.ghx": {
+        "anchor": "beta",
+        "slug": "beta-searchablevaluelist-1",
+        "title": "Define searchable value lists",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 1,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "BETA-MultilineTextInput.ghx": {
+        "anchor": "beta",
+        "slug": "beta-multilinetextinput",
+        "title": "Define multiline text inputs",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 1,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "BETA-InstancesTutorial1-Controller.ghx": {
+        "anchor": "beta",
+        "slug": "beta-instancestutorial1-controller",
+        "title": "Control instances of other ShapeDiver models",
+        "modelLink": false,
+        "appLink": true,
+        "rating": 2,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {
+            "Parametric Box": "BETA-ParametricBoxInstance.ghx"
+        },
+		"files": {}
+    },
+    "BETA-Anchor3dSimple.ghx": {
+        "anchor": "beta",
+        "slug": "beta-anchor3d",
+        "title": "Create anchor containers attached to 3d locations in the scene",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 2,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "BETA-Anchor2dTutorial.ghx": {
+        "anchor": "beta",
+        "slug": "beta-anchor2d",
+        "title": "Create anchor containers attached to 2d locations on the screen",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 2,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "BETA-SoundAction.ghx": {
+        "anchor": "beta",
+        "slug": "beta-soundaction",
+        "title": "Play a sound",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 1,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "BETA-ExportWithState.ghx": {
+        "anchor": "beta",
+        "slug": "beta-exportwithstate",
+        "title": "Loop the value of a model state back to Grasshopper and include it in an export email",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 1,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "BETA-ExportWithScreenshot.ghx": {
+        "anchor": "beta",
+        "slug": "beta-exportwithscreenshot",
+        "title": "Send a screenshot of the App back to Grasshopper and include it in an export email",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 1,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "BETA-FormWidget.ghx": {
+        "anchor": "beta",
+        "slug": "beta-formwidget",
+        "title": "Create form inputs linked to a file export",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 1,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "BETA-CameraAction.ghx": {
+        "anchor": "beta",
+        "slug": "beta-cameraaction",
+        "title": "Trigger camera movements and animations using a Camera Action.",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 2,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    },
+    "BETA-SavedStatesWidget.ghx": {
+        "anchor": "beta",
+        "slug": "beta-savedstateswidget",
+        "title": "Saved States Widget",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 1,
+        "docLink": "",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    }
+}
