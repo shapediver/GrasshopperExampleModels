@@ -2,7 +2,9 @@
     "name": "root",
     "private": true,
     "scripts": {
-        "prepare": "husky"
+        "prepare": "husky",
+        "docs:create-tables": "pnpm --filter @shapediver/docs-cli run create-tables \"${PWD}/src/\"",
+        "docs:validate": "pnpm --filter @shapediver/docs-cli run validate \"${PWD}/src/\""
     },
     "devDependencies": {
         "@eslint/js": "10.0.1",

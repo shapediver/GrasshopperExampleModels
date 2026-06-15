@@ -1,2 +1,2 @@
 #!/bin/sh
-pnpm --filter @shapediver/docs-cli run validate "${PWD}/src"
+npm run docs:validate

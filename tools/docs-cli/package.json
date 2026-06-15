@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
+        "create-tables": "tsx src/createTables.ts",
         "validate": "tsx src/validate.ts"
     },
     "dependencies": {

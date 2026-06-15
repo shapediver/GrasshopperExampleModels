@@ -1,0 +1,38 @@
+{
+    "8A-SpecklePublish.ghx": {
+        "anchor": "plugins",
+        "slug": "8a-specklepublish-3",
+        "title": "Publish data to a Speckle model",
+        "modelLink": false,
+        "appLink": true,
+        "rating": 1,
+        "docLink": "https://help.shapediver.com/doc/shapediver-for-speckle",
+        "videoLink": "https://www.youtube.com/watch?v=Son87CXLqkM",
+        "ghFiles": {},
+		"files": {}
+    },
+    "8B-SpeckleLoad.ghx": {
+        "anchor": "plugins",
+        "slug": "8b-speckleload",
+        "title": "Load data from a Speckle model",
+        "modelLink": false,
+        "appLink": true,
+        "rating": 1,
+        "docLink": "https://help.shapediver.com/doc/shapediver-for-speckle",
+        "videoLink": "https://www.youtube.com/watch?v=Son87CXLqkM",
+        "ghFiles": {},
+		"files": {}
+    },
+    "8C-SkemaIntegration.ghx": {
+        "anchor": "plugins",
+        "slug": "8c-skemaintegration",
+        "title": "Exchange data with a Skema project",
+        "modelLink": false,
+        "appLink": true,
+        "rating": 1,
+        "docLink": "https://help.shapediver.com/doc/shapediver-for-skema",
+        "videoLink": "",
+        "ghFiles": {},
+		"files": {}
+    }
+}
