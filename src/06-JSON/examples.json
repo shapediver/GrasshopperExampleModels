@@ -6,8 +6,8 @@
         "modelLink": false,
         "appLink": false,
         "rating": 1,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
 		"files": {}
     }

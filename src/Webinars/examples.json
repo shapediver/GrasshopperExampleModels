@@ -1,4 +1,3 @@
-
 {
     "2410A-Webinar_BarcelonaNeighbourhood.ghx": {
         "anchor": "webinar",
@@ -7,10 +6,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 2,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "2410B-Webinar_ModularCabinets.ghx": {
         "anchor": "webinar",
@@ -19,10 +18,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 3,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "2503A-Webinar_SpecklePavillion.ghx": {
         "anchor": "webinar",
@@ -31,10 +30,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 2,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "2503B-Webinar_ShopifyWorkflow.ghx": {
         "anchor": "webinar",
@@ -43,10 +42,10 @@
         "modelLink": true,
         "appLink": "https://appbuilder.shapediver.com/v1/ijewel3d/latest/?slug=2503b-shopifyworkflow&g=https://cdn.shopify.com/s/files/1/0897/7802/8923/files/example-agent-ring-theme.json&webgiScene=https://cdn.shopify.com/s/files/1/0585/2721/9918/files/3dConfiguratorScene.vjson",
         "rating": 2,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "2605-Webinar_NewAppBuilderFeatures.ghx": {
         "anchor": "webinar",
@@ -55,9 +54,9 @@
         "modelLink": false,
         "appLink": true,
         "rating": 2,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     }
 }

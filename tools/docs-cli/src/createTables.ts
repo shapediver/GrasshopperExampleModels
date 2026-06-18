@@ -76,6 +76,11 @@ function ratingToStars(rating: number): string {
     return Array.from({ length: 3 }, (_, i) => (i < rating ? '★' : '☆')).join(' ');
 }
 
+/** Creates an optional markdown link for boolean-or-string example metadata fields. */
+function createOptionalLink(icon: string, value: false | string): string {
+    return value ? `[${icon}](${value})` : '';
+}
+
 /**
  * Creates a markdown table from the given examples, including conditional resources column if any
  * example has links.
@@ -105,10 +110,7 @@ function createTable(examples: Examples[]): string {
         const [[ghxName, data]] = Object.entries(example);
         const ref = `**${ghxName.split('/').at(-1)!.split('-')[0]}**`;
         const resourceCell = hasResources
-            ? [
-                  data.docLink ? `[📖](${data.docLink})` : '',
-                  data.videoLink ? `[🎥](${data.videoLink})` : '',
-              ]
+            ? [createOptionalLink('📖', data.docLink), createOptionalLink('🎥', data.videoLink)]
                   .filter(Boolean)
                   .join(' ')
             : null;

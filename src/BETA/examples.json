@@ -6,10 +6,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 2,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "BETA-DynamicValueListsTutorial.ghx": {
         "anchor": "beta",
@@ -18,10 +18,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 2,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "BETA-SearchableValueList.ghx": {
         "anchor": "beta",
@@ -30,10 +30,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 1,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "BETA-MultilineTextInput.ghx": {
         "anchor": "beta",
@@ -42,10 +42,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 1,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "BETA-InstancesTutorial1-Controller.ghx": {
         "anchor": "beta",
@@ -54,12 +54,12 @@
         "modelLink": false,
         "appLink": true,
         "rating": 2,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {
             "Parametric Box": "BETA-ParametricBoxInstance.ghx"
         },
-		"files": {}
+        "files": {}
     },
     "BETA-Anchor3dSimple.ghx": {
         "anchor": "beta",
@@ -68,10 +68,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 2,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "BETA-Anchor2dTutorial.ghx": {
         "anchor": "beta",
@@ -80,10 +80,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 2,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "BETA-SoundAction.ghx": {
         "anchor": "beta",
@@ -92,10 +92,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 1,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "BETA-ExportWithState.ghx": {
         "anchor": "beta",
@@ -104,10 +104,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 1,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "BETA-ExportWithScreenshot.ghx": {
         "anchor": "beta",
@@ -116,10 +116,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 1,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "BETA-FormWidget.ghx": {
         "anchor": "beta",
@@ -128,10 +128,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 1,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "BETA-CameraAction.ghx": {
         "anchor": "beta",
@@ -140,10 +140,10 @@
         "modelLink": true,
         "appLink": true,
         "rating": 2,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "BETA-SavedStatesWidget.ghx": {
         "anchor": "beta",
@@ -152,9 +152,9 @@
         "modelLink": true,
         "appLink": true,
         "rating": 1,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     }
 }

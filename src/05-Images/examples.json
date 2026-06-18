@@ -6,8 +6,8 @@
         "modelLink": true,
         "appLink": false,
         "rating": 1,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
 		"files": {}
     },
@@ -18,8 +18,8 @@
         "modelLink": true,
         "appLink": false,
         "rating": 1,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
 		"files": {}
     },
@@ -30,8 +30,8 @@
         "modelLink": true,
         "appLink": false,
         "rating": 1,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
 		"files": {}
     },
@@ -42,8 +42,8 @@
         "modelLink": true,
         "appLink": false,
         "rating": 2,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
 		"files": {}
     },
@@ -54,8 +54,8 @@
         "modelLink": true,
         "appLink": false,
         "rating": 2,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
 		"files": {}
     }

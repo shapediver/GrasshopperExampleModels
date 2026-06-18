@@ -9,7 +9,7 @@
         "docLink": "https://help.shapediver.com/doc/shapediver-for-speckle",
         "videoLink": "https://www.youtube.com/watch?v=Son87CXLqkM",
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "8B-SpeckleLoad.ghx": {
         "anchor": "plugins",
@@ -21,7 +21,7 @@
         "docLink": "https://help.shapediver.com/doc/shapediver-for-speckle",
         "videoLink": "https://www.youtube.com/watch?v=Son87CXLqkM",
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "8C-SkemaIntegration.ghx": {
         "anchor": "plugins",
@@ -31,8 +31,8 @@
         "appLink": true,
         "rating": 1,
         "docLink": "https://help.shapediver.com/doc/shapediver-for-skema",
-        "videoLink": "",
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     }
 }
