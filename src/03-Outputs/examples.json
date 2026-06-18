@@ -7,7 +7,7 @@
         "appLink": false,
         "rating": 1,
         "docLink": "https://help.shapediver.com/doc/download-export",
-        "videoLink": "",
+        "videoLink": false,
         "ghFiles": {},
 		"files": {}
     },
@@ -19,7 +19,7 @@
         "appLink": false,
         "rating": 1,
         "docLink": "https://help.shapediver.com/doc/export-attributes",
-        "videoLink": "",
+        "videoLink": false,
         "ghFiles": {},
 		"files": {}
     },
@@ -31,7 +31,7 @@
         "appLink": false,
         "rating": 1,
         "docLink": "https://help.shapediver.com/doc/direct-data-output",
-        "videoLink": "",
+        "videoLink": false,
         "ghFiles": {},
 		"files": {}
     },
@@ -43,7 +43,7 @@
         "appLink": false,
         "rating": 1,
         "docLink": "https://help.shapediver.com/doc/zip-streams",
-        "videoLink": "",
+        "videoLink": false,
         "ghFiles": {},
 		"files": {}
     }

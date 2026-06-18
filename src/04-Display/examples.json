@@ -6,10 +6,10 @@
         "modelLink": true,
         "appLink": false,
         "rating": 1,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "4B-MaterialPresets.ghx": {
         "anchor": "display",
@@ -18,10 +18,10 @@
         "modelLink": true,
         "appLink": false,
         "rating": 1,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "4C-RenderingGuide.ghx": {
         "anchor": "display",
@@ -30,8 +30,8 @@
         "modelLink": false,
         "appLink": true,
         "rating": 2,
-        "docLink": "",
-        "videoLink": "",
+        "docLink": false,
+        "videoLink": false,
         "ghFiles": {
             "START": "4C-start.ghx",
             "After Chapter 2": "4C-after-chapter-2.ghx",
@@ -39,6 +39,6 @@
             "After Chapter 4": "4C-after-chapter-4.ghx",
             "FINAL": "4C-RenderingGuide.ghx"
         },
-		"files": {}
+        "files": {}
     }
 }

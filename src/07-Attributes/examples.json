@@ -7,8 +7,8 @@
         "appLink": true,
         "rating": 1,
         "docLink": "https://shapediver.atlassian.net/wiki/spaces/DOC/pages/2104721409/ShapeDiver+Output",
-        "videoLink": "",
+        "videoLink": false,
         "ghFiles": {},
-		"files": {}
+        "files": {}
     }
 }

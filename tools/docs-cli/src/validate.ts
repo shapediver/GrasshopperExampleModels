@@ -3,6 +3,44 @@ import path from 'path';
 import { z } from 'zod';
 import { FILE_NAME_EXAMPLES, SCHEMA_EXAMPLES } from './utils';
 
+/**
+ * Validate a file reference declared inside an examples.json file.
+ *
+ * All references are resolved relative to the examples.json file, may use `..`, must not be
+ * absolute, must exist, must be regular files, and must not be symlinks.
+ */
+function validateReferencedFile(
+    reference: string,
+    fieldPath: string,
+    examplesFilePath: string
+): void {
+    if (path.isAbsolute(reference)) {
+        throw new Error(
+            `Invalid absolute path in '${fieldPath}': '${reference}' in ${examplesFilePath}.`
+        );
+    }
+
+    const absolutePath = path.resolve(path.dirname(examplesFilePath), reference);
+    if (!fs.existsSync(absolutePath)) {
+        throw new Error(
+            `Missing referenced file in '${fieldPath}': '${reference}' in ${examplesFilePath}.`
+        );
+    }
+
+    const stats = fs.lstatSync(absolutePath);
+    if (stats.isSymbolicLink()) {
+        throw new Error(
+            `Referenced file must not be a symlink in '${fieldPath}': '${reference}' in ${examplesFilePath}.`
+        );
+    }
+
+    if (!stats.isFile()) {
+        throw new Error(
+            `Referenced path is not a regular file in '${fieldPath}': '${reference}' in ${examplesFilePath}.`
+        );
+    }
+}
+
 (function () {
     // husky passes the absolute path of the mdbook directory as an argument
     const mdbookPath = process.argv[2];
@@ -18,8 +56,6 @@ import { FILE_NAME_EXAMPLES, SCHEMA_EXAMPLES } from './utils';
         .map((entry) => path.join(mdbookPath, entry.name, FILE_NAME_EXAMPLES))
         .filter((filePath) => fs.existsSync(filePath));
 
-    let hasError = false;
-
     for (const filePath of exampleFiles) {
         try {
             const fileContent = fs.readFileSync(filePath, 'utf-8');
@@ -28,14 +64,19 @@ import { FILE_NAME_EXAMPLES, SCHEMA_EXAMPLES } from './utils';
             // Validate JSON structure
             const parsedData = SCHEMA_EXAMPLES.parse(jsonData);
 
-            const baseDir = path.dirname(filePath);
+            // Validate all file references declared by each example entry.
+            for (const [main, example] of Object.entries(parsedData)) {
+                // The top-level key is the main Grasshopper file for the example.
+                validateReferencedFile(main, main, filePath);
 
-            // Validate physical files exist relative to the JSON file
-            for (const ghxName of Object.keys(parsedData)) {
-                const absolutePath = path.join(baseDir, ghxName);
-                if (!fs.existsSync(absolutePath)) {
-                    console.error(`ERROR: Missing referenced file '${ghxName}' in ${filePath}.`);
-                    hasError = true;
+                // Auxiliary Grasshopper assets are declared as label -> relative file path.
+                for (const [label, referencedFile] of Object.entries(example.ghFiles)) {
+                    validateReferencedFile(referencedFile, `${main}.ghFiles.${label}`, filePath);
+                }
+
+                // Additional non-Grasshopper assets are declared as label -> relative file path.
+                for (const [label, referencedFile] of Object.entries(example.files)) {
+                    validateReferencedFile(referencedFile, `${main}.files.${label}`, filePath);
                 }
             }
         } catch (e) {
@@ -47,13 +88,8 @@ import { FILE_NAME_EXAMPLES, SCHEMA_EXAMPLES } from './utils';
             } else {
                 console.error(e);
             }
-            hasError = true;
+            console.error('\nValidation failed. Please fix the errors above before committing.');
+            process.exit(1);
         }
-    }
-
-    // Abort the commit if any errors were found
-    if (hasError) {
-        console.error('\nValidation failed. Please fix the errors above before committing.');
-        process.exit(1);
     }
 })();
