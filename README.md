@@ -1,9 +1,10 @@
 # GrasshopperExampleModels
-Example Grasshopper models used throughout our documentation. 
 
-Please find a searchable overview of all example models [here](https://shapediver.github.io/GrasshopperExampleModels/). 
+Example Grasshopper models used throughout our documentation.
 
-You can clone this repository to download all models at once. 
+Please find a searchable overview of all example models [here](https://shapediver.github.io/GrasshopperExampleModels/).
+
+You can clone this repository to download all models at once.
 
 ## How to add or update example models
 
@@ -20,27 +21,38 @@ The source of truth for example metadata is `src/**/examples.json`. Markdown tab
 
 ### Guidelines
 
-  * Use the `ghx` XML file format of Grasshopper.
-  * Update `examples.json` when changing example metadata.
-  * Add only additional explanatory text manually to Markdown files.
-  * Do not manually create or edit generated markdown tables; they are generated via GitHub workflows.
+- Use the `ghx` XML file format of Grasshopper.
+- Update `examples.json` when changing example metadata.
+- Add only additional explanatory text manually to Markdown files.
+- Do not manually create or edit generated markdown tables; they are generated via GitHub workflows.
 
 ### Commands
 
 - `npm run docs:validate` validates all `src/**/examples.json` files and checks referenced files.
 - `npm run docs:create-tables` regenerates markdown tables from `src/**/examples.json`.
+- `pnpm run docs:process-models` processes changed Grasshopper models for ShapeDiver deployment.
+
+    Required environment variables:
+    - `SHAPEDIVER_PLATFORM_USER_ID`
+    - `SHAPEDIVER_ACCESS_KEY_ID`
+    - `SHAPEDIVER_ACCESS_KEY_SECRET`
+
+    Optional environment variables:
+    - `SHAPEDIVER_PLATFORM_URL` — defaults to `https://app.shapediver.com`
+    - `GITHUB_SHA` — defaults to `git rev-parse HEAD`
+    - `PROCESS_MODELS_CHAPTER` — limits processing to a single chapter
+
 - `mdbook serve .` starts a local preview server for the documentation.
 
 ### Local testing
 
 Take the following setup steps to locally test auto-generation of the documentation.
 
-  * Install [rust](https://www.rust-lang.org/tools/install)
-  * Install [mdBook](https://rust-lang.github.io/mdBook/guide/installation.html)
-    `cargo install mdbook`
-  * Install [mdbook-external-links](https://crates.io/crates/mdbook-external-links)
-    `cargo install mdbook-external-links`
-  * From the root directory of this repository run `mdbook serve .`
+- Install [rust](https://www.rust-lang.org/tools/install)
+- Install [mdBook](https://rust-lang.github.io/mdBook/guide/installation.html)
+  `cargo install mdbook`
+- Install [mdbook-external-links](https://crates.io/crates/mdbook-external-links)
+  `cargo install mdbook-external-links`
+- From the root directory of this repository run `mdbook serve .`
 
 In normal workflows, markdown tables are generated through GitHub workflows and should not be created manually.
-

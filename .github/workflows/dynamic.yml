@@ -1,0 +1,192 @@
+# Workflow for dynamically uploading changed models to ShapeDiver, generating documentation, and
+# deploying to GitHub Pages.
+#
+# To get started with mdBook see: https://rust-lang.github.io/mdBook/index.html
+#
+name: Dynamic model deployment
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: [development]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  process-and-build:
+    runs-on: ubuntu-latest
+    outputs:
+      deploy_docs: ${{ steps.parse.outputs.deploy_docs }}
+      tool_fatal: ${{ steps.parse.outputs.tool_fatal }}
+      slack_message: ${{ steps.parse.outputs.slack_message }}
+    env:
+      MDBOOK_VERSION: 0.4.47
+      MDBOOK_EXTERNAL_LINKS_VERSION: 0.1.2
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup mise tools
+        uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Install mdBook
+        run: |
+          cargo install --version ${MDBOOK_VERSION} mdbook
+          cargo install --version ${MDBOOK_EXTERNAL_LINKS_VERSION} mdbook-external-links
+
+      - name: Process changed ShapeDiver models
+        id: process_models
+        env:
+          SHAPEDIVER_PLATFORM_USER_ID: ${{ secrets.SHAPEDIVER_PLATFORM_USER_ID }}
+          SHAPEDIVER_ACCESS_KEY_ID: ${{ secrets.SHAPEDIVER_ACCESS_KEY_ID }}
+          SHAPEDIVER_ACCESS_KEY_SECRET: ${{ secrets.SHAPEDIVER_ACCESS_KEY_SECRET }}
+        run: |
+          set +e
+          pnpm run docs:process-models > dynamic-process-result.json 2> dynamic-process-stderr.txt
+          exit_code=$?
+          set -e
+
+          [ -s dynamic-process-stderr.txt ] && cat dynamic-process-stderr.txt >&2
+          echo "exit_code=$exit_code" >> "$GITHUB_OUTPUT"
+          exit "$exit_code"
+
+      - name: Parse process result
+        id: parse
+        run: |
+          if [ ! -s dynamic-process-result.json ]; then
+            cat > dynamic-process-result.json <<'JSON'
+          {
+            "ok": false,
+            "fatal": true,
+            "deployDocs": false,
+            "notification": {
+              "level": "error",
+              "message": "❌ Dynamic deployment failed before a result JSON was produced. Check the GitHub Action logs."
+            }
+          }
+          JSON
+          fi
+
+          echo "deploy_docs=$(jq -r '.deployDocs' dynamic-process-result.json)" >> "$GITHUB_OUTPUT"
+          echo "tool_fatal=$(jq -r '.fatal' dynamic-process-result.json)" >> "$GITHUB_OUTPUT"
+          message=$(jq -r '.notification.message' dynamic-process-result.json)
+          {
+            echo 'slack_message<<EOF'
+            echo "$message"
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create docs tables
+        if: ${{ steps.parse.outputs.tool_fatal != 'true' && steps.parse.outputs.deploy_docs == 'true' }}
+        run: npm run docs:create-tables
+
+      - name: Build with mdBook
+        if: ${{ steps.parse.outputs.tool_fatal != 'true' && steps.parse.outputs.deploy_docs == 'true' }}
+        run: mdbook build
+
+      - name: Setup Pages
+        if: ${{ steps.parse.outputs.tool_fatal != 'true' && steps.parse.outputs.deploy_docs == 'true' }}
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        if: ${{ steps.parse.outputs.tool_fatal != 'true' && steps.parse.outputs.deploy_docs == 'true' }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./book
+
+  deploy:
+    needs: process-and-build
+    if: ${{ needs.process-and-build.outputs.deploy_docs == 'true' && needs.process-and-build.outputs.tool_fatal != 'true' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  notify:
+    needs:
+      - process-and-build
+      - deploy
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Determine Slack message
+        id: slack
+        env:
+          TOOL_FATAL: ${{ needs.process-and-build.outputs.tool_fatal }}
+          TOOL_MESSAGE: ${{ needs.process-and-build.outputs.slack_message }}
+          PROCESS_RESULT: ${{ needs.process-and-build.result }}
+          DEPLOY_RESULT: ${{ needs.deploy.result }}
+        run: |
+          if [ "$TOOL_FATAL" = "true" ]; then
+            message="$TOOL_MESSAGE"
+          elif [ "$PROCESS_RESULT" = "failure" ]; then
+            message='❌ Dynamic deployment failed while building the documentation. Check the GitHub Action logs.'
+          elif [ "$DEPLOY_RESULT" = "failure" ]; then
+            message='❌ Dynamic deployment failed while deploying GitHub Pages. Check the GitHub Action logs.'
+          else
+            message="$TOOL_MESSAGE"
+          fi
+
+          {
+            echo 'message<<EOF'
+            echo "$message"
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Notify Slack
+        uses: slackapi/slack-github-action@v1.25.0
+        with:
+          payload: |
+            {
+              "text": ${{ toJson(steps.slack.outputs.message) }}
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+  conclude:
+    needs:
+      - process-and-build
+      - deploy
+      - notify
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail workflow on fatal deployment errors
+        run: |
+          if [ "${{ needs.process-and-build.outputs.tool_fatal }}" = "true" ]; then
+            echo "Dynamic deployment tool reported a fatal error."
+            exit 1
+          fi
+
+          if [ "${{ needs.process-and-build.result }}" = "failure" ]; then
+            echo "Documentation build failed."
+            exit 1
+          fi
+
+          if [ "${{ needs.deploy.result }}" = "failure" ]; then
+            echo "GitHub Pages deployment failed."
+            exit 1
+          fi

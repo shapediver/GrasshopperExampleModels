@@ -6,3 +6,5 @@ dist
 .npmrc
 .nx
 *.tsbuildinfo
+
+.pi/

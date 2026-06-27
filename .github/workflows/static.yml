@@ -32,22 +32,30 @@ jobs:
       MDBOOK_VERSION: 0.4.47
       MDBOOK_EXTERNAL_LINKS_VERSION: 0.1.2
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Setup mise tools
         uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
       - name: Install mdBook
         run: |
           cargo install --version ${MDBOOK_VERSION} mdbook
           cargo install --version ${MDBOOK_EXTERNAL_LINKS_VERSION} mdbook-external-links
+
       - name: Create docs tables
         run: npm run docs:create-tables
+
       - name: Build with mdBook
         run: mdbook build
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

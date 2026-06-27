@@ -24,6 +24,10 @@ const SCHEMA_NON_EMPTY_TRIMMED_STRING = z
 /** Optional documentation/video link fields are either disabled (`false`) or set explicitly. */
 const SCHEMA_OPTIONAL_LINK = z.union([z.literal(false), SCHEMA_NON_EMPTY_TRIMMED_STRING]);
 
+const SLUG_VALIDATION_MESSAGE =
+    'Slug can only contain a-z letters, numbers from 0-9, hyphen and must be at least 5 characters long.';
+const SLUG_REGEX = /^$|^[a-z0-9-]{5,}$/;
+
 /**
  * Record schema that validates keys with detailed string errors instead of Zod's generic
  * "Invalid key in record" message.
@@ -56,7 +60,7 @@ export const SCHEMA_EXAMPLES = createExamplesRecordSchema(
         anchor: SCHEMA_NON_EMPTY_TRIMMED_STRING,
 
         /** The slug of the ShapeDiver model. */
-        slug: z.string(),
+        slug: z.string().regex(SLUG_REGEX, SLUG_VALIDATION_MESSAGE),
 
         /** The title of the ShapeDiver model. */
         title: SCHEMA_NON_EMPTY_TRIMMED_STRING,
