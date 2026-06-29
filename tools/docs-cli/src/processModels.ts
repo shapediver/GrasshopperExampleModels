@@ -762,7 +762,6 @@ async function getPlatformModel(
             SdPlatformModelGetEmbeddableFields.User,
             SdPlatformModelGetEmbeddableFields.BackendSystem,
             SdPlatformModelGetEmbeddableFields.PreviousModel,
-            SdPlatformModelGetEmbeddableFields.BackendProperties,
         ]);
         const model = response.data as SdPlatformResponseModelOwner;
         cachePlatformModel(cache, model, idOrSlug);
