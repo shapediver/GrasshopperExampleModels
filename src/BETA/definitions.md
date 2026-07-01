@@ -6,4 +6,14 @@ Note that the final components and component flow might differ from the current 
 
 > Some of the examples below make use of the JSwan Grasshopper plugin (version 1.2.0).
 
+
+## Dynamic inputs
+
+[dynamic]: #
+
+## Misc
+
 [beta]: #
+
+
+

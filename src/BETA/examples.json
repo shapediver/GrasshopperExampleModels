@@ -1,6 +1,6 @@
 {
     "BETA-DynamicSlidersTutorial.ghx": {
-        "anchor": "beta",
+        "anchor": "dynamic",
         "slug": "beta-dynamicsliderstutorial",
         "title": "Dynamic Sliders Tutorial",
         "modelLink": true,
@@ -12,9 +12,21 @@
         "files": {}
     },
     "BETA-DynamicValueListsTutorial.ghx": {
-        "anchor": "beta",
+        "anchor": "dynamic",
         "slug": "beta-dynamicvalueliststutorial",
         "title": "Dynamic Value Lists Tutorial",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 2,
+        "docLink": false,
+        "videoLink": false,
+        "ghFiles": {},
+        "files": {}
+    },
+    "BETA-DynamicPointsInput.ghx": {
+        "anchor": "dynamic",
+        "slug": "beta-dynamicpointsinput",
+        "title": "Dynamic Points Input Tutorial",
         "modelLink": true,
         "appLink": true,
         "rating": 2,
