@@ -10,11 +10,13 @@ if (!command) {
 
 const repoRoot = path.resolve(__dirname, '..');
 const srcPath = path.join(repoRoot, 'src');
-const pnpmBin = process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm';
+const args = ['--filter', '@shapediver/docs-cli', 'run', command, srcPath];
 
-const result = spawnSync(pnpmBin, ['--filter', '@shapediver/docs-cli', 'run', command, srcPath], {
+const result = spawnSync('pnpm', args, {
     cwd: repoRoot,
     stdio: 'inherit',
+    shell: process.platform === 'win32',
+    windowsHide: true,
 });
 
 if (result.error) {
