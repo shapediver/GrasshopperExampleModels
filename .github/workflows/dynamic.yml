@@ -33,7 +33,6 @@ jobs:
       tool_fatal: ${{ steps.parse.outputs.tool_fatal }}
       slack_message: ${{ steps.parse.outputs.slack_message }}
     env:
-      MDBOOK_VERSION: 0.4.47
       MDBOOK_EXTERNAL_LINKS_VERSION: 0.1.2
     steps:
       - name: Checkout repository
@@ -47,9 +46,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Install mdBook
+      - name: Install mdBook extension
         run: |
-          cargo install --version ${MDBOOK_VERSION} mdbook
           cargo install --version ${MDBOOK_EXTERNAL_LINKS_VERSION} mdbook-external-links
 
       - name: Process changed ShapeDiver models
