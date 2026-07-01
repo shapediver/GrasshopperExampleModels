@@ -673,6 +673,16 @@ async function finalizeModel(
             previousModel,
             stableSlug
         );
+
+        if (
+            previousModel.visibility_nominal !== SdPlatformModelVisibility.Private &&
+            previousModel.visibility !== SdPlatformModelVisibility.Private
+        ) {
+            log(`Setting visibility for previous platform model '${previousModel.id}' to private.`);
+            await client.models.patch(previousModel.id, {
+                visibility: SdPlatformModelVisibility.Private,
+            });
+        }
     } else {
         finalizedModel = await ensureExpectedSlug(client, finalizedModel, stableSlug);
     }
