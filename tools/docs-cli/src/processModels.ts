@@ -678,7 +678,9 @@ async function finalizeModel(
             previousModel.visibility_nominal !== SdPlatformModelVisibility.Private &&
             previousModel.visibility !== SdPlatformModelVisibility.Private
         ) {
-            log(`Setting visibility for previous platform model '${previousModel.id}' to private.`);
+            log(
+                `Setting visibility for previous platform model '${previousModel.id}' to private.`
+            );
             await client.models.patch(previousModel.id, {
                 visibility: SdPlatformModelVisibility.Private,
             });
@@ -724,10 +726,7 @@ async function transferStableSlug(
     );
 
     try {
-        const response = await client.models.swapSlug(newModel.id, {
-            other: previousModel.id,
-            other_slug: '',
-        });
+        const response = await client.models.swapSlug(newModel.id, { other: previousModel.id });
         log(
             `Transferred stable slug '${stableSlug}' to new model '${newModel.id}'. Swap response: ${JSON.stringify(response.data)}.`
         );
