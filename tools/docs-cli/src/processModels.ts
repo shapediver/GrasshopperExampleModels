@@ -1030,7 +1030,7 @@ function logSubsection(title: string): void {
 }
 
 function buildPaddedSeparator(title: string, fillCharacter: '=' | '-'): string {
-    const totalLength = 90;
+    const totalLength = 120;
     const paddedTitle = ` ${title} `;
     const remainingLength = totalLength - paddedTitle.length;
 
