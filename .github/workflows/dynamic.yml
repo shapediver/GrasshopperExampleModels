@@ -56,6 +56,7 @@ jobs:
           SHAPEDIVER_PLATFORM_USER_ID: ${{ secrets.SHAPEDIVER_PLATFORM_USER_ID }}
           SHAPEDIVER_ACCESS_KEY_ID: ${{ secrets.SHAPEDIVER_ACCESS_KEY_ID }}
           SHAPEDIVER_ACCESS_KEY_SECRET: ${{ secrets.SHAPEDIVER_ACCESS_KEY_SECRET }}
+          DEFAULT_BACKEND_SYSTEM_ALIAS: ${{ vars.DEFAULT_BACKEND_SYSTEM_ALIAS }}
         run: |
           set +e
           pnpm run docs:process-models > dynamic-process-result.json 2> dynamic-process-stderr.txt

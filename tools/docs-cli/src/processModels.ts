@@ -108,10 +108,12 @@ async function main(): Promise<void> {
         const accessKeyId = requireEnv('SHAPEDIVER_ACCESS_KEY_ID');
         const accessKeySecret = requireEnv('SHAPEDIVER_ACCESS_KEY_SECRET');
         const platformUrl = requireEnv('SHAPEDIVER_PLATFORM_URL', 'https://app.shapediver.com');
+        const defaultBackendSystemAlias = requireEnv('DEFAULT_BACKEND_SYSTEM_ALIAS');
         const currentSha = requireEnv('GITHUB_SHA', getCurrentSha(repoRoot));
         const chapterFilter = process.env.PROCESS_MODELS_CHAPTER;
 
         log(`Platform user ID is '${platformUserId}'.`);
+        log(`Default backend system alias is '${defaultBackendSystemAlias}'.`);
         log(`Current SHA is '${currentSha}'.`);
 
         if (chapterFilter) {
@@ -142,7 +144,14 @@ async function main(): Promise<void> {
 
         logSection(`PROCESS ${preflight.length} QUEUED PREFLIGHT MODELS`);
         for (const item of preflight) {
-            await processPreflightItem(client, item, currentSha, state);
+            await processPreflightItem(
+                client,
+                item,
+                currentSha,
+                platformUserId,
+                defaultBackendSystemAlias,
+                state
+            );
         }
 
         logSummary(state, false);
@@ -336,11 +345,20 @@ async function processPreflightItem(
     client: PlatformClient,
     item: PreflightItem,
     currentSha: string,
+    platformUserId: string,
+    defaultBackendSystemAlias: string,
     state: ProcessingState
 ): Promise<void> {
     logModelBlock(item.example);
 
-    const wipModel = await createWipModel(client, item.example, item.previousModel, currentSha);
+    const wipModel = await createWipModel(
+        client,
+        item.example,
+        item.previousModel,
+        currentSha,
+        platformUserId,
+        defaultBackendSystemAlias
+    );
     const geometryContext = await uploadGrasshopperFile(client, wipModel.id, item.example);
     await processOpenModel(
         client,
@@ -357,14 +375,27 @@ async function createWipModel(
     client: PlatformClient,
     example: RepoExample,
     previousModel: SdPlatformResponseModelOwner | null,
-    currentSha: string
+    currentSha: string,
+    platformUserId: string,
+    defaultBackendSystemAlias: string
 ): Promise<SdPlatformResponseModelOwner> {
     const temporarySlug = getTemporarySlug(example.slug);
+    const backendSystemAlias = getWipCreationBackendSystemAlias(
+        example.slug,
+        previousModel,
+        defaultBackendSystemAlias
+    );
+    const userId = previousModel?.user?.id ?? platformUserId;
     await assertTemporarySlugAvailable(client, temporarySlug);
 
     log(
-        `Creating private WIP model with previous model '${previousModel?.id ?? 'none'}' and SHA '${currentSha}'.`
+        `Creating private WIP model with previous model '${previousModel?.id ?? 'none'}', backend system '${backendSystemAlias}', and SHA '${currentSha}'.`
     );
+
+    log(
+        `Ensuring user '${userId}' uses backend system '${backendSystemAlias}' before model creation.`
+    );
+    await client.users.patch(userId, { backend_system_alias: backendSystemAlias });
 
     const response = await client.models.create({
         title: `${example.titlePrefix} - ${example.title}`,
@@ -376,12 +407,29 @@ async function createWipModel(
         require_token: previousModel?.require_token,
     });
 
-    const createdModel = response.data as SdPlatformResponseModelOwner;
-    const sluggedModel = await ensureExpectedSlug(client, createdModel, temporarySlug);
+    const wipModel = await ensureExpectedSlug(client, response.data, temporarySlug);
+    log(`Created WIP model '${wipModel.id}' with slug '${wipModel.slug}'.`);
 
-    log(`Created WIP model '${sluggedModel.id}' with slug '${sluggedModel.slug}'.`);
+    return wipModel;
+}
 
-    return sluggedModel;
+function getWipCreationBackendSystemAlias(
+    stableSlug: string,
+    previousModel: SdPlatformResponseModelOwner | null,
+    defaultBackendSystemAlias: string
+): string {
+    if (previousModel) {
+        const previousBackendSystemAlias = previousModel.backend_system?.alias;
+        if (!previousBackendSystemAlias) {
+            throw new Error(
+                `Cannot create WIP model for slug '${stableSlug}': previous model '${previousModel.id}' exists but has no backend system alias.`
+            );
+        }
+
+        return previousBackendSystemAlias;
+    }
+
+    return defaultBackendSystemAlias;
 }
 
 async function assertTemporarySlugAvailable(

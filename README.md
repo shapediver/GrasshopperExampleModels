@@ -33,9 +33,10 @@ The source of truth for example metadata is `src/**/examples.json`. Markdown tab
 - `pnpm run docs:process-models` processes changed Grasshopper models for ShapeDiver deployment.
 
     Required environment variables:
-    - `SHAPEDIVER_PLATFORM_USER_ID`
+    - `SHAPEDIVER_PLATFORM_USER_ID` - The ShapeDiver user ID that has to own all example models.
     - `SHAPEDIVER_ACCESS_KEY_ID`
     - `SHAPEDIVER_ACCESS_KEY_SECRET`
+    - `DEFAULT_BACKEND_SYSTEM_ALIAS` — backend system alias used when creating a brand-new model without a previous ShapeDiver model
 
     Optional environment variables:
     - `SHAPEDIVER_PLATFORM_URL` — defaults to `https://app.shapediver.com`
