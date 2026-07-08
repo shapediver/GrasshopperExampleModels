@@ -90,7 +90,7 @@
     "../02-Inputs/2D-SelectionInput_Basic.ghx": {
         "anchor": "interaction",
         "slug": "2d-selectioninput-tutorial1",
-        "title": "Selection Input - Basic Tutorial",
+        "title": "Selection Input 1 - Basic Tutorial",
         "modelLink": false,
         "appLink": true,
         "rating": 1,
@@ -102,7 +102,7 @@
     "../02-Inputs/2E-SelectionInput_Advanced.ghx": {
         "anchor": "interaction",
         "slug": "2e-selectioninput-tutorial2",
-        "title": "Selection Input - Influence Geometry and Context",
+        "title": "Selection Input 2 - Influence Geometry and Context",
         "modelLink": false,
         "appLink": true,
         "rating": 2,
