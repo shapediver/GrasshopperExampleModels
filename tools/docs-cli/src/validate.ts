@@ -69,6 +69,10 @@ function validateReferencedFile(
                 // The top-level key is the main Grasshopper file for the example.
                 validateReferencedFile(main, main, filePath);
 
+                if (example.thumbnail !== '') {
+                    validateReferencedFile(example.thumbnail, `${main}.thumbnail`, filePath);
+                }
+
                 // Auxiliary Grasshopper assets are declared as label -> relative file path.
                 for (const [label, referencedFile] of Object.entries(example.ghFiles)) {
                     validateReferencedFile(referencedFile, `${main}.ghFiles.${label}`, filePath);

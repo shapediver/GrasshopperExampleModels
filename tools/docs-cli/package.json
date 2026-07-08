@@ -11,10 +11,5 @@
         "@shapediver/sdk.geometry-api-sdk-v2": "3.4.2",
         "@shapediver/sdk.platform-api-sdk-v1": "2.29.17",
         "zod": "4.3.6"
-    },
-    "devDependencies": {
-        "@types/node": "24.1.0",
-        "tsx": "4.21.0",
-        "typescript": "6.0.2"
     }
 }

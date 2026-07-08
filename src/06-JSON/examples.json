@@ -3,12 +3,14 @@
         "anchor": "json",
         "slug": "",
         "title": "Introduction to JSON object manipulation",
+        "description": "Introduction to JSON object manipulation",
         "modelLink": false,
         "appLink": false,
         "rating": 1,
         "docLink": false,
         "videoLink": false,
+        "thumbnail": "",
         "ghFiles": {},
-		"files": {}
+        "files": {}
     }
 }

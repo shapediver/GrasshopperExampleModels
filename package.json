@@ -1,6 +1,7 @@
 {
     "name": "root",
     "private": true,
+    "workspaces": ["tools"],
     "scripts": {
         "prepare": "husky",
         "docs:create-tables": "node ./scripts/run-docs-cli.cjs create-tables",
@@ -9,10 +10,13 @@
     },
     "devDependencies": {
         "@eslint/js": "10.0.1",
+        "@types/node": "24.1.0",
         "eslint": "10.2.0",
         "husky": "9.1.7",
         "npm-check-updates": "21.0.0",
         "prettier": "3.8.3",
-        "typescript-eslint": "8.58.2"
+        "tsx": "4.21.0",
+        "typescript-eslint": "8.58.2",
+        "typescript": "6.0.2"
     }
 }

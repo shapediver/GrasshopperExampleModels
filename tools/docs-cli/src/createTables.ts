@@ -135,7 +135,7 @@ function createTable(examples: Examples[]): string {
         const cells = [
             ref,
             ...(resourceCell !== null ? [resourceCell] : []),
-            data.title,
+            data.description,
             shapeDiverLinks,
             ghDefinitionCell,
             ...(hasFiles ? [filesCell] : []),

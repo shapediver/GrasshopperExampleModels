@@ -44,10 +44,12 @@ type ProcessResult = {
 type RepoExample = {
     slug: string;
     title: string;
+    description: string;
     filePath: string;
     relativeFilePath: string;
     fileType: SdPlatformModelFileType;
     titlePrefix: string;
+    thumbnail: string;
 };
 
 type PlatformClient = ReturnType<typeof create>;
@@ -226,11 +228,13 @@ function extractProcessableExamples(
         repoExamples.push({
             slug: entry.slug,
             title: entry.title,
+            description: entry.description,
             filePath: resolvedFilePath,
             relativeFilePath: toRepoRelativePath(repoRoot, resolvedFilePath),
             fileType:
                 extension === '.gh' ? SdPlatformModelFileType.GH : SdPlatformModelFileType.GHX,
             titlePrefix: path.basename(mainFile).split('-')[0],
+            thumbnail: entry.thumbnail,
         });
     }
 
@@ -400,6 +404,7 @@ async function createWipModel(
 
     const response = await client.models.create({
         title: `${example.titlePrefix} - ${example.title}`,
+        description: example.description,
         ftype: example.fileType,
         comment: currentSha,
         prev_id: previousModel?.id,
@@ -408,10 +413,102 @@ async function createWipModel(
         require_token: previousModel?.require_token,
     });
 
-    const wipModel = await ensureExpectedSlug(client, response.data, temporarySlug);
+    let wipModel = await ensureExpectedSlug(client, response.data, temporarySlug);
     log(`Created WIP model '${wipModel.id}' with slug '${wipModel.slug}'.`);
 
+    wipModel =
+        example.thumbnail !== ''
+            ? await createDecorationFromThumbnail(client, wipModel, example)
+            : await copyPreviousModelDecoration(client, wipModel, previousModel);
+
+    log('Initial WIP model setup complete.');
+
     return wipModel;
+}
+
+async function createDecorationFromThumbnail(
+    client: PlatformClient,
+    targetModel: SdPlatformResponseModelOwner,
+    example: RepoExample
+): Promise<SdPlatformResponseModelOwner> {
+    if (example.thumbnail === '') {
+        return targetModel;
+    }
+
+    const freshTargetModel = await requirePlatformModel(client, targetModel.id);
+    if ((freshTargetModel.decoration?.length ?? 0) > 0) {
+        log(
+            `Skipping dedicated thumbnail upload because it already has ${freshTargetModel.decoration?.length ?? 0} decoration image(s).`
+        );
+        return freshTargetModel;
+    }
+
+    const thumbnailFilePath = path.resolve(path.dirname(example.filePath), example.thumbnail);
+    log(`Uploading dedicated thumbnail '${example.thumbnail}' as decoration.`);
+
+    const imageData = (await fsPromises.readFile(thumbnailFilePath)).toString('base64');
+    const createdImage = await client.images.create({ imageData });
+    const patchedModel = (await client.models.patch(targetModel.id, {
+        decoration: [createdImage.data.id],
+    })) as { data: SdPlatformResponseModelOwner };
+
+    log(`Uploaded dedicated thumbnail as decoration for WIP model.`);
+
+    return patchedModel.data;
+}
+
+async function copyPreviousModelDecoration(
+    client: PlatformClient,
+    targetModel: SdPlatformResponseModelOwner,
+    previousModel: SdPlatformResponseModelOwner | null
+): Promise<SdPlatformResponseModelOwner> {
+    const sourceDecoration = previousModel?.decoration ?? [];
+    if (sourceDecoration.length === 0) {
+        log(`Skipping decoration copy because the previous Model has no decorations.`);
+        return targetModel;
+    }
+
+    const freshTargetModel = await requirePlatformModel(client, targetModel.id);
+    if ((freshTargetModel.decoration?.length ?? 0) > 0) {
+        log(
+            `Skipping decoration copy because the WIP-model already has ${freshTargetModel.decoration?.length ?? 0} decoration image(s).`
+        );
+        return freshTargetModel;
+    }
+
+    log(`Copying ${sourceDecoration.length} decoration image(s) from previous model.`);
+
+    const copiedImageIds: string[] = [];
+    for (const image of sourceDecoration) {
+        if (!image.url) {
+            throw new Error(
+                `Cannot copy decoration image from previous model because image '${image.id}' has no URL.`
+            );
+        }
+
+        const imageResponse = await fetch(image.url);
+        if (!imageResponse.ok) {
+            throw new Error(
+                `Failed to download decoration image '${image.id}' from '${image.url}': HTTP ${imageResponse.status} ${imageResponse.statusText}.`
+            );
+        }
+
+        const imageData = Buffer.from(await imageResponse.arrayBuffer()).toString('base64');
+        const createdImage = await client.images.create({
+            alt: image.alt,
+            alias: image.alias,
+            imageData,
+        });
+        copiedImageIds.push(createdImage.data.id);
+    }
+
+    const patchedModel = (await client.models.patch(targetModel.id, {
+        decoration: copiedImageIds,
+    })) as { data: SdPlatformResponseModelOwner };
+
+    log(`Copied ${copiedImageIds.length} decoration image(s) to WIP model.`);
+
+    return patchedModel.data;
 }
 
 function getWipCreationBackendSystemAlias(
@@ -824,6 +921,7 @@ async function getPlatformModel(
         const response = await client.models.get(idOrSlug, [
             SdPlatformModelGetEmbeddableFields.User,
             SdPlatformModelGetEmbeddableFields.BackendSystem,
+            SdPlatformModelGetEmbeddableFields.Decoration,
             SdPlatformModelGetEmbeddableFields.PreviousModel,
         ]);
         const model = response.data as SdPlatformResponseModelOwner;

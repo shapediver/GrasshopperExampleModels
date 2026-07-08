@@ -3,60 +3,70 @@
         "anchor": "images",
         "slug": "5a-grasshopperbitmap-8",
         "title": "Introduction to Grasshopper Bitmaps",
+        "description": "Introduction to Grasshopper Bitmaps",
         "modelLink": true,
         "appLink": false,
         "rating": 1,
         "docLink": false,
         "videoLink": false,
+        "thumbnail": "",
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "5B-ShapeDiverImageSampler.ghx": {
         "anchor": "images",
         "slug": "5b-shapediverimagesampler-4",
         "title": "ShapeDiver Image Sampler",
+        "description": "ShapeDiver Image Sampler",
         "modelLink": true,
         "appLink": false,
         "rating": 1,
         "docLink": false,
         "videoLink": false,
+        "thumbnail": "",
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "5C-ShapeDiverImageToMesh.ghx": {
         "anchor": "images",
         "slug": "5c-shapediverimagetomesh-40",
         "title": "ShapeDiver Image to Mesh",
+        "description": "ShapeDiver Image to Mesh",
         "modelLink": true,
         "appLink": false,
         "rating": 1,
         "docLink": false,
         "videoLink": false,
+        "thumbnail": "",
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "5D-SquidShapeDiverEdition.ghx": {
         "anchor": "images",
         "slug": "5d-squidshapediveredition",
         "title": "Use the Squid plugin to generate Bitmaps",
+        "description": "Use the Squid plugin to generate Bitmaps",
         "modelLink": true,
         "appLink": false,
         "rating": 2,
         "docLink": false,
         "videoLink": false,
+        "thumbnail": "",
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "5Dbis-SquidShapeDiverEditionPDF.ghx": {
         "anchor": "images",
         "slug": "5dbis-squidshapedivereditionpdf",
         "title": "Use the Squid plugin to generate Pdfs",
+        "description": "Use the Squid plugin to generate Pdfs",
         "modelLink": true,
         "appLink": false,
         "rating": 2,
         "docLink": false,
         "videoLink": false,
+        "thumbnail": "",
         "ghFiles": {},
-		"files": {}
+        "files": {}
     }
 }

@@ -3,48 +3,56 @@
         "anchor": "outputs",
         "slug": "3a-exportexamples-27",
         "title": "Export Components - Basic Tutorial",
+        "description": "Export Components - Basic Tutorial",
         "modelLink": true,
         "appLink": false,
         "rating": 1,
         "docLink": "https://help.shapediver.com/doc/download-export",
         "videoLink": false,
+        "thumbnail": "",
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "3B-ExportWithAttributes.ghx": {
         "anchor": "outputs",
         "slug": "3b-exportwithattributes",
         "title": "Use attributes to export document properties",
+        "description": "Use attributes to export document properties",
         "modelLink": true,
         "appLink": false,
         "rating": 1,
         "docLink": "https://help.shapediver.com/doc/export-attributes",
         "videoLink": false,
+        "thumbnail": "",
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "3E-DataOutputTypes.ghx": {
         "anchor": "outputs",
         "slug": "",
-        "title": "Direct Data Output - Explore all supported data types",
+        "title": "Direct Data Output - All data types",
+        "description": "Direct Data Output - All data types",
         "modelLink": false,
         "appLink": false,
         "rating": 1,
         "docLink": "https://help.shapediver.com/doc/direct-data-output",
         "videoLink": false,
+        "thumbnail": "",
         "ghFiles": {},
-		"files": {}
+        "files": {}
     },
     "3H-ExportZipArchive.ghx": {
         "anchor": "outputs",
         "slug": "3h-exportziparchive",
         "title": "Export archives with multiple files",
+        "description": "Export archives with multiple files",
         "modelLink": true,
         "appLink": false,
         "rating": 1,
         "docLink": "https://help.shapediver.com/doc/zip-streams",
         "videoLink": false,
+        "thumbnail": "",
         "ghFiles": {},
-		"files": {}
+        "files": {}
     }
 }

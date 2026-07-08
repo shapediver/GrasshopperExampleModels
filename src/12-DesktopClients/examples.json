@@ -3,11 +3,13 @@
         "anchor": "clients",
         "slug": "12a-desktopclientstutorial",
         "title": "Desktop Clients 1 - Basic Tutorial",
+        "description": "Desktop Clients 1 - Basic Tutorial",
         "modelLink": true,
         "appLink": true,
         "rating": 1,
         "docLink": false,
         "videoLink": false,
+        "thumbnail": "",
         "ghFiles": {},
         "files": {}
     }

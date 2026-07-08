@@ -3,11 +3,13 @@
         "anchor": "attributes",
         "slug": "7a-attributevisualization-3",
         "title": "Attribute Visualization 1 - Basic Tutorial",
+        "description": "Attribute Visualization 1 - Basic Tutorial",
         "modelLink": true,
         "appLink": true,
         "rating": 1,
         "docLink": "https://shapediver.atlassian.net/wiki/spaces/DOC/pages/2104721409/ShapeDiver+Output",
         "videoLink": false,
+        "thumbnail": "",
         "ghFiles": {},
         "files": {}
     }
