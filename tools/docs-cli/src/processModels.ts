@@ -878,9 +878,7 @@ async function transferStableSlug(
             other: previousModel.id,
             other_slug: previousModelReplacementSlug,
         });
-        log(
-            `Transferred stable slug '${stableSlug}' to new model '${newModel.id}'. Swap response: ${JSON.stringify(response.data)}.`
-        );
+        log(`Transferred stable slug '${stableSlug}' to new model '${newModel.id}'.`);
         return await requirePlatformModel(client, newModel.id);
     } catch (error) {
         throw new Error(
