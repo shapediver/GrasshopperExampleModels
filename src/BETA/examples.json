@@ -2,7 +2,7 @@
     "BETA-DynamicSlidersTutorial.ghx": {
         "anchor": "dynamic",
         "slug": "beta-dynamicsliderstutorial",
-        "title": "Dynamic Sliders Tutorial",
+        "title": "Beta - Dynamic Sliders",
         "modelLink": true,
         "appLink": true,
         "rating": 2,
@@ -14,7 +14,7 @@
     "BETA-DynamicValueListsTutorial.ghx": {
         "anchor": "dynamic",
         "slug": "beta-dynamicvalueliststutorial",
-        "title": "Dynamic Value Lists Tutorial",
+        "title": "Beta - Dynamic Value Lists",
         "modelLink": true,
         "appLink": true,
         "rating": 2,
@@ -26,7 +26,7 @@
     "BETA-DynamicPointsInput.ghx": {
         "anchor": "dynamic",
         "slug": "beta-dynamicpointsinput",
-        "title": "Dynamic Points Input Tutorial",
+        "title": "Beta - Dynamic Points Input",
         "modelLink": true,
         "appLink": true,
         "rating": 2,
@@ -38,7 +38,7 @@
     "BETA-SearchableValueList.ghx": {
         "anchor": "beta",
         "slug": "beta-searchablevaluelist-1",
-        "title": "Define searchable value lists",
+        "title": "Beta - Searchable Value Lists",
         "modelLink": true,
         "appLink": true,
         "rating": 1,
@@ -50,7 +50,7 @@
     "BETA-MultilineTextInput.ghx": {
         "anchor": "beta",
         "slug": "beta-multilinetextinput",
-        "title": "Define multiline text inputs",
+        "title": "Beta - Multiline Text Inputs",
         "modelLink": true,
         "appLink": true,
         "rating": 1,
@@ -62,7 +62,7 @@
     "BETA-InstancesTutorial1-Controller.ghx": {
         "anchor": "beta",
         "slug": "beta-instancestutorial1-controller",
-        "title": "Control instances of other ShapeDiver models",
+        "title": "Control Instances of other ShapeDiver Models",
         "modelLink": false,
         "appLink": true,
         "rating": 2,
@@ -76,7 +76,7 @@
     "BETA-Anchor3dSimple.ghx": {
         "anchor": "beta",
         "slug": "beta-anchor3d",
-        "title": "Create anchor containers attached to 3d locations in the scene",
+        "title": "Containers with 3D Anchors in the Scene",
         "modelLink": true,
         "appLink": true,
         "rating": 2,
@@ -88,7 +88,7 @@
     "BETA-Anchor2dTutorial.ghx": {
         "anchor": "beta",
         "slug": "beta-anchor2d",
-        "title": "Create anchor containers attached to 2d locations on the screen",
+        "title": "Containers with 2D Anchors on the Screen",
         "modelLink": true,
         "appLink": true,
         "rating": 2,
@@ -100,7 +100,7 @@
     "BETA-SoundAction.ghx": {
         "anchor": "beta",
         "slug": "beta-soundaction",
-        "title": "Play a sound",
+        "title": "Beta - Play a Sound",
         "modelLink": true,
         "appLink": true,
         "rating": 1,
@@ -112,7 +112,7 @@
     "BETA-ExportWithState.ghx": {
         "anchor": "beta",
         "slug": "beta-exportwithstate",
-        "title": "Loop the value of a model state back to Grasshopper and include it in an export email",
+        "title": "Beta - Loop Model State Values back to Grasshopper",
         "modelLink": true,
         "appLink": true,
         "rating": 1,
@@ -124,7 +124,7 @@
     "BETA-ExportWithScreenshot.ghx": {
         "anchor": "beta",
         "slug": "beta-exportwithscreenshot",
-        "title": "Send a screenshot of the App back to Grasshopper and include it in an export email",
+        "title": "Beta - Loop Screenshot back to Grasshopper",
         "modelLink": true,
         "appLink": true,
         "rating": 1,
@@ -136,7 +136,7 @@
     "BETA-FormWidget.ghx": {
         "anchor": "beta",
         "slug": "beta-formwidget",
-        "title": "Create form inputs linked to a file export",
+        "title": "Beta - Form widget",
         "modelLink": true,
         "appLink": true,
         "rating": 1,
@@ -148,7 +148,7 @@
     "BETA-CameraAction.ghx": {
         "anchor": "beta",
         "slug": "beta-cameraaction",
-        "title": "Trigger camera movements and animations using a Camera Action.",
+        "title": "Beta - Camera Action",
         "modelLink": true,
         "appLink": true,
         "rating": 2,
@@ -160,7 +160,7 @@
     "BETA-SavedStatesWidget.ghx": {
         "anchor": "beta",
         "slug": "beta-savedstateswidget",
-        "title": "Saved States Widget",
+        "title": "Beta - Saved States Widget",
         "modelLink": true,
         "appLink": true,
         "rating": 1,

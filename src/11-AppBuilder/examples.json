@@ -2,7 +2,7 @@
     "11A-AppBuilder_Tutorial1.ghx": {
         "anchor": "workflows",
         "slug": "appbuilder-tutorial1-simpleexample",
-        "title": "Build a simple user interface with controls and text widgets",
+        "title": "App Builder 1 - Basic Tutorial",
         "modelLink": true,
         "appLink": true,
         "rating": 1,
@@ -14,7 +14,7 @@
     "11B-AppBuilder_Tutorial2.ghx": {
         "anchor": "workflows",
         "slug": "appbuilder-tutorial2-contextualui",
-        "title": "Use parametric logic to build a contextual interface",
+        "title": "App Builder 2 - Contextual UI",
         "modelLink": true,
         "appLink": true,
         "rating": 1,
@@ -28,7 +28,7 @@
     "11C-AppBuilder_Tutorial3.ghx": {
         "anchor": "workflows",
         "slug": "appbuilder-tutorial3-imagewidget",
-        "title": "Link Export components to image widgets in your apps.",
+        "title": "App Builder 3 - Link Exports with Image Widgets",
         "modelLink": true,
         "appLink": true,
         "rating": 2,
@@ -42,7 +42,7 @@
     "11D-AppBuilder_Tutorial4.ghx": {
         "anchor": "workflows",
         "slug": "appbuilder-tutorial4-charts",
-        "title": "Define charts and graphs",
+        "title": "App Builder 4 - Charts and Graphs",
         "modelLink": true,
         "appLink": true,
         "rating": 3,
@@ -90,7 +90,7 @@
     "../02-Inputs/2D-SelectionInput_Basic.ghx": {
         "anchor": "interaction",
         "slug": "2d-selectioninput-tutorial1",
-        "title": "Selection Input basic tutorial",
+        "title": "Selection Input - Basic Tutorial",
         "modelLink": false,
         "appLink": true,
         "rating": 1,
@@ -102,7 +102,7 @@
     "../02-Inputs/2E-SelectionInput_Advanced.ghx": {
         "anchor": "interaction",
         "slug": "2e-selectioninput-tutorial2",
-        "title": "Use a Selection Input to influence both geometry and build a contextual App user interface",
+        "title": "Selection Input - Influence Geometry and Context",
         "modelLink": false,
         "appLink": true,
         "rating": 2,
@@ -114,7 +114,7 @@
     "../02-Inputs/2F-GumballInput_Basic.ghx": {
         "anchor": "interaction",
         "slug": "2f-minimalgumballexample",
-        "title": "Gumball Input basic tutorial",
+        "title": "Gumball Input 1 - Basic Tutorial",
         "modelLink": true,
         "appLink": true,
         "rating": 1,
@@ -126,7 +126,7 @@
     "../02-Inputs/2G-GumballInput_Tutorial1.ghx": {
         "anchor": "interaction",
         "slug": "2g-gumballinput-tutorial1",
-        "title": "Use a Gumball Input to transform geometry in the viewer and apply the transformations in Grasshopper",
+        "title": "Gumball Input 2 - Loop Transformations in Grasshopper",
         "modelLink": true,
         "appLink": true,
         "rating": 2,
@@ -138,7 +138,7 @@
     "../02-Inputs/2H-Gumballinput_Tutorial2.ghx": {
         "anchor": "interaction",
         "slug": "2h-gumballinput-tutorial2-3",
-        "title": "Advanced Gumball example with dynamic transformable objects.",
+        "title": "Gumball Input 3 - Dynamic Transformable Objects",
         "modelLink": true,
         "appLink": true,
         "rating": 3,
@@ -150,7 +150,7 @@
     "../02-Inputs/2I-PointsInputBasicTutorial.ghx": {
         "anchor": "interaction",
         "slug": "2i-pointsinputsimpleexample",
-        "title": "Points Input basic tutorial",
+        "title": "Points Input 1 - Basic Tutorial",
         "modelLink": true,
         "appLink": true,
         "rating": 2,
@@ -162,7 +162,7 @@
     "../02-Inputs/2J-PointsInputGeometryConstraints.ghx": {
         "anchor": "interaction",
         "slug": "2j-pointsinputgeometryconstraints",
-        "title": "Points Input with geometry constraints",
+        "title": "Points Input 2 - Geometry Constraints",
         "modelLink": true,
         "appLink": true,
         "rating": 2,

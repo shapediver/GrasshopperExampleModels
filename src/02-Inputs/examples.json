@@ -26,7 +26,7 @@
     "2C-ImportWithAttributes.ghx": {
         "anchor": "inputs",
         "slug": "2c-importwithattributes",
-        "title": "Import document properties and User Text using ShapeDiver Attributes.",
+        "title": "Use attributes to import properties and user text",
         "modelLink": true,
         "appLink": false,
         "rating": 2,
@@ -40,7 +40,7 @@
     "2D-SelectionInput_Basic.ghx": {
         "anchor": "inputs",
         "slug": "2d-selectioninput-tutorial1",
-        "title": "Selection Input basic tutorial",
+        "title": "Selection Input - Basic Tutorial",
         "modelLink": false,
         "appLink": true,
         "rating": 1,
@@ -52,7 +52,7 @@
     "2E-SelectionInput_Advanced.ghx": {
         "anchor": "inputs",
         "slug": "2e-selectioninput-tutorial2",
-        "title": "Use a Selection Input to influence both geometry and build a contextual App user interface",
+        "title": "Selection Input - Influence Geometry and Context",
         "modelLink": false,
         "appLink": true,
         "rating": 2,
@@ -64,8 +64,8 @@
     "2F-GumballInput_Basic.ghx": {
         "anchor": "inputs",
         "slug": "2f-minimalgumballexample",
-        "title": "Gumball Input basic tutorial",
-        "modelLink": true,
+        "title": "Gumball Input 1 - Basic Tutorial",
+        "modelLink": false,
         "appLink": true,
         "rating": 1,
         "docLink": "https://help.shapediver.com/doc/gumball-input",
@@ -76,8 +76,8 @@
     "2G-GumballInput_Tutorial1.ghx": {
         "anchor": "inputs",
         "slug": "2g-gumballinput-tutorial1",
-        "title": "Use a Gumball Input to transform geometry in the viewer and apply the transformations in Grasshopper",
-        "modelLink": true,
+        "title": "Gumball Input 2 - Loop Transformations in Grasshopper",
+        "modelLink": false,
         "appLink": true,
         "rating": 2,
         "docLink": "https://help.shapediver.com/doc/gumball-input",
@@ -88,8 +88,8 @@
     "2H-Gumballinput_Tutorial2.ghx": {
         "anchor": "inputs",
         "slug": "2h-gumballinput-tutorial2-3",
-        "title": "Advanced Gumball example with dynamic transformable objects.",
-        "modelLink": true,
+        "title": "Gumball Input 3 - Dynamic Transformable Objects",
+        "modelLink": false,
         "appLink": true,
         "rating": 3,
         "docLink": "https://help.shapediver.com/doc/gumball-input",
@@ -100,8 +100,8 @@
     "2I-PointsInputBasicTutorial.ghx": {
         "anchor": "inputs",
         "slug": "2i-pointsinputsimpleexample",
-        "title": "Points Input basic tutorial",
-        "modelLink": true,
+        "title": "Points Input 1 - Basic Tutorial",
+        "modelLink": false,
         "appLink": true,
         "rating": 2,
         "docLink": "https://help.shapediver.com/doc/points-input",
@@ -112,8 +112,8 @@
     "2J-PointsInputGeometryConstraints.ghx": {
         "anchor": "inputs",
         "slug": "2j-pointsinputgeometryconstraints",
-        "title": "Points Input with geometry constraints",
-        "modelLink": true,
+        "title": "Points Input 2 - Geometry Constraints",
+        "modelLink": false,
         "appLink": true,
         "rating": 2,
         "docLink": "https://help.shapediver.com/doc/points-input",
@@ -124,8 +124,8 @@
     "2K-ValueListWithImages.ghx": {
         "anchor": "inputs",
         "slug": "2k-valuelistwithimages",
-        "title": "Define various types of value lists with images",
-        "modelLink": true,
+        "title": "Create Image Pickers using Value List Settings",
+        "modelLink": false,
         "appLink": true,
         "rating": 2,
         "docLink": false,
@@ -136,8 +136,8 @@
     "2L-SliderSettings.ghx": {
         "anchor": "inputs",
         "slug": "2l-slidersettings",
-        "title": "Create or override slider settings such as min and max values, step and marks.",
-        "modelLink": true,
+        "title": "Create and Override Slider Settings",
+        "modelLink": false,
         "appLink": true,
         "rating": 1,
         "docLink": false,

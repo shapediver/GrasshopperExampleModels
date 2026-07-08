@@ -38,7 +38,7 @@
     "5D-SquidShapeDiverEdition.ghx": {
         "anchor": "images",
         "slug": "5d-squidshapediveredition",
-        "title": "Use the Squid plugin to generate bitmaps in Grasshopper",
+        "title": "Use the Squid plugin to generate Bitmaps",
         "modelLink": true,
         "appLink": false,
         "rating": 2,
@@ -50,7 +50,7 @@
     "5Dbis-SquidShapeDiverEditionPDF.ghx": {
         "anchor": "images",
         "slug": "5dbis-squidshapedivereditionpdf",
-        "title": "Use the Squid plugin to generate pdfs in Grasshopper",
+        "title": "Use the Squid plugin to generate Pdfs",
         "modelLink": true,
         "appLink": false,
         "rating": 2,

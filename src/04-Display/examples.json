@@ -2,7 +2,7 @@
     "4A-DisplayBasicTutorial.ghx": {
         "anchor": "display",
         "slug": "4a-displaybasictutorial",
-        "title": "Display Basic tutorial - All the ways to display geometry in the ShapeDiver viewer",
+        "title": "Display Basic Tutorial - Overview",
         "modelLink": true,
         "appLink": false,
         "rating": 1,
@@ -26,7 +26,7 @@
     "4C-RenderingGuide.ghx": {
         "anchor": "display",
         "slug": "4c-renderingguide",
-        "title": "Rendering Guide: How to Make Your Models Look Great Online",
+        "title": "Rendering Guide: Make Models Look Great Online",
         "modelLink": false,
         "appLink": true,
         "rating": 2,
