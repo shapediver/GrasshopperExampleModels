@@ -23,7 +23,6 @@ import {
     type SdPlatformResponseModelPublic,
 } from '@shapediver/sdk.platform-api-sdk-v1';
 import { execFileSync } from 'child_process';
-import { randomBytes } from 'crypto';
 import fs from 'fs';
 import fsPromises from 'fs/promises';
 import path from 'path';
@@ -885,17 +884,10 @@ async function transferStableSlug(
         return newModel;
     }
 
-    const previousModelReplacementSlug = `${stableSlug}-${randomBytes(4).toString('hex')}`;
-
-    log(
-        `Transferring stable slug '${stableSlug}' from previous model '${previousModel.id}' to new model '${newModel.id}' and assigning previous model slug '${previousModelReplacementSlug}'.`
-    );
+    log(`Transferring stable slug '${stableSlug}' from previous model '${previousModel.id}' to new model '${newModel.id}'.`);
 
     try {
-        const response = await client.models.swapSlug(newModel.id, {
-            other: previousModel.id,
-            other_slug: previousModelReplacementSlug,
-        });
+        await client.models.swapSlug(newModel.id, { other: previousModel.id, other_slug: '' });
         log(`Transferred stable slug '${stableSlug}' to new model '${newModel.id}'.`);
         return await requirePlatformModel(client, newModel.id);
     } catch (error) {
