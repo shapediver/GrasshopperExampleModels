@@ -556,8 +556,26 @@ async function processOpenModel(
 ): Promise<void> {
     log(`Processing ${source} model '${openModel.id}'.`);
 
-    const resolvedGeometryContext =
-        geometryContext ?? (await getGeometryUploadContext(client, openModel));
+    let resolvedGeometryContext: GeometryUploadContext;
+    if (geometryContext) {
+        resolvedGeometryContext = geometryContext;
+    } else {
+        resolvedGeometryContext = await getGeometryUploadContext(client, openModel);
+        if (
+            resolvedGeometryContext.geometryModel.model.stat ===
+            GeometryResModelStatus.NOT_UPLOADED
+        ) {
+            log(
+                `Geometry model '${resolvedGeometryContext.geometryModel.model.id}' is not uploaded; retrying Grasshopper file upload for platform model '${openModel.id}'.`
+            );
+            resolvedGeometryContext = await uploadGrasshopperFile(
+                client,
+                openModel.id,
+                example
+            );
+        }
+    }
+
     const geometryModel = await waitForModelCheck(resolvedGeometryContext);
     log(`Model-check result polling ended with geometry status '${geometryModel.model.stat}'.`);
 
