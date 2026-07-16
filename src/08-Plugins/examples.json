@@ -40,5 +40,19 @@
         "thumbnail": "",
         "ghFiles": {},
         "files": {}
+    },
+    "8D-ShopifyTutorial.ghx": {
+        "anchor": "plugins",
+        "slug": "8d-shopifytutorial",
+        "title": "Create a Shopify configurator",
+        "description": "Create a Shopify configurator",
+        "modelLink": false,
+        "appLink": true,
+        "rating": 1,
+        "docLink": "https://help.shapediver.com/doc/shapediver-for-shopify",
+        "videoLink": "https://www.youtube.com/watch?v=BEMXLWQOeLw",
+        "thumbnail": "",
+        "ghFiles": {},
+        "files": {}
     }
 }
