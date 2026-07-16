@@ -150,7 +150,6 @@ async function main(): Promise<void> {
                 client,
                 item,
                 currentSha,
-                platformUserId,
                 defaultBackendSystemAlias,
                 state
             );
@@ -349,7 +348,6 @@ async function processPreflightItem(
     client: PlatformClient,
     item: PreflightItem,
     currentSha: string,
-    platformUserId: string,
     defaultBackendSystemAlias: string,
     state: ProcessingState
 ): Promise<void> {
@@ -360,7 +358,6 @@ async function processPreflightItem(
         item.example,
         item.previousModel,
         currentSha,
-        platformUserId,
         defaultBackendSystemAlias
     );
     const geometryContext = await uploadGrasshopperFile(client, wipModel.id, item.example);
@@ -380,7 +377,6 @@ async function createWipModel(
     example: RepoExample,
     previousModel: SdPlatformResponseModelOwner | null,
     currentSha: string,
-    platformUserId: string,
     defaultBackendSystemAlias: string
 ): Promise<SdPlatformResponseModelOwner> {
     const temporarySlug = getTemporarySlug(example.slug);
@@ -389,17 +385,11 @@ async function createWipModel(
         previousModel,
         defaultBackendSystemAlias
     );
-    const userId = previousModel?.user?.id ?? platformUserId;
     await assertTemporarySlugAvailable(client, temporarySlug);
 
     log(
         `Creating private WIP model with previous model '${previousModel?.id ?? 'none'}', backend system '${backendSystemAlias}', and SHA '${currentSha}'.`
     );
-
-    log(
-        `Ensuring user '${userId}' uses backend system '${backendSystemAlias}' before model creation.`
-    );
-    await client.users.patch(userId, { backend_system_alias: backendSystemAlias });
 
     const response = await client.models.create({
         title: `${example.titlePrefix} - ${example.title}`,
@@ -410,6 +400,7 @@ async function createWipModel(
         backendaccess: previousModel?.backend_access ?? true,
         visibility: SdPlatformModelVisibility.Private,
         require_token: previousModel?.require_token,
+        backend_system_alias: backendSystemAlias,
     });
 
     let wipModel = await ensureExpectedSlug(client, response.data, temporarySlug);

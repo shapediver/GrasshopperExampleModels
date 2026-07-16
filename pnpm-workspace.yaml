@@ -1,4 +1,6 @@
 packages:
-    - 'tools/docs-cli/'
+  - 'tools/docs-cli/'
 allowBuilds:
-    esbuild: true
+  esbuild: true
+minimumReleaseAgeExclude:
+  - '@shapediver/*'
