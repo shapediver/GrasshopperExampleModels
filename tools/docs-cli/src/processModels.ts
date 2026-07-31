@@ -38,6 +38,14 @@ type ProcessResult = {
         level: NotificationLevel;
         message: string;
     };
+    newModels: NewModel[];
+};
+
+type NewModel = {
+    slug: string;
+    title: string;
+    description: string;
+    relativeFilePath: string;
 };
 
 type RepoExample = {
@@ -75,6 +83,7 @@ type ProcessingState = {
         }
     >;
     modelCache: Map<string, SdPlatformResponseModelOwner | null>;
+    newModels: NewModel[];
 };
 
 type PlatformDecision =
@@ -146,13 +155,7 @@ async function main(): Promise<void> {
 
         logSection(`PROCESS ${preflight.length} QUEUED PREFLIGHT MODELS`);
         for (const item of preflight) {
-            await processPreflightItem(
-                client,
-                item,
-                currentSha,
-                defaultBackendSystemAlias,
-                state
-            );
+            await processPreflightItem(client, item, currentSha, defaultBackendSystemAlias, state);
         }
 
         logSummary(state, false);
@@ -246,6 +249,7 @@ function createProcessingState(): ProcessingState {
         waitingCount: 0,
         openWipBySlug: new Map(),
         modelCache: new Map<string, SdPlatformResponseModelOwner | null>(),
+        newModels: [],
     };
 }
 
@@ -558,11 +562,7 @@ async function processOpenModel(
             log(
                 `Geometry model '${resolvedGeometryContext.geometryModel.model.id}' is not uploaded; retrying Grasshopper file upload for platform model '${openModel.id}'.`
             );
-            resolvedGeometryContext = await uploadGrasshopperFile(
-                client,
-                openModel.id,
-                example
-            );
+            resolvedGeometryContext = await uploadGrasshopperFile(client, openModel.id, example);
         }
     }
 
@@ -599,6 +599,16 @@ async function processOpenModel(
     state.modelCache.delete(example.slug);
     state.modelCache.delete(getTemporarySlug(example.slug));
     cachePlatformModel(state.modelCache, finalizedModel, finalizedModel.id);
+
+    if (!previousModel) {
+        log(`Classified model ${openModel.id} as a new model.`);
+        state.newModels.push({
+            slug: example.slug,
+            title: example.title,
+            description: example.description,
+            relativeFilePath: example.relativeFilePath,
+        });
+    }
 
     log(
         `Finalized ${source} model '${openModel.id}' into stable model '${finalizedModel.id}' with slug '${finalizedModel.slug}'.`
@@ -875,7 +885,9 @@ async function transferStableSlug(
         return newModel;
     }
 
-    log(`Transferring stable slug '${stableSlug}' from previous model '${previousModel.id}' to new model '${newModel.id}'.`);
+    log(
+        `Transferring stable slug '${stableSlug}' from previous model '${previousModel.id}' to new model '${newModel.id}'.`
+    );
 
     try {
         await client.models.swapSlug(newModel.id, { other: previousModel.id, other_slug: '' });
@@ -1035,6 +1047,7 @@ function buildResult(state: ProcessingState, fatal: boolean): ProcessResult {
             level,
             message: buildNotificationMessage(level, state, fatal),
         },
+        newModels: state.newModels,
     };
 }
 

@@ -32,6 +32,7 @@ jobs:
       deploy_docs: ${{ steps.parse.outputs.deploy_docs }}
       tool_fatal: ${{ steps.parse.outputs.tool_fatal }}
       slack_message: ${{ steps.parse.outputs.slack_message }}
+      new_models: ${{ steps.parse.outputs.new_models }}
     env:
       MDBOOK_EXTERNAL_LINKS_VERSION: 0.1.2
     steps:
@@ -92,6 +93,7 @@ jobs:
             echo "$message"
             echo 'EOF'
           } >> "$GITHUB_OUTPUT"
+          echo "new_models=$(jq -c '.newModels // []' dynamic-process-result.json)" >> "$GITHUB_OUTPUT"
 
       - name: Create docs tables
         if: ${{ steps.parse.outputs.tool_fatal != 'true' && steps.parse.outputs.deploy_docs == 'true' }}
@@ -111,6 +113,132 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./book
+
+      - name: Create Newsfeed token
+        if: ${{ steps.parse.outputs.tool_fatal != 'true' && steps.parse.outputs.deploy_docs == 'true' && steps.parse.outputs.new_models != '[]' }}
+        id: newsfeed-token
+        # The default workflow token cannot write to the separate Newsfeed repository.
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3
+        with:
+          client-id: ${{ secrets.BOT_APP_CLIENT_ID }}
+          private-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
+          owner: shapediver
+          repositories: |
+            Newsfeed
+          permission-contents: write
+
+      - name: Publish new models to Newsfeed
+        if: ${{ steps.parse.outputs.tool_fatal != 'true' && steps.parse.outputs.deploy_docs == 'true' && steps.parse.outputs.new_models != '[]' }}
+        env:
+          GH_TOKEN: ${{ steps.newsfeed-token.outputs.token }}
+          NEW_MODELS: ${{ steps.parse.outputs.new_models }}
+        run: |
+          set -euo pipefail
+          NEWSFEED_REPO="shapediver/Newsfeed"
+          BRANCH="development"
+
+          # Create a file or update it on reruns, which makes publishing idempotent.
+          put_file() {
+            local path="$1" slug="$2" content="$3" sha filename
+
+            filename="${path##*/}"
+            sha="$(gh api "repos/${NEWSFEED_REPO}/contents/${path}?ref=${BRANCH}" --jq '.sha' 2>/dev/null || true)"
+
+            if [[ -n "$sha" ]]; then
+              gh api "repos/${NEWSFEED_REPO}/contents/${path}" \
+                --method PUT \
+                -f message="Update Grasshopper tutorial ${slug} newsfeed entry" \
+                -f content="$(printf '%s' "$content" | base64 -w0)" \
+                -f branch="$BRANCH" \
+                -f sha="$sha"
+              echo "Updated newsfeed entry: ${filename}"
+            else
+              gh api "repos/${NEWSFEED_REPO}/contents/${path}" \
+                --method PUT \
+                -f message="Add Grasshopper tutorial ${slug} newsfeed entry" \
+                -f content="$(printf '%s' "$content" | base64 -w0)" \
+                -f branch="$BRANCH"
+              echo "Created newsfeed entry: ${filename}"
+            fi
+          }
+
+          # Extract the generated header and row for one definition from its chapter table.
+          extract_table() {
+            local definitions_path="$1" ref="$2"
+            [[ -f "$definitions_path" ]] || return 1
+
+            awk -v ref="$ref" '
+              /^\| Ref \|/ {
+                header = $0
+                if ((getline separator) <= 0) exit 1
+                in_table = 1
+                next
+              }
+              in_table && /^\|/ {
+                if (index($0, "| **" ref "** |") > 0) {
+                  print header
+                  print separator
+                  print $0
+                  found = 1
+                  exit
+                }
+                next
+              }
+              in_table { in_table = 0 }
+              END { if (!found) exit 1 }
+            ' "$definitions_path"
+          }
+
+          # Each newly finalized model receives one uniquely named Newsfeed entry.
+          jq -c '.[]' <<< "$NEW_MODELS" | while read -r model; do
+            slug="$(jq -r '.slug' <<< "$model")"
+            title="$(jq -r '.title' <<< "$model")"
+            description="$(jq -r '.description' <<< "$model")"
+            relative_file_path="$(jq -r '.relativeFilePath' <<< "$model")"
+
+            filename="grasshopper-tutorials-${slug}.md"
+            target_path="src/content/news/${filename}"
+            date="$(date -u +%Y-%m-%d)"
+
+            # Extract the model's table row + header from the generated markdown file.
+            chapter_path="${relative_file_path%/*}"
+            definition_filename="${relative_file_path##*/}"
+            ref="${definition_filename%%-*}"
+            definitions_path="${chapter_path}/definitions.md"
+            table="$(extract_table "$definitions_path" "$ref" || true)"
+
+            # Use a sane default when table could not get extracted.
+            if [[ -z "$table" ]]; then
+              echo "::warning::Could not extract generated table row for '${relative_file_path}' from '${definitions_path}'. Using the fallback tutorial table."
+              table=$(cat <<EOF
+          | Tutorial | Description |
+          | --- | --- |
+          | [${title}](https://www.shapediver.com/app/m/${slug}) | ${description} |
+          EOF
+              )
+            fi
+
+            # Newsfeed categories are predefined; use the supported Grasshopper category.
+            content=$(cat <<EOF
+          ---
+          title: "$(printf '%s' "$title" | sed 's/"/\\"/g')"
+          description: "$(printf '%s' "$description" | sed 's/"/\\"/g')"
+          pubDate: ${date}
+          category: grasshopper
+          tags:
+            - Grasshopper
+            - Tutorials
+          author: Mathieu Huard
+          externalUrl: "https://www.shapediver.com/app/m/${slug}"
+          ---
+
+          ${table}
+
+          [Tutorials center](https://help.shapediver.com/doc/welcome-tutorial-grasshopper-definitions-for-shapediver)
+          EOF
+
+            put_file "$target_path" "$slug" "$content"
+          done
 
   deploy:
     needs: process-and-build
