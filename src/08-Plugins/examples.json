@@ -54,5 +54,19 @@
         "thumbnail": "",
         "ghFiles": {},
         "files": {}
+    },
+    "8E-ShopifyAdvanced.ghx": {
+        "anchor": "plugins",
+        "slug": "8e-shopifyadvanced",
+        "title": "Advanced Shopify features",
+        "description": "Advanced Shopify features",
+        "modelLink": false,
+        "appLink": true,
+        "rating": 1,
+        "docLink": "https://help.shapediver.com/doc/shapediver-for-shopify",
+        "videoLink": false,
+        "thumbnail": "",
+        "ghFiles": {},
+        "files": {}
     }
 }
