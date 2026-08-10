@@ -649,7 +649,7 @@ async function getGeometryUploadContext(
         accessToken: geometryAccessToken,
     });
 
-    const geometryModel = (await new GeometryModelApi(config).getModel(freshModel.guid)).data;
+    const geometryModel = await new GeometryModelApi(config).getModel(freshModel.guid);
     log(
         `Resolved geometry model '${geometryModel.model.id}' for platform model '${model.id}' with current geometry status '${geometryModel.model.stat}'.`
     );
@@ -732,7 +732,7 @@ async function waitForModelCheck(uploadContext: GeometryUploadContext): Promise<
 
         log(`Waiting for model-check to start (status='${geometryModel.model.stat}').`);
         await sleep(MODEL_CHECK_POLL_INTERVAL_MS);
-        geometryModel = (await geometryModelApi.getModel(geometryModel.model.id)).data;
+        geometryModel = await geometryModelApi.getModel(geometryModel.model.id);
     }
 
     const maxComputationTimeMs = geometryModel.setting.compute!.max_comp_time;
@@ -751,7 +751,7 @@ async function waitForModelCheck(uploadContext: GeometryUploadContext): Promise<
 
         log(`Waiting for model-check to finish (status='${geometryModel.model.stat}').`);
         await sleep(MODEL_CHECK_POLL_INTERVAL_MS);
-        geometryModel = (await geometryModelApi.getModel(geometryModel.model.id)).data;
+        geometryModel = await geometryModelApi.getModel(geometryModel.model.id);
     }
 
     log(`Model-check finished with status '${geometryModel.model.stat}'.`);

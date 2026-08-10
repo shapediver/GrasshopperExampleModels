@@ -8,8 +8,8 @@
         "process-models": "tsx src/processModels.ts"
     },
     "dependencies": {
-        "@shapediver/sdk.geometry-api-sdk-v2": "3.4.2",
-        "@shapediver/sdk.platform-api-sdk-v1": "2.29.19",
+        "@shapediver/sdk.geometry-api-sdk-v2": "4.1.0",
+        "@shapediver/sdk.platform-api-sdk-v1": "3.0.2",
         "zod": "4.3.6"
     }
 }
