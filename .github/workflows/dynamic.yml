@@ -236,6 +236,7 @@ jobs:
 
           [Tutorials center](https://help.shapediver.com/doc/welcome-tutorial-grasshopper-definitions-for-shapediver)
           EOF
+            )
 
             put_file "$target_path" "$slug" "$content"
           done
