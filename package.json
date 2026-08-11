@@ -6,7 +6,8 @@
         "prepare": "husky",
         "docs:create-tables": "node ./scripts/run-docs-cli.cjs create-tables",
         "docs:validate": "node ./scripts/run-docs-cli.cjs validate",
-        "docs:process-models": "node ./scripts/run-docs-cli.cjs process-models"
+        "docs:process-models": "node ./scripts/run-docs-cli.cjs process-models",
+        "docs:newsfeed-table": "tsx tools/docs-cli/src/newsfeedTable.ts"
     },
     "devDependencies": {
         "@eslint/js": "10.0.1",
