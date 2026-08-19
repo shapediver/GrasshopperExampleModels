@@ -132,6 +132,8 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.newsfeed-token.outputs.token }}
           NEW_MODELS: ${{ steps.parse.outputs.new_models }}
+          GRASSHOPPER_EXAMPLES_REPO_URL: ${{ vars.GRASSHOPPER_EXAMPLES_REPO_URL }}
+          TUTORIAL_CENTER_URL: ${{ vars.TUTORIAL_CENTER_URL }}
         run: |
           set -euo pipefail
           NEWSFEED_REPO="shapediver/Newsfeed"
@@ -162,61 +164,21 @@ jobs:
             fi
           }
 
-          # Extract the generated header and row for one definition from its chapter table.
-          extract_table() {
-            local definitions_path="$1" ref="$2"
-            [[ -f "$definitions_path" ]] || return 1
-
-            awk -v ref="$ref" '
-              /^\| Ref \|/ {
-                header = $0
-                if ((getline separator) <= 0) exit 1
-                in_table = 1
-                next
-              }
-              in_table && /^\|/ {
-                if (index($0, "| **" ref "** |") > 0) {
-                  print header
-                  print separator
-                  print $0
-                  found = 1
-                  exit
-                }
-                next
-              }
-              in_table { in_table = 0 }
-              END { if (!found) exit 1 }
-            ' "$definitions_path"
-          }
-
           # Each newly finalized model receives one uniquely named Newsfeed entry.
           jq -c '.[]' <<< "$NEW_MODELS" | while read -r model; do
             slug="$(jq -r '.slug' <<< "$model")"
             title="$(jq -r '.title' <<< "$model")"
             description="$(jq -r '.description' <<< "$model")"
             relative_file_path="$(jq -r '.relativeFilePath' <<< "$model")"
+            mdbook_relative_file_path="${relative_file_path#src/}"
 
             filename="grasshopper-tutorials-${slug}.md"
             target_path="src/content/news/${filename}"
             date="$(date -u +%Y-%m-%d)"
 
-            # Extract the model's table row + header from the generated markdown file.
-            chapter_path="${relative_file_path%/*}"
-            definition_filename="${relative_file_path##*/}"
-            ref="${definition_filename%%-*}"
-            definitions_path="${chapter_path}/definitions.md"
-            table="$(extract_table "$definitions_path" "$ref" || true)"
+            table="$(npm run --silent docs:newsfeed-table -- "$GITHUB_WORKSPACE/src" "$mdbook_relative_file_path" "$title" "$description" "$slug" "$GRASSHOPPER_EXAMPLES_REPO_URL")"
 
-            # Use a sane default when table could not get extracted.
-            if [[ -z "$table" ]]; then
-              echo "::warning::Could not extract generated table row for '${relative_file_path}' from '${definitions_path}'. Using the fallback tutorial table."
-              table=$(cat <<EOF
-          | Tutorial | Description |
-          | --- | --- |
-          | [${title}](https://www.shapediver.com/app/m/${slug}) | ${description} |
-          EOF
-              )
-            fi
+            tutorials_center_url="$TUTORIAL_CENTER_URL"
 
             # Newsfeed categories are predefined; use the supported Grasshopper category.
             content=$(cat <<EOF
@@ -229,13 +191,14 @@ jobs:
             - Grasshopper
             - Tutorials
           author: Mathieu Huard
-          externalUrl: "https://www.shapediver.com/app/m/${slug}"
+          externalUrl: "${tutorials_center_url}"
           ---
 
           ${table}
 
-          [Tutorials center](https://help.shapediver.com/doc/welcome-tutorial-grasshopper-definitions-for-shapediver)
+          [Tutorials center](${tutorials_center_url})
           EOF
+            )
 
             put_file "$target_path" "$slug" "$content"
           done

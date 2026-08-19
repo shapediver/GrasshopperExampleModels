@@ -889,9 +889,16 @@ async function transferStableSlug(
         `Transferring stable slug '${stableSlug}' from previous model '${previousModel.id}' to new model '${newModel.id}'.`
     );
 
+    const previousModelSlug = `${stableSlug}-${Math.floor(Date.now() / 1000)}`;
+
     try {
-        await client.models.swapSlug(newModel.id, { other: previousModel.id, other_slug: '' });
-        log(`Transferred stable slug '${stableSlug}' to new model '${newModel.id}'.`);
+        await client.models.swapSlug(newModel.id, {
+            other: previousModel.id,
+            other_slug: previousModelSlug,
+        });
+        log(
+            `Transferred stable slug '${stableSlug}' to new model '${newModel.id}' and assigned '${previousModelSlug}' to previous model '${previousModel.id}'.`
+        );
         return await requirePlatformModel(client, newModel.id);
     } catch (error) {
         throw new Error(
