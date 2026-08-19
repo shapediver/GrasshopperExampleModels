@@ -72,7 +72,7 @@
     "BETA-InstancesTutorial1-Controller.ghx": {
         "anchor": "beta",
         "slug": "beta-instancestutorial1-controller",
-        "title": "Control Instances of other ShapeDiver Models",
+        "title": "Beta - Instances",
         "description": "Control Instances of other ShapeDiver Models",
         "modelLink": false,
         "appLink": true,
@@ -88,7 +88,7 @@
     "BETA-Anchor3dSimple.ghx": {
         "anchor": "beta",
         "slug": "beta-anchor3d",
-        "title": "Containers with 3D Anchors in the Scene",
+        "title": "Beta - 3D Anchors",
         "description": "Containers with 3D Anchors in the Scene",
         "modelLink": true,
         "appLink": true,
@@ -102,7 +102,7 @@
     "BETA-Anchor2dTutorial.ghx": {
         "anchor": "beta",
         "slug": "beta-anchor2d",
-        "title": "Containers with 2D Anchors on the Screen",
+        "title": "Beta - 2D Anchors",
         "description": "Containers with 2D Anchors on the Screen",
         "modelLink": true,
         "appLink": true,
@@ -130,7 +130,7 @@
     "BETA-ExportWithState.ghx": {
         "anchor": "beta",
         "slug": "beta-exportwithstate",
-        "title": "Beta - Loop Model State Values back to Grasshopper",
+        "title": "Beta - Loop Model States",
         "description": "Beta - Loop Model State Values back to Grasshopper",
         "modelLink": true,
         "appLink": true,
@@ -144,7 +144,7 @@
     "BETA-ExportWithScreenshot.ghx": {
         "anchor": "beta",
         "slug": "beta-exportwithscreenshot",
-        "title": "Beta - Loop Screenshot back to Grasshopper",
+        "title": "Beta - Loop Screenshots",
         "description": "Beta - Loop Screenshot back to Grasshopper",
         "modelLink": true,
         "appLink": true,

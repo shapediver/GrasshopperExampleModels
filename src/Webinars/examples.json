@@ -2,7 +2,7 @@
     "2410A-Webinar_BarcelonaNeighbourhood.ghx": {
         "anchor": "webinar",
         "slug": "webinar-2410-a-barcelonaneighbourhood",
-        "title": "Fall '24 Update: Barcelona Neighborhood Analysis",
+        "title": "Barcelona Neighborhood Analysis",
         "description": "[🎥 Fall '24 Update](https://www.youtube.com/watch?v=Rnu86ss0qT4): Barcelona Neighborhood Analysis (Interactions components and Dynamic Parameters)",
         "modelLink": true,
         "appLink": true,
@@ -16,7 +16,7 @@
     "2410B-Webinar_ModularCabinets.ghx": {
         "anchor": "webinar",
         "slug": "webinar-2410-b-modularcabinets",
-        "title": "Fall '24 Update: Modular cabinets configurator",
+        "title": "Modular cabinets configurator",
         "description": "[🎥 Fall '24 Update](https://www.youtube.com/watch?v=Rnu86ss0qT4): Modular cabinets configurator (Interactions components and Dynamic Parameters)",
         "modelLink": true,
         "appLink": true,
@@ -30,7 +30,7 @@
     "2503A-Webinar_SpecklePavillion.ghx": {
         "anchor": "webinar",
         "slug": "2503a-speckle-pavillion",
-        "title": "Spring '25 Update: Speckle pavillion",
+        "title": "Speckle Pavillion",
         "description": "[🎥 Spring '25 Update](https://shapediver.com/blog/shapediver-spring-25-update-live-webinar): Speckle pavillion",
         "modelLink": true,
         "appLink": true,
@@ -44,7 +44,7 @@
     "2503B-Webinar_ShopifyWorkflow.ghx": {
         "anchor": "webinar",
         "slug": "2503b-shopifyworkflow",
-        "title": "Spring '25 Update: Shopify workflow",
+        "title": "Shopify Workflow",
         "description": "[🎥 Spring '25 Update](https://www.youtube.com/watch?v=mAy7dLjXbGA): Shopify workflow",
         "modelLink": true,
         "appLink": "https://appbuilder.shapediver.com/v1/ijewel3d/latest/?slug=2503b-shopifyworkflow&g=https://cdn.shopify.com/s/files/1/0897/7802/8923/files/example-agent-ring-theme.json&webgiScene=https://cdn.shopify.com/s/files/1/0585/2721/9918/files/3dConfiguratorScene.vjson",

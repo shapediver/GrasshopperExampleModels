@@ -2,7 +2,7 @@
     "11A-AppBuilder_Tutorial1.ghx": {
         "anchor": "workflows",
         "slug": "appbuilder-tutorial1-simpleexample",
-        "title": "App Builder 1 - Basic Tutorial",
+        "title": "App Builder Tutorial 1",
         "description": "App Builder 1 - Basic Tutorial",
         "modelLink": true,
         "appLink": true,
@@ -16,7 +16,7 @@
     "11B-AppBuilder_Tutorial2.ghx": {
         "anchor": "workflows",
         "slug": "appbuilder-tutorial2-contextualui",
-        "title": "App Builder 2 - Contextual UI",
+        "title": "App Builder Tutorial 2",
         "description": "App Builder 2 - Contextual UI",
         "modelLink": true,
         "appLink": true,
@@ -32,7 +32,7 @@
     "11C-AppBuilder_Tutorial3.ghx": {
         "anchor": "workflows",
         "slug": "appbuilder-tutorial3-imagewidget",
-        "title": "App Builder 3 - Link Exports with Image Widgets",
+        "title": "App Builder Tutorial 3",
         "description": "App Builder 3 - Link Exports with Image Widgets",
         "modelLink": true,
         "appLink": true,
@@ -48,7 +48,7 @@
     "11D-AppBuilder_Tutorial4.ghx": {
         "anchor": "workflows",
         "slug": "appbuilder-tutorial4-charts",
-        "title": "App Builder 4 - Charts and Graphs",
+        "title": "App Builder Tutorial 4",
         "description": "App Builder 4 - Charts and Graphs",
         "modelLink": true,
         "appLink": true,
@@ -104,7 +104,7 @@
     "../02-Inputs/2D-SelectionInput_Basic.ghx": {
         "anchor": "interaction",
         "slug": "2d-selectioninput-tutorial1",
-        "title": "Selection Input 1 - Basic Tutorial",
+        "title": "Selection Input Tutorial 1",
         "description": "Selection Input 1 - Basic Tutorial",
         "modelLink": false,
         "appLink": true,
@@ -118,7 +118,7 @@
     "../02-Inputs/2E-SelectionInput_Advanced.ghx": {
         "anchor": "interaction",
         "slug": "2e-selectioninput-tutorial2",
-        "title": "Selection Input 2 - Influence Geometry and Context",
+        "title": "Selection Input Tutorial 2",
         "description": "Selection Input 2 - Influence Geometry and Context",
         "modelLink": false,
         "appLink": true,
@@ -132,7 +132,7 @@
     "../02-Inputs/2F-GumballInput_Basic.ghx": {
         "anchor": "interaction",
         "slug": "2f-minimalgumballexample",
-        "title": "Gumball Input 1 - Basic Tutorial",
+        "title": "Gumball Input Tutorial 1",
         "description": "Gumball Input 1 - Basic Tutorial",
         "modelLink": true,
         "appLink": true,
@@ -146,7 +146,7 @@
     "../02-Inputs/2G-GumballInput_Tutorial1.ghx": {
         "anchor": "interaction",
         "slug": "2g-gumballinput-tutorial1",
-        "title": "Gumball Input 2 - Loop Transformations",
+        "title": "Gumball Input Tutorial 2",
         "description": "Gumball Input 2 - Loop Transformations",
         "modelLink": true,
         "appLink": true,
@@ -160,7 +160,7 @@
     "../02-Inputs/2H-Gumballinput_Tutorial2.ghx": {
         "anchor": "interaction",
         "slug": "2h-gumballinput-tutorial2-3",
-        "title": "Gumball Input 3 - Dynamic Transformable Objects",
+        "title": "Gumball Input Tutorial 3",
         "description": "Gumball Input 3 - Dynamic Transformable Objects",
         "modelLink": true,
         "appLink": true,
@@ -174,7 +174,7 @@
     "../02-Inputs/2I-PointsInputBasicTutorial.ghx": {
         "anchor": "interaction",
         "slug": "2i-pointsinputsimpleexample",
-        "title": "Points Input 1 - Basic Tutorial",
+        "title": "Points Input Tutorial 1",
         "description": "Points Input 1 - Basic Tutorial",
         "modelLink": true,
         "appLink": true,
@@ -188,7 +188,7 @@
     "../02-Inputs/2J-PointsInputGeometryConstraints.ghx": {
         "anchor": "interaction",
         "slug": "2j-pointsinputgeometryconstraints",
-        "title": "Points Input 2 - Geometry Constraints",
+        "title": "Points Input Tutorial 2",
         "description": "Points Input 2 - Geometry Constraints",
         "modelLink": true,
         "appLink": true,

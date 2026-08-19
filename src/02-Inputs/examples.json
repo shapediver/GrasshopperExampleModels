@@ -30,7 +30,7 @@
     "2C-ImportWithAttributes.ghx": {
         "anchor": "inputs",
         "slug": "2c-importwithattributes",
-        "title": "Use attributes to import properties and user text",
+        "title": "Import with attributes",
         "description": "Use attributes to import properties and user text",
         "modelLink": true,
         "appLink": false,
@@ -46,7 +46,7 @@
     "2D-SelectionInput_Basic.ghx": {
         "anchor": "inputs",
         "slug": "2d-selectioninput-tutorial1",
-        "title": "Selection Input 1 - Basic Tutorial",
+        "title": "Selection Input Tutorial 1",
         "description": "Selection Input 1 - Basic Tutorial",
         "modelLink": false,
         "appLink": true,
@@ -60,7 +60,7 @@
     "2E-SelectionInput_Advanced.ghx": {
         "anchor": "inputs",
         "slug": "2e-selectioninput-tutorial2",
-        "title": "Selection Input 2 - Influence Geometry and Context",
+        "title": "Selection Input Tutorial 2",
         "description": "Selection Input 2 - Influence Geometry and Context",
         "modelLink": false,
         "appLink": true,
@@ -74,7 +74,7 @@
     "2F-GumballInput_Basic.ghx": {
         "anchor": "inputs",
         "slug": "2f-minimalgumballexample",
-        "title": "Gumball Input 1 - Basic Tutorial",
+        "title": "Gumball Input Tutorial 1",
         "description": "Gumball Input 1 - Basic Tutorial",
         "modelLink": false,
         "appLink": true,
@@ -88,7 +88,7 @@
     "2G-GumballInput_Tutorial1.ghx": {
         "anchor": "inputs",
         "slug": "2g-gumballinput-tutorial1",
-        "title": "Gumball Input 2 - Loop Transformations",
+        "title": "Gumball Input Tutorial 2",
         "description": "Gumball Input 2 - Loop Transformations",
         "modelLink": false,
         "appLink": true,
@@ -102,7 +102,7 @@
     "2H-Gumballinput_Tutorial2.ghx": {
         "anchor": "inputs",
         "slug": "2h-gumballinput-tutorial2-3",
-        "title": "Gumball Input 3 - Dynamic Transformable Objects",
+        "title": "Gumball Input Tutorial 3",
         "description": "Gumball Input 3 - Dynamic Transformable Objects",
         "modelLink": false,
         "appLink": true,
@@ -116,7 +116,7 @@
     "2I-PointsInputBasicTutorial.ghx": {
         "anchor": "inputs",
         "slug": "2i-pointsinputsimpleexample",
-        "title": "Points Input 1 - Basic Tutorial",
+        "title": "Points Input Tutorial 1",
         "description": "Points Input 1 - Basic Tutorial",
         "modelLink": false,
         "appLink": true,
@@ -130,7 +130,7 @@
     "2J-PointsInputGeometryConstraints.ghx": {
         "anchor": "inputs",
         "slug": "2j-pointsinputgeometryconstraints",
-        "title": "Points Input 2 - Geometry Constraints",
+        "title": "Points Input Tutorial 2",
         "description": "Points Input 2 - Geometry Constraints",
         "modelLink": false,
         "appLink": true,
@@ -144,7 +144,7 @@
     "2K-ValueListWithImages.ghx": {
         "anchor": "inputs",
         "slug": "2k-valuelistwithimages",
-        "title": "Create Image Pickers using Value List Settings",
+        "title": "Value List with Images",
         "description": "Create Image Pickers using Value List Settings",
         "modelLink": false,
         "appLink": true,

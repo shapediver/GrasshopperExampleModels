@@ -2,7 +2,7 @@
     "4A-DisplayBasicTutorial.ghx": {
         "anchor": "display",
         "slug": "4a-displaybasictutorial",
-        "title": "Display Basic Tutorial - Overview",
+        "title": "Display Basic Tutorial",
         "description": "Display Basic Tutorial - Overview",
         "modelLink": true,
         "appLink": false,
@@ -30,7 +30,7 @@
     "4C-RenderingGuide.ghx": {
         "anchor": "display",
         "slug": "4c-renderingguide",
-        "title": "Rendering Guide: Make Models Look Great Online",
+        "title": "Rendering Guide",
         "description": "Rendering Guide: Make Models Look Great Online",
         "modelLink": false,
         "appLink": true,
