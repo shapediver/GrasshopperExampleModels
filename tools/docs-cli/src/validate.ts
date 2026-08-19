@@ -1,7 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { z } from 'zod';
-import { FILE_NAME_EXAMPLES, SCHEMA_EXAMPLES } from './utils';
+import {
+    createModelTitle,
+    FILE_NAME_EXAMPLES,
+    SCHEMA_EXAMPLES,
+} from './utils';
 
 /**
  * Validate a file reference declared inside an examples.json file.
@@ -68,6 +72,7 @@ function validateReferencedFile(
             for (const [main, example] of Object.entries(parsedData)) {
                 // The top-level key is the main Grasshopper file for the example.
                 validateReferencedFile(main, main, filePath);
+                createModelTitle(main, example.title);
 
                 if (example.thumbnail !== '') {
                     validateReferencedFile(example.thumbnail, `${main}.thumbnail`, filePath);

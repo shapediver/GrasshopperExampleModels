@@ -1,4 +1,5 @@
 /* This file contains utility functions and constants for the docs-cli tool. */
+import path from 'path';
 import { z } from 'zod';
 
 /** The name of the JSON file holding information about ShapeDiver models used as examples. */
@@ -6,6 +7,23 @@ export const FILE_NAME_EXAMPLES = 'examples.json';
 
 /** The name of the Markdown file holding definitions for ShapeDiver models used as examples. */
 export const FILE_NAME_DEFINITIONS = 'definitions.md';
+
+/** Maximum number of characters accepted by the ShapeDiver platform for a model title. */
+export const MAX_MODEL_TITLE_LENGTH = 50;
+
+/** Compose and validate the title sent to ShapeDiver when an example model is created. */
+export function createModelTitle(mainFile: string, title: string): string {
+    const exampleId = path.basename(mainFile).split('-')[0];
+    const modelTitle = `${exampleId} - ${title}`;
+
+    if (modelTitle.length > MAX_MODEL_TITLE_LENGTH) {
+        throw new Error(
+            `Model title for '${mainFile}' exceeds ${MAX_MODEL_TITLE_LENGTH} characters (${modelTitle.length}): '${modelTitle}'.`
+        );
+    }
+
+    return modelTitle;
+}
 
 /**
  * Create a string schema for user-authored fields that must be non-empty, non-whitespace, and
@@ -85,10 +103,14 @@ export const SCHEMA_EXAMPLES = createExamplesRecordSchema(
         /** The slug of the ShapeDiver model. */
         slug: z.string().regex(SLUG_REGEX, SLUG_VALIDATION_MESSAGE),
 
-        /** The title of the ShapeDiver model. */
+        /**
+         * The title of the ShapeDiver model.
+         *
+         * Note: The final model title will be prefixed by the example ID of the file name.
+         */
         title: createNonEmptyTrimmedStringSchema({
             max: {
-                length: 50,
+                length: MAX_MODEL_TITLE_LENGTH,
                 msg: 'Title must not be longer than 50 characters.',
             },
         }),

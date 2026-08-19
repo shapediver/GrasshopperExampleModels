@@ -26,7 +26,7 @@ import { execFileSync } from 'child_process';
 import fs from 'fs';
 import fsPromises from 'fs/promises';
 import path from 'path';
-import { FILE_NAME_EXAMPLES, SCHEMA_EXAMPLES, type Examples } from './utils';
+import { createModelTitle, FILE_NAME_EXAMPLES, SCHEMA_EXAMPLES, type Examples } from './utils';
 
 type NotificationLevel = 'success' | 'warning' | 'error';
 
@@ -55,7 +55,6 @@ type RepoExample = {
     filePath: string;
     relativeFilePath: string;
     fileType: SdPlatformModelFileType;
-    titlePrefix: string;
     thumbnail: string;
 };
 
@@ -234,7 +233,6 @@ function extractProcessableExamples(
             relativeFilePath: toRepoRelativePath(repoRoot, resolvedFilePath),
             fileType:
                 extension === '.gh' ? SdPlatformModelFileType.GH : SdPlatformModelFileType.GHX,
-            titlePrefix: path.basename(mainFile).split('-')[0],
             thumbnail: entry.thumbnail,
         });
     }
@@ -396,7 +394,7 @@ async function createWipModel(
     );
 
     const response = await client.models.create({
-        title: `${example.titlePrefix} - ${example.title}`,
+        title: createModelTitle(example.filePath, example.title),
         description: example.description,
         ftype: example.fileType,
         comment: currentSha,
