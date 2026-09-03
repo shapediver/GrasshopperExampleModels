@@ -402,7 +402,8 @@ async function createWipModel(
         backendaccess: previousModel?.backend_access ?? true,
         visibility: SdPlatformModelVisibility.Private,
         require_token: previousModel?.require_token,
-        backend_system_alias: backendSystemAlias,
+	    backend_system_alias: backendSystemAlias,
+		use_global_accessdomains: previousModel?.use_global_accessdomains ?? false,
     });
 
     let wipModel = await ensureExpectedSlug(client, response.data, temporarySlug);
