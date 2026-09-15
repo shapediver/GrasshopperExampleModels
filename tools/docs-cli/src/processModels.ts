@@ -1128,6 +1128,48 @@ function formatUnknownError(error: unknown): string {
     return JSON.stringify(error);
 }
 
+function inspectPlatformError(error: unknown): string {
+    if (!error || typeof error !== 'object') {
+        return String(error);
+    }
+
+    const value = error as {
+        constructor?: { name?: string };
+        errorType?: unknown;
+        http_status_code?: unknown;
+        error?: unknown;
+        error_description?: unknown;
+        message?: unknown;
+        fields?: unknown;
+        code?: unknown;
+    };
+
+    return JSON.stringify({
+        name: value.constructor?.name,
+        errorType: value.errorType,
+        http_status_code: value.http_status_code,
+        code: value.code,
+        error: value.error,
+        error_description: value.error_description,
+        message: value.message,
+        fields: value.fields,
+    });
+}
+
+function inspectErrorChain(error: unknown): string {
+    const seen = new Set<object>();
+    const parts: string[] = [];
+    let current: unknown = error;
+
+    while (current && typeof current === 'object' && !seen.has(current)) {
+        seen.add(current);
+        parts.push(inspectPlatformError(current));
+        current = 'cause' in current ? (current as { cause: unknown }).cause : undefined;
+    }
+
+    return parts.join(' caused by ');
+}
+
 function formatPlatformError(error: unknown): string {
     if (isPBValidationResponseError(error)) {
         return `${error.message} (${JSON.stringify(error.fields)})`;
@@ -1162,15 +1204,17 @@ async function formatGeometryError(error: unknown): Promise<string> {
 }
 
 async function formatFailure(error: unknown): Promise<string> {
+    const detail = inspectErrorChain(error);
+
     if (
         isPBValidationResponseError(error) ||
         isPBForbiddenResponseError(error) ||
         isPBOAuthResponseError(error)
     ) {
-        return formatPlatformError(error);
+        return `${formatPlatformError(error)} ${detail}`;
     }
 
-    return formatUnknownError(error);
+    return `${formatUnknownError(error)} ${detail}`;
 }
 
 function toRepoRelativePath(repoRoot: string, filePath: string): string {
