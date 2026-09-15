@@ -73,7 +73,7 @@
         "anchor": "advanced",
         "slug": "demo-modularcabinets",
         "title": "Demo - Modular Cabinets",
-        "description": "A new version of the 2410B model, making use of parameter overrides and reset values, without the need to manipulate dynamic parameters.",
+        "description": "A new version of the 2410B model, making use of convenient parameter overrides and reset values instead of dynamic parameters.",
         "modelLink": false,
         "appLink": true,
         "rating": 3,
