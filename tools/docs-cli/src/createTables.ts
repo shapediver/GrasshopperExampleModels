@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import {
+    createAppUrl,
     Examples,
     FILE_NAME_DEFINITIONS,
     FILE_NAME_EXAMPLES,
@@ -114,13 +115,10 @@ function createTable(examples: Examples[]): string {
                   .filter(Boolean)
                   .join(' ')
             : null;
+        const appUrl = createAppUrl(data.slug, data.appLink);
         const shapeDiverLinks = [
             data.modelLink ? `[Model](https://www.shapediver.com/app/m/${data.slug})` : '',
-            typeof data.appLink === 'string'
-                ? `[App](${data.appLink})`
-                : data.appLink
-                  ? `[App](https://www.shapediver.com/app/builder/v1/main/latest/?slug=${data.slug}&redirect=0)`
-                  : '',
+            appUrl ? `[App](${appUrl})` : '',
         ]
             .filter(Boolean)
             .join(' / ');

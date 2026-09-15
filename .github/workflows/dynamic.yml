@@ -168,7 +168,6 @@ jobs:
           jq -c '.[]' <<< "$NEW_MODELS" | while read -r model; do
             slug="$(jq -r '.slug' <<< "$model")"
             title="$(jq -r '.title' <<< "$model")"
-            description="$(jq -r '.description' <<< "$model")"
             relative_file_path="$(jq -r '.relativeFilePath' <<< "$model")"
             mdbook_relative_file_path="${relative_file_path#src/}"
 
@@ -176,15 +175,15 @@ jobs:
             target_path="src/content/news/${filename}"
             date="$(date -u +%Y-%m-%d)"
 
-            table="$(npm run --silent docs:newsfeed-table -- "$GITHUB_WORKSPACE/src" "$mdbook_relative_file_path" "$title" "$description" "$slug" "$GRASSHOPPER_EXAMPLES_REPO_URL")"
+            body="$(npm run --silent docs:newsfeed-body -- "$GITHUB_WORKSPACE/src" "$mdbook_relative_file_path" "$GRASSHOPPER_EXAMPLES_REPO_URL")"
 
             tutorials_center_url="$TUTORIAL_CENTER_URL"
 
             # Newsfeed categories are predefined; use the supported Grasshopper category.
             content=$(cat <<EOF
           ---
-          title: "$(printf '%s' "$title" | sed 's/"/\\"/g')"
-          description: "$(printf '%s' "$description" | sed 's/"/\\"/g')"
+          title: "New tutorial: $(printf '%s' "$title" | sed 's/"/\\"/g')"
+          description: "Check out the App and learn with the Grasshopper definition."
           pubDate: ${date}
           category: grasshopper
           tags:
@@ -194,7 +193,7 @@ jobs:
           externalUrl: "${tutorials_center_url}"
           ---
 
-          ${table}
+          ${body}
 
           [Tutorials center](${tutorials_center_url})
           EOF

@@ -158,5 +158,16 @@ export const SCHEMA_EXAMPLES = createExamplesRecordSchema(
 );
 export type Examples = z.infer<typeof SCHEMA_EXAMPLES>;
 
+/** ShapeDiver App URL used in generated tables and Newsfeed entries. */
+export function createAppUrl(slug: string, appLink: boolean | string): string | null {
+    if (typeof appLink === 'string') {
+        return appLink;
+    }
+    if (appLink) {
+        return `https://www.shapediver.com/app/builder/v1/main/latest/?slug=${slug}&redirect=0`;
+    }
+    return null;
+}
+
 /** A regular expression to match markdown anchors in the format of `[anchor]: #`. */
 export const MDBOOK_ANCHOR_REGEX = new RegExp(/^\[([^\]]+)\]: #$/, 'gm');

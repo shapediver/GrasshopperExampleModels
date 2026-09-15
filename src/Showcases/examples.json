@@ -68,5 +68,19 @@
         "thumbnail": "",
         "ghFiles": {},
         "files": {}
+    },
+    "DEMO-ModularCabinets.ghx": {
+        "anchor": "advanced",
+        "slug": "",
+        "title": "Advanced demo",
+        "description": "Advanced demo",
+        "modelLink": false,
+        "appLink": false,
+        "rating": 1,
+        "docLink": false,
+        "videoLink": false,
+        "thumbnail": "",
+        "ghFiles": {},
+        "files": {}
     }
 }

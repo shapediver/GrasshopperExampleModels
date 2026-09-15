@@ -1,3 +1,0 @@
-# Webinar examples
-
-[webinar]: #
