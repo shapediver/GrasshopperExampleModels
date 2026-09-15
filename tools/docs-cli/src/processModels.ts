@@ -949,6 +949,12 @@ async function getPlatformModel(
             cache.set(idOrSlug, null);
             return null;
         }
+        if (isPBForbiddenResponseError(error)) {
+            throw new Error(
+                `No permission to get ShapeDiver model '${idOrSlug}'. If this is a new example, choose a slug that is not already taken by another account.`,
+                { cause: error }
+            );
+        }
         throw error;
     }
 }
