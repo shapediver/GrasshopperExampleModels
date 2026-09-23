@@ -47,7 +47,7 @@
         "title": "Shopify Workflow",
         "description": "[🎥 Spring '25 Update](https://www.youtube.com/watch?v=mAy7dLjXbGA): Shopify workflow",
         "modelLink": true,
-        "appLink": "https://appbuilder.shapediver.com/v1/ijewel3d/latest/?slug=2503b-shopifyworkflow&g=https://cdn.shopify.com/s/files/1/0897/7802/8923/files/example-agent-ring-theme.json&webgiScene=https://cdn.shopify.com/s/files/1/0585/2721/9918/files/3dConfiguratorScene.vjson",
+        "appLink": "https://appbuilder.shapediver.com/v1/ijewel3d/latest/?slug=2503b-shopifyworkflow&g=https://shapediverdownloads.s3.us-east-1.amazonaws.com/themes/example-agent-ring-theme.json&webgiScene=https://shapediverdownloads.s3.us-east-1.amazonaws.com/themes/3dConfiguratorScene.vjson",
         "rating": 2,
         "docLink": false,
         "videoLink": false,
