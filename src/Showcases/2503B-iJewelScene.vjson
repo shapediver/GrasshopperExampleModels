@@ -1,0 +1,1137 @@
+{
+  "version": "0.11.2",
+  "type": "ViewerApp",
+  "metadata": {
+    "generator": "WebGiViewerApp",
+    "version": 1
+  },
+  "plugins": [
+    {
+      "variations": [],
+      "type": "SwitchNodePlugin"
+    },
+    {
+      "sceneEnvironmentRotation": 2.5519004438958452,
+      "sceneEnvironmentIntensity": 1,
+      "sceneEnvironmentFixedDirection": true,
+      "tonemapBackground": false,
+      "tonemapGround": false,
+      "ssbevelEnabled": false,
+      "ssbevelIntensity": null,
+      "type": "SimpleBackgroundEnvUiPlugin2"
+    },
+    {
+      "exportOptions": {
+        "compress": false,
+        "name": "scene",
+        "viewerConfig": true,
+        "encodeUint16Rgbe": false,
+        "convertMeshToIndexed": false,
+        "embedUrlImagePreviews": false,
+        "embedUrlImages": false,
+        "dracoOptions": {
+          "encodeSpeed": 5,
+          "method": 1,
+          "quantizationVolume": "mesh",
+          "quantizationBits": {
+            "POSITION": 14,
+            "NORMAL": 10,
+            "COLOR": 8,
+            "TEX_COORD": 12,
+            "GENERIC": 12
+          }
+        },
+        "encrypt": false,
+        "encryptKey": "",
+        "ignoreInvalidMorphTargetTracks": true,
+        "ignoreEmptyTextures": true
+      },
+      "type": "AssetExporterPlugin"
+    },
+    {
+      "type": "GLTFDracoExportPlugin"
+    },
+    {
+      "loader": 0,
+      "loadingTextHeader": "Loading Components",
+      "errorTextHeader": "Error Loading Files",
+      "showFileNames": false,
+      "showProcessStates": true,
+      "showProgress": true,
+      "hideOnOnlyErrors": true,
+      "hideOnFilesLoad": true,
+      "hideOnSceneObjectLoad": false,
+      "minimizeOnSceneObjectLoad": true,
+      "showOnFilesLoading": true,
+      "showOnSceneEmpty": true,
+      "hideDelay": 100,
+      "backgroundOpacity": 0.5,
+      "backgroundBlur": 24,
+      "background": "#ffffff",
+      "textColor": "#222222",
+      "enabled": true,
+      "type": "LoadingScreenPlugin"
+    },
+    {
+      "enabled": false,
+      "type": "CannonPhysics"
+    },
+    {
+      "enabled": true,
+      "autoFocus": false,
+      "type": "Picking"
+    },
+    {
+      "enabled": true,
+      "type": "GBuffer",
+      "pass": {}
+    },
+    {
+      "maxFrameCount": 32,
+      "jitter": true,
+      "type": "Progressive",
+      "passes": {
+        "progressive": {
+          "enabled": true
+        }
+      }
+    },
+    {
+      "extension": {
+        "enabled": false,
+        "aberrationIntensity": 0.01
+      },
+      "enabled": true,
+      "type": "ChromaticAberration"
+    },
+    {
+      "extension": {
+        "toneMapping": 4,
+        "tonemapBackground": false,
+        "clipBackground": false,
+        "exposure": 1,
+        "saturation": 1,
+        "contrast": 1
+      },
+      "enabled": true,
+      "type": "Tonemap"
+    },
+    {
+      "extension": {
+        "enabled": false,
+        "lutBackground": true,
+        "intensity": 1
+      },
+      "enabled": true,
+      "type": "LUTPlugin1"
+    },
+    {
+      "extension": {
+        "enabled": false,
+        "power": 0.5,
+        "bgcolor": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "isColor": true
+        }
+      },
+      "enabled": true,
+      "type": "Vignette"
+    },
+    {
+      "extension": {
+        "enabled": false,
+        "grainMultiply": false,
+        "grainIntensity": 10
+      },
+      "enabled": true,
+      "type": "FilmicGrain"
+    },
+    {
+      "extension": {},
+      "enabled": true,
+      "type": "GammaCorrection"
+    },
+    {
+      "type": "SSReflection",
+      "passes": {
+        "ssr": {
+          "intensity": 1,
+          "boost": {
+            "x": 1,
+            "y": 1,
+            "z": 1,
+            "isVector3": true
+          },
+          "objectRadius": 1,
+          "autoRadius": true,
+          "power": 1.1,
+          "tolerance": 0.5,
+          "stepCount": 16,
+          "lowQualityFrames": 0,
+          "maskFrontRays": true,
+          "maskFrontFactor": -0.2,
+          "enabled": true
+        }
+      }
+    },
+    {
+      "type": "SSAO",
+      "passes": {
+        "ssao": {
+          "bilateralPass": {
+            "smoothEnabled": true,
+            "edgeSharpness": 0.1,
+            "enabled": true
+          },
+          "parameters": {
+            "intensity": 0.25,
+            "occlusionWorldRadius": 1,
+            "bias": 0.001,
+            "falloff": 1.3,
+            "useSmallScaleAO": false,
+            "intensitySmallAO": 0.2,
+            "autoRadius": false,
+            "projScale": 1889.9868630344022
+          },
+          "enabled": true
+        }
+      }
+    },
+    {
+      "enabled": true,
+      "type": "FrameFade",
+      "pass": {
+        "enabled": true
+      }
+    },
+    {
+      "autoIncrementTime": true,
+      "loopAnimations": true,
+      "loopRepetitions": "Infinity",
+      "timeScale": 1,
+      "animationSpeed": 1,
+      "animateOnScroll": false,
+      "animateOnDrag": false,
+      "dragAxis": "y",
+      "autoplayOnLoad": false,
+      "syncMaxDuration": false,
+      "type": "GLTFAnimation"
+    },
+    {
+      "enabled": true,
+      "type": "AnisotropyPlugin"
+    },
+    {
+      "enabled": true,
+      "type": "TriplanarUVMappingPlugin"
+    },
+    {
+      "enabled": true,
+      "type": "ThinFilmLayerPlugin"
+    },
+    {
+      "enabled": true,
+      "type": "FragmentClippingExtensionPlugin1"
+    },
+    {
+      "enabled": true,
+      "type": "NoiseBumpMaterialPlugin"
+    },
+    {
+      "enabled": true,
+      "bicubicFiltering": true,
+      "type": "CustomBumpMapPlugin"
+    },
+    {
+      "enabled": true,
+      "type": "ClearcoatTintPlugin"
+    },
+    {
+      "enabled": false,
+      "type": "VelocityBuffer",
+      "pass": {}
+    },
+    {
+      "enabled": true,
+      "type": "TAA",
+      "pass": {
+        "feedBack": {
+          "x": 0.88,
+          "y": 0.97,
+          "isVector2": true
+        },
+        "enabled": true
+      }
+    },
+    {
+      "cameraViews": [],
+      "viewLooping": false,
+      "viewPauseTime": 200,
+      "animEase": "easeInOutSine",
+      "animDuration": 1000,
+      "rotationOffset": 0.25,
+      "interpolateMode": "spherical",
+      "splineCurve": "chordal",
+      "seekOnScroll": false,
+      "type": "CameraViews"
+    },
+    {
+      "enabled": false,
+      "rdLight": {
+        "object": {
+          "uuid": "6f9016f4-feff-4505-b46e-ece876e9bae4",
+          "type": "DirectionalLight",
+          "castShadow": true,
+          "layers": 0,
+          "matrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "color": 13430527,
+          "intensity": 1,
+          "shadow": {
+            "bias": -0.001,
+            "radius": 2,
+            "mapSize": [
+              1024,
+              1024
+            ],
+            "camera": {
+              "uuid": "35b091ea-37cc-49a4-8cb5-c5e64e636a6f",
+              "type": "OrthographicCamera",
+              "layers": 1,
+              "up": [
+                0,
+                1,
+                0
+              ],
+              "zoom": 1,
+              "left": -2,
+              "right": 2,
+              "top": 2,
+              "bottom": -2,
+              "near": -2,
+              "far": 9,
+              "view": {
+                "enabled": true,
+                "fullWidth": 1024,
+                "fullHeight": 1024,
+                "offsetX": -0.25,
+                "offsetY": 0.375,
+                "width": 1024,
+                "height": 1024
+              }
+            }
+          }
+        },
+        "userData": {
+          "TransformAnimationPlugin": {
+            "transforms": []
+          }
+        },
+        "type": "DirectionalLight2",
+        "target": [
+          0,
+          0,
+          -1
+        ],
+        "shadowParams": {
+          "enabled": true,
+          "radius": 2,
+          "width": 1024,
+          "height": 1024,
+          "bias": -0.001,
+          "normalBias": 0,
+          "near": 1.5,
+          "far": 4,
+          "frustumSize": 4
+        },
+        "randomParams": {
+          "focus": 1,
+          "spread": 0.01,
+          "distanceScale": 50,
+          "minDistanceScale": {
+            "x": 10,
+            "y": 10,
+            "z": 10,
+            "isVector3": true
+          },
+          "normalDirection": {
+            "x": 0.010203019316098974,
+            "y": 0.9998958929776994,
+            "z": 0.010203019316098974,
+            "isVector3": true
+          },
+          "direction": {
+            "x": -0.9,
+            "y": 0.5,
+            "z": -1,
+            "isVector3": true
+          }
+        }
+      },
+      "lightLayers": 1,
+      "type": "RandomizedDirectionalLight"
+    },
+    {
+      "enabled": false,
+      "worldRadius": 100,
+      "tripodHeight": 10,
+      "originPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "isVector3": true
+      },
+      "type": "HDRiGroundPlugin"
+    },
+    {
+      "enableEdit": false,
+      "focalPoint": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "isVector3": true
+      },
+      "crossFadeTime": 200,
+      "enabled": false,
+      "type": "DepthOfField",
+      "pass": {
+        "nearFarBlurScale": {
+          "x": 0.25,
+          "y": 0.25,
+          "isVector2": true
+        },
+        "focalDepthRange": {
+          "x": 0.5,
+          "y": 1.5,
+          "isVector2": true
+        },
+        "enabled": false
+      }
+    },
+    {
+      "enabled": false,
+      "radius": 0.015,
+      "intensity": 1,
+      "tolerance": 1.5,
+      "onlySSCSDebug": false,
+      "stepCount": 2,
+      "type": "SSContactShadows"
+    },
+    {
+      "type": "SSGI",
+      "passes": {
+        "ssrtgi": {
+          "bilateralPass": {
+            "smoothEnabled": true,
+            "edgeSharpness": 0.1,
+            "enabled": true
+          },
+          "intensity": 2,
+          "power": 1.1,
+          "autoRadius": true,
+          "objectRadius": 2,
+          "tolerance": 1,
+          "bias": 0.15,
+          "falloff": 0.7,
+          "rayCount": 2,
+          "stepCount": 4,
+          "smoothEnabled": true,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "enabled": false,
+      "type": "NormalBufferPlugin",
+      "pass": {}
+    },
+    {
+      "enabled": false,
+      "type": "SSBevelPlugin",
+      "pass": {
+        "sceneBevel": false,
+        "sceneBevelRadius": 2,
+        "enabled": false
+      }
+    },
+    {
+      "model": "",
+      "groundBelowModel": false,
+      "type": "ModelStagePlugin"
+    },
+    {
+      "enabled": false,
+      "enableEdit": false,
+      "invert": false,
+      "sensitivity": 0.5,
+      "focalPoint": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "isVector3": true
+      },
+      "damping": 0.5,
+      "cameraView": "",
+      "type": "ParallaxCameraControllerPlugin"
+    },
+    {
+      "enabled": true,
+      "type": "Bloom",
+      "pass": {
+        "threshold": 2,
+        "softThreshold": 0.5,
+        "intensity": 0.2,
+        "bloomIterations": 4,
+        "radius": 0.6,
+        "power": 1,
+        "enabled": true
+      }
+    },
+    {
+      "bakedShadows": true,
+      "groundReflection": false,
+      "physicalReflections": false,
+      "autoFrustumSize": true,
+      "shadowBaker": {
+        "randomizedLight": {
+          "object": {
+            "uuid": "3ee1fa60-4a08-4fa0-9abc-2adf41dc22d3",
+            "type": "DirectionalLight",
+            "castShadow": true,
+            "layers": 32,
+            "matrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "color": 16777215,
+            "intensity": 10,
+            "shadow": {
+              "radius": 10,
+              "mapSize": [
+                1024,
+                1024
+              ],
+              "camera": {
+                "uuid": "98f4bb9b-cc04-4024-b42d-afb63e8c42b5",
+                "type": "OrthographicCamera",
+                "layers": 1,
+                "up": [
+                  0,
+                  1,
+                  0
+                ],
+                "zoom": 1,
+                "left": -2,
+                "right": 2,
+                "top": 2,
+                "bottom": -2,
+                "near": -2,
+                "far": 41,
+                "view": {
+                  "enabled": true,
+                  "fullWidth": 1024,
+                  "fullHeight": 1024,
+                  "offsetX": -0.25,
+                  "offsetY": 0.375,
+                  "width": 1024,
+                  "height": 1024
+                }
+              }
+            }
+          },
+          "userData": {
+            "TransformAnimationPlugin": {
+              "transforms": []
+            }
+          },
+          "type": "DirectionalLight2",
+          "target": [
+            0.09856602183139421,
+            -0.9930824782853647,
+            -0.06381168124200738
+          ],
+          "shadowParams": {
+            "enabled": true,
+            "radius": 10,
+            "width": 1024,
+            "height": 1024,
+            "bias": 0,
+            "normalBias": 0,
+            "near": 1.5,
+            "far": 20,
+            "frustumSize": 4
+          },
+          "randomParams": {
+            "focus": 1,
+            "spread": 0.9,
+            "distanceScale": 20,
+            "minDistanceScale": {
+              "x": 10,
+              "y": 10,
+              "z": 10,
+              "isVector3": true
+            },
+            "normalDirection": {
+              "x": 0,
+              "y": 1,
+              "z": 0,
+              "isVector3": true
+            },
+            "direction": {
+              "x": 0.19245008972987523,
+              "y": 0.9622504486493761,
+              "z": 0.19245008972987523,
+              "isVector3": true
+            }
+          }
+        },
+        "maxFrameNumber": 400,
+        "smoothShadow": false,
+        "shadowMapType": 0,
+        "groundMapMode": "aoMap",
+        "alphaVignette": true,
+        "alphaVignetteAxis": "xy",
+        "maxBakeCount": "Infinity"
+      },
+      "material": {
+        "uuid": "27f1b97f-eb88-4aaa-9af4-d0c0cf4aa0a1",
+        "resource": "materials"
+      },
+      "visible": true,
+      "size": 8,
+      "yOffset": 0.25,
+      "renderToDepth": true,
+      "tonemapGround": false,
+      "limitCameraAboveGround": false,
+      "type": "Ground"
+    },
+    {
+      "enabled": true,
+      "animationDuration": 2000,
+      "animationDistance": 80,
+      "animationPauseDuration": 6000,
+      "rotationDistance": 0.3,
+      "yOffset": 0,
+      "autoStart": true,
+      "autoStartDelay": 30000,
+      "autoStop": true,
+      "autoStartOnObjectLoad": true,
+      "autoStartOnObjectLoadDelay": 3000,
+      "onlyOnOrbitControls": true,
+      "type": "InteractionPromptPlugin"
+    },
+    {
+      "enabled": true,
+      "type": "LayeredMaterialPlugin"
+    },
+    {
+      "envMap": {
+        "uuid": "4a231374-10bb-4274-8306-70a3ae7b72e7",
+        "resource": "textures"
+      },
+      "envMap2": null,
+      "envMap3": null,
+      "forceSceneEnvMap": false,
+      "type": "Diamond"
+    },
+    {
+      "extension": {
+        "enabled": true,
+        "enableHighlight": false,
+        "enableDynamicSelection": true,
+        "outlineIntensity": 2,
+        "highlightTransparency": 0.84,
+        "outlineColor": {
+          "r": 0.8148465722120952,
+          "g": 0.2541520943200296,
+          "b": 0.13013647668074665,
+          "isColor": true
+        }
+      },
+      "enabled": true,
+      "type": "Outline"
+    },
+    {
+      "enabled": false,
+      "stepCount": 12,
+      "binaryStepCount": 3,
+      "type": "ReliefParallaxMapping"
+    },
+    {
+      "enabled": false,
+      "overCanvas": true,
+      "type": "CSS3DRenderer"
+    },
+    {
+      "enabled": false,
+      "type": "ObjectRotationPlugin"
+    },
+    {
+      "type": "ShapeTubeExtrudePlugin"
+    },
+    {
+      "applyToMap": true,
+      "applyToBumpMap": false,
+      "applyToAlphaMap": true,
+      "inverseAlphaMap": false,
+      "type": "SimpleTextPlugin"
+    },
+    {
+      "type": "MaterialLibraryPlugin"
+    },
+    {
+      "convergeMode": true,
+      "mimeType": "video/mp4",
+      "videoFrameRate": 30,
+      "type": "CanvasRecorder"
+    },
+    {
+      "filename": "snapshot",
+      "progressiveFrames": 64,
+      "tileRows": 1,
+      "tileColumns": 1,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "z": 1,
+        "w": 1,
+        "isVector4": true
+      },
+      "type": "CanvasSnipper"
+    },
+    {
+      "version": 1,
+      "mode": "full",
+      "scale": 1,
+      "type": "RendererParamsUiPlugin"
+    },
+    {
+      "useNormals": true,
+      "chartOptions": {
+        "fixWinding": false,
+        "maxBoundaryLength": 0,
+        "maxChartArea": 0,
+        "maxCost": 2,
+        "maxIterations": 1,
+        "normalDeviationWeight": 2,
+        "normalSeamWeight": 4,
+        "roundnessWeight": 0.009999999776482582,
+        "straightnessWeight": 6,
+        "textureSeamWeight": 0.5,
+        "useInputMeshUvs": false,
+        "serializableClassId": "UChartOptions"
+      },
+      "packOptions": {
+        "bilinear": true,
+        "blockAlign": false,
+        "bruteForce": false,
+        "createImage": false,
+        "maxChartSize": 0,
+        "padding": 0,
+        "resolution": 0,
+        "rotateCharts": true,
+        "rotateChartsToAxis": true,
+        "texelsPerUnit": 0,
+        "serializableClassId": "UPackOptions"
+      },
+      "type": "XAtlasPlugin"
+    },
+    {
+      "type": "GradientSvgPlugin",
+      "gradientUnits": "objectBoundingBox",
+      "position1": {
+        "x": 0,
+        "y": 0,
+        "isVector2": true
+      },
+      "position2": {
+        "x": 1,
+        "y": 1,
+        "isVector2": true
+      },
+      "angle": 0,
+      "radius": 0.5,
+      "center": {
+        "x": 0.5,
+        "y": 0.5,
+        "isVector2": true
+      },
+      "focus": {
+        "x": 0.5,
+        "y": 0.5,
+        "isVector2": true
+      },
+      "spreadMethod": "pad",
+      "colors": [
+        {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "isColor": true
+        },
+        {
+          "r": 1,
+          "g": 0,
+          "b": 0,
+          "isColor": true
+        }
+      ],
+      "applyToBackground": false,
+      "autoRefresh": true
+    },
+    {
+      "animation": {
+        "name": "",
+        "access": "",
+        "options": {},
+        "duration": 1000,
+        "delay": 0,
+        "repeat": 1,
+        "repeatType": "mirror",
+        "ease": "easeInOutSine",
+        "updateScene": false,
+        "updateCamera": false,
+        "updateViewer": false,
+        "animSetParallel": false,
+        "animSet": [],
+        "serializableClassId": "AnimationObject"
+      },
+      "type": "AnimationObjectPlugin"
+    },
+    {
+      "enabled": false,
+      "maxRange": 17,
+      "particleSize": 0.35,
+      "particleSpeed": 0.35,
+      "minRangeY": 1,
+      "paused": false,
+      "type": "SnowFallPlugin"
+    },
+    {
+      "enabled": false,
+      "noiseScale": 1.8,
+      "amplitude": 0.5,
+      "paused": false,
+      "type": "WaveGroundPlugin"
+    },
+    {
+      "enabled": true,
+      "axis": "y",
+      "invertAxis": false,
+      "analog": true,
+      "hourOffset": 0,
+      "minuteOffset": 0,
+      "secondOffset": 0,
+      "hour": ".*hour.*",
+      "minute": ".*minute.*",
+      "second": ".*second.*",
+      "regex": true,
+      "type": "WatchHandsPlugin"
+    },
+    {
+      "variations": [],
+      "type": "MaterialConfiguratorPlugin"
+    }
+  ],
+  "renderManager": {
+    "stableNoise": true,
+    "useLegacyLights": false,
+    "serializableClassId": "RenderManager"
+  },
+  "scene": {
+    "defaultCamera": {
+      "userData": {},
+      "camControls": {
+        "type": "OrbitControls",
+        "dollyZoom": false,
+        "zoomToCursor": false,
+        "enableDamping": true,
+        "dampingFactor": 0.08,
+        "autoRotate": false,
+        "autoRotateSpeed": 2,
+        "enableZoom": true,
+        "zoomSpeed": 0.15,
+        "maxZoomSpeed": 0.2,
+        "enableRotate": true,
+        "rotateSpeed": 2,
+        "enablePan": false,
+        "panSpeed": 1,
+        "autoPushTarget": false,
+        "autoPullTarget": false,
+        "minDistance": 4,
+        "maxDistance": 20,
+        "minZoom": 0.01,
+        "maxZoom": 1000,
+        "minPolarAngle": 0,
+        "maxPolarAngle": 3.141592653589793,
+        "minAzimuthAngle": -1000000,
+        "maxAzimuthAngle": 1000000,
+        "clampMin": {
+          "x": -1000000,
+          "y": -1000000,
+          "z": -1000000,
+          "isVector3": true
+        },
+        "clampMax": {
+          "x": 1000000,
+          "y": 1000000,
+          "z": 1000000,
+          "isVector3": true
+        },
+        "screenSpacePanning": true,
+        "keyPanSpeed": 7
+      },
+      "camOptions": {
+        "type": "PerspectiveCamera",
+        "aspect": "auto",
+        "focus": 10,
+        "fov": 25,
+        "zoom": 1,
+        "frustumSize": 1,
+        "top": 1,
+        "bottom": -1,
+        "left": -1,
+        "right": 1,
+        "controlsMode": "orbit",
+        "controlsEnabled": true
+      },
+      "position": {
+        "x": -2.7695975771344776,
+        "y": 4.1196751767033355,
+        "z": -5.832086423727819,
+        "isVector3": true
+      },
+      "target": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "isVector3": true
+      }
+    },
+    "envMapIntensity": 1,
+    "fixedEnvMapDirection": true,
+    "backgroundIntensity": 1,
+    "environment": {
+      "uuid": "93702821-6fd3-47a9-913c-fcbf158da2dc",
+      "resource": "textures"
+    },
+    "textureSlots": {},
+    "background": null,
+    "backgroundColor": {
+      "r": 1,
+      "g": 1,
+      "b": 1,
+      "isColor": true
+    }
+  },
+  "backgroundIntensity": 1,
+  "useLegacyLights": false,
+  "background": {
+    "r": 1,
+    "g": 1,
+    "b": 1,
+    "isColor": true
+  },
+  "resources": {
+    "geometries": {},
+    "materials": {
+      "27f1b97f-eb88-4aaa-9af4-d0c0cf4aa0a1": {
+        "metadata": {
+          "version": 4.6,
+          "type": "Material",
+          "generator": "Material.toJSON"
+        },
+        "uuid": "27f1b97f-eb88-4aaa-9af4-d0c0cf4aa0a1",
+        "type": "MeshStandardMaterial2",
+        "name": "BaseGroundMaterial",
+        "color": 16777215,
+        "roughness": 0.75,
+        "metalness": 0.5,
+        "sheen": 0,
+        "sheenColor": 0,
+        "sheenRoughness": 1,
+        "emissive": 0,
+        "specularIntensity": 1,
+        "specularColor": 16777215,
+        "clearcoat": 0,
+        "clearcoatRoughness": 0,
+        "iridescence": 0,
+        "iridescenceIOR": 1.3,
+        "iridescenceThicknessRange": [
+          100,
+          400
+        ],
+        "anisotropy": 0,
+        "anisotropyRotation": 0,
+        "envMapIntensity": 1,
+        "reflectivity": 0.5,
+        "transmission": 0,
+        "thickness": 0,
+        "attenuationDistance": 0,
+        "attenuationColor": 16777215,
+        "depthFunc": 3,
+        "depthTest": true,
+        "depthWrite": true,
+        "colorWrite": true,
+        "stencilWrite": false,
+        "stencilWriteMask": 255,
+        "stencilFunc": 519,
+        "stencilRef": 0,
+        "stencilFuncMask": 255,
+        "stencilFail": 7680,
+        "stencilZFail": 7680,
+        "stencilZPass": 7680,
+        "fog": false,
+        "userData": {
+          "runtimeMaterial": true,
+          "renderToDepth": true,
+          "postTonemap": false,
+          "ssaoDisabled": true,
+          "sscsDisabled": true,
+          "ssreflDisabled": false,
+          "ssreflNonPhysical": true,
+          "gMapMode": "aoMap",
+          "ALPHA_I_RGBA_PACKING": false,
+          "uuid": "27f1b97f-eb88-4aaa-9af4-d0c0cf4aa0a1"
+        }
+      }
+    },
+    "textures": {
+      "4a231374-10bb-4274-8306-70a3ae7b72e7": {
+        "metadata": {
+          "version": 4.6,
+          "type": "Texture",
+          "generator": "Texture.toJSON"
+        },
+        "uuid": "4a231374-10bb-4274-8306-70a3ae7b72e7",
+        "name": "https://packs.ijewel3d.com/files/env_gem_002_30251392af.exr",
+        "image": "724eff62-a1e0-4f34-b78a-2a0cca6d2629",
+        "mapping": 300,
+        "channel": 0,
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "center": [
+          0,
+          0
+        ],
+        "rotation": 0,
+        "wrap": [
+          1001,
+          1001
+        ],
+        "format": 1023,
+        "internalFormat": null,
+        "type": 1016,
+        "colorSpace": "srgb-linear",
+        "encoding": 3000,
+        "minFilter": 1006,
+        "magFilter": 1006,
+        "anisotropy": 1,
+        "flipY": false,
+        "generateMipmaps": false,
+        "premultiplyAlpha": false,
+        "unpackAlignment": 1,
+        "userData": {
+          "rootPath": "https://packs.ijewel3d.com/files/env_gem_002_30251392af.exr"
+        }
+      },
+      "93702821-6fd3-47a9-913c-fcbf158da2dc": {
+        "metadata": {
+          "version": 4.6,
+          "type": "Texture",
+          "generator": "Texture.toJSON"
+        },
+        "uuid": "93702821-6fd3-47a9-913c-fcbf158da2dc",
+        "name": "https://cdn.shopify.com/s/files/1/0585/2721/9918/files/env_metal_010_f0b1961b8c.exr?v=1752001689",
+        "image": "182da862-3a92-4501-842b-7112c3af43f0",
+        "mapping": 303,
+        "channel": 0,
+        "repeat": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "center": [
+          0,
+          0
+        ],
+        "rotation": 2.5519004438958452,
+        "wrap": [
+          1001,
+          1001
+        ],
+        "format": 1023,
+        "internalFormat": null,
+        "type": 1016,
+        "colorSpace": "srgb",
+        "encoding": 3001,
+        "minFilter": 1006,
+        "magFilter": 1006,
+        "anisotropy": 1,
+        "flipY": false,
+        "generateMipmaps": false,
+        "premultiplyAlpha": false,
+        "unpackAlignment": 1,
+        "userData": {
+          "rootPath": "https://cdn.shopify.com/s/files/1/0585/2721/9918/files/env_metal_010_f0b1961b8c.exr?v=1752001689"
+        }
+      }
+    },
+    "images": {},
+    "shapes": {},
+    "skeletons": {},
+    "animations": {},
+    "extras": {}
+  }
+}

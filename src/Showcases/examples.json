@@ -52,7 +52,10 @@
         "docLink": false,
         "videoLink": false,
         "thumbnail": "",
-        "ghFiles": {},
+        "ghFiles": {
+            "Theme": "2503B-RingTheme.json",
+            "iJewelScene": "2503B-iJewelScene.vjson"
+        },
         "files": {}
     },
     "2605-Webinar_NewAppBuilderFeatures.ghx": {
