@@ -10,7 +10,9 @@
         "docLink": "https://help.shapediver.com/doc/shapediver-for-speckle",
         "videoLink": "https://www.youtube.com/watch?v=Son87CXLqkM",
         "thumbnail": "",
-        "ghFiles": {},
+        "ghFiles": {
+            "Input": "../assets/MassingExample.3dm"
+        },
         "files": {}
     },
     "8B-SpeckleLoad.ghx": {
