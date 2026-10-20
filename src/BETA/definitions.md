@@ -11,6 +11,10 @@ Note that the final components and component flow might differ from the current 
 
 [dynamic]: #
 
+## AI Agent
+
+[agent]: #
+
 ## Misc
 
 [beta]: #

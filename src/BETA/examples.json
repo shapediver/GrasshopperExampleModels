@@ -41,6 +41,20 @@
         "ghFiles": {},
         "files": {}
     },
+    "BETA-AgentSetup.ghx": {
+        "anchor": "agent",
+        "slug": "beta-agentsetup",
+        "title": "Beta -AI Agent Setup",
+        "description": "Beta - AI Agent Setup",
+        "modelLink": true,
+        "appLink": true,
+        "rating": 1,
+        "docLink": false,
+        "videoLink": false,
+        "thumbnail": "",
+        "ghFiles": {},
+        "files": {}
+    },
     "BETA-SearchableValueList.ghx": {
         "anchor": "beta",
         "slug": "beta-searchablevaluelist-1",
