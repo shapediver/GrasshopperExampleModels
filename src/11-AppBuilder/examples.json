@@ -101,6 +101,34 @@
         "ghFiles": {},
         "files": {}
     },
+    "11H-FloatingContainer2d": {
+        "anchor": "components",
+        "slug": "11h-floatingcontainer2d",
+        "title": "Floating Container 2d",
+        "description": "Floating container attached to a 2d location on the viewer canvas",
+        "modelLink": false,
+        "appLink": true,
+        "rating": 1,
+        "docLink": false,
+        "videoLink": false,
+        "thumbnail": "",
+        "ghFiles": {},
+        "files": {}
+    },
+    "11I-FloatingContainer3d": {
+        "anchor": "components",
+        "slug": "11i-floatingcontainer3d",
+        "title": "Floating Container 3d",
+        "description": "Floating container attached to a 3d location in the viewer scene",
+        "modelLink": false,
+        "appLink": true,
+        "rating": 1,
+        "docLink": false,
+        "videoLink": false,
+        "thumbnail": "",
+        "ghFiles": {},
+        "files": {}
+    },
     "../02-Inputs/2D-SelectionInput_Basic.ghx": {
         "anchor": "interaction",
         "slug": "2d-selectioninput-tutorial1",

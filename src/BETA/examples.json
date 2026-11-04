@@ -99,34 +99,6 @@
             "Parametric Box": "BETA-ParametricBoxInstance.ghx"
         }
     },
-    "BETA-Anchor3dSimple.ghx": {
-        "anchor": "beta",
-        "slug": "beta-anchor3d",
-        "title": "Beta - 3D Anchors",
-        "description": "Containers with 3D Anchors in the Scene",
-        "modelLink": false,
-        "appLink": true,
-        "rating": 2,
-        "docLink": false,
-        "videoLink": false,
-        "thumbnail": "",
-        "ghFiles": {},
-        "files": {}
-    },
-    "BETA-Anchor2dTutorial.ghx": {
-        "anchor": "beta",
-        "slug": "beta-anchor2d",
-        "title": "Beta - 2D Anchors",
-        "description": "Containers with 2D Anchors on the Screen",
-        "modelLink": false,
-        "appLink": true,
-        "rating": 2,
-        "docLink": false,
-        "videoLink": false,
-        "thumbnail": "",
-        "ghFiles": {},
-        "files": {}
-    },
     "BETA-SoundAction.ghx": {
         "anchor": "beta",
         "slug": "beta-soundaction",
