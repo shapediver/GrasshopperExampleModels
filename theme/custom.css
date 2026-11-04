@@ -261,7 +261,7 @@ h6:target::before {
 }
 
 .hero .lede {
-    max-width: 40em;
+    max-width: none;
     margin: 0;
     color: rgba(255, 255, 255, 0.72);
     font-size: 1.6rem;
