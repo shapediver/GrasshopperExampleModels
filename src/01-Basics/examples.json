@@ -29,7 +29,7 @@
     },
     "1C-ExampleWithAppBuilder.ghx": {
         "anchor": "basics",
-        "slug": "1b-examplewithshapediverplugin-108",
+        "slug": "1c-examplewithappbuilder",
         "title": "Basic example with App Builder",
         "description": "Basic example of building an App with the ShapeDiver plugin and its App Builder components",
         "modelLink": false,
