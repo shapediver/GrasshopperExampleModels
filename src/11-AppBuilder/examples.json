@@ -101,7 +101,7 @@
         "ghFiles": {},
         "files": {}
     },
-    "11H-FloatingContainer2d": {
+    "11H-FloatingContainer2d.ghx": {
         "anchor": "components",
         "slug": "11h-floatingcontainer2d",
         "title": "Floating Container 2d",
@@ -115,7 +115,7 @@
         "ghFiles": {},
         "files": {}
     },
-    "11I-FloatingContainer3d": {
+    "11I-FloatingContainer3d.ghx": {
         "anchor": "components",
         "slug": "11i-floatingcontainer3d",
         "title": "Floating Container 3d",
