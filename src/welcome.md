@@ -1,31 +1,38 @@
-# 👋 Welcome to the ShapeDiver tutorial library!
+<div class="hero">
+<p class="eyebrow">Learn how to turn Grasshopper definitions into web applications</p>
+<h1>Welcome to the ShapeDiver <span>tutorial library</span></h1>
+<p class="lede">Grasshopper definitions that demonstrate ShapeDiver features. Each one is a tutorial, kept current with the plugin, and ready to upload as an online application. See <a href="https://shapediver.com/">what ShapeDiver is</a>, <a href="https://www.shapediver.com/app/register">create an account</a>, <a href="https://www.food4rhino.com/en/app/shapediver">download the Grasshopper plugin</a>, or <a href="https://www.shapediver.com/app/m/upload">start uploading</a> definitions.</p>
+</div>
 
-## Introduction
+## Get started
 
-In this library, you will find Grasshopper definitions demonstrating various ShapeDiver features. Before you get started, here are some helpful links:
+<div class="get-started">
+<img class="tutorial-shot" src="assets/screenshot1.png" alt="Grasshopper definition annotated as a ShapeDiver tutorial">
+<div class="get-started-copy">
+<p>Each definition walks through the steps for one plugin feature. Open a section, read what the example covers, and use the level marker to judge the difficulty. You can upload the definitions as they are, or treat them as a starting point for your own designs.</p>
+<div class="levels">
+<span class="level">★☆☆ Beginner</span>
+<span class="level">★★☆ Intermediate</span>
+<span class="level">★★★ Expert</span>
+</div>
+</div>
+</div>
 
-- ❓ [What is ShapeDiver?](https://shapediver.com/)
-- 👤 [Create an account](https://www.shapediver.com/app/register) to the platform and start exploring.
-- 🦗 [Download](https://www.food4rhino.com/en/app/shapediver) the latest version of the ShapeDiver plugin for Grasshopper.
-- ⬆️ [Start uploading](https://www.shapediver.com/app/m/upload) Grasshopper definitions to your account and generate online applications instantly!
 
-## How to use the tutorials
 
-Each definition of this library doubles as a tutorial with in-depth explanations of the various steps to get a specific plugin functionality up and running:
+## Categories
 
-<img src="assets/screenshot1.png" alt="ShapeDiver Tutorial Screenshot" style="width:50%; height:auto; display: block;
-  margin: auto;">
-
-Browse the various sections to read a description of what each tutorial covers, and a hint about the tutorial level:
-
- ★ ☆ ☆ : Beginner
-
- ★ ★ ☆ : Intermediate
- 
- ★ ★ ★ : Expert 
-
-> 💡 Use the navigation on the left to browse sections.
-
-The definitions are regularly updated to the latest version of the ShapeDiver plugin and ready to be uploaded to the ShapeDiver platform, but you can of course use them to get started and start developing your own designs.
-
-Let's get started!
+<div class="category-filter">
+<a href="01-Basics/definitions.html">Basics</a>
+<a href="02-Inputs/definitions.html">Inputs</a>
+<a href="03-Outputs/definitions.html">Outputs</a>
+<a href="04-Display/definitions.html">Display</a>
+<a href="05-Images/definitions.html">Images</a>
+<a href="06-JSON/definitions.html">JSON</a>
+<a href="07-Attributes/definitions.html">Attributes</a>
+<a href="08-Plugins/definitions.html">Plugins</a>
+<a href="11-AppBuilder/definitions.html">App Builder</a>
+<a href="12-DesktopClients/definitions.html">Desktop Clients</a>
+<a href="Showcases/definitions.html">Showcases</a>
+<a href="BETA/definitions.html">BETA</a>
+</div>

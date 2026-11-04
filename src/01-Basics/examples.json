@@ -26,5 +26,19 @@
         "thumbnail": "",
         "ghFiles": {},
         "files": {}
+    },
+    "1C-ExampleWithAppBuilder.ghx": {
+        "anchor": "basics",
+        "slug": "1b-examplewithshapediverplugin-108",
+        "title": "Basic example with App Builder",
+        "description": "Basic example of building an App with the ShapeDiver plugin and its App Builder components",
+        "modelLink": false,
+        "appLink": true,
+        "rating": 1,
+        "docLink": false,
+        "videoLink": false,
+        "thumbnail": "",
+        "ghFiles": {},
+        "files": {}
     }
 }

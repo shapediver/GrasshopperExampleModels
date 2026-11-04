@@ -72,14 +72,27 @@ match number of unique anchors in examples JSON (${tableEntries.length}).`);
     }
 })();
 
-/** Converts a numeric rating (1-3) into a string of star characters. */
+/** Converts a numeric rating (1-3) into a compact star marker with a text label. */
 function ratingToStars(rating: number): string {
-    return Array.from({ length: 3 }, (_, i) => (i < rating ? '★' : '☆')).join(' ');
+    const labels = ['', 'Beginner', 'Intermediate', 'Expert'];
+    const filled = Math.min(Math.max(rating, 0), 3);
+    const label = labels[filled] ?? '';
+    const on = '★'.repeat(filled);
+    const off = '☆'.repeat(3 - filled);
+    return `<span class="level" title="${label}"><span class="on">${on}</span><span class="off">${off}</span></span>`;
 }
 
-/** Creates an optional markdown link for boolean-or-string example metadata fields. */
-function createOptionalLink(icon: string, value: false | string): string {
-    return value ? `[${icon}](${value})` : '';
+/** Renders a short action link. Description prose stays ordinary markdown. */
+function chip(label: string, href: string): string {
+    const external = /^https?:/i.test(href);
+    const extra = external ? ' target="_blank" rel="noopener noreferrer"' : '';
+    const safeHref = href.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+    return `<a class="chip" href="${safeHref}"${extra}>${label}</a>`;
+}
+
+/** Creates an optional action link for boolean-or-string example metadata fields. */
+function createOptionalLink(label: string, value: false | string): string {
+    return value ? chip(label, value) : '';
 }
 
 /**
@@ -102,33 +115,33 @@ function createTable(examples: Examples[]): string {
         'ShapeDiver links',
         'Grasshopper definition',
         ...(hasFiles ? ['Files'] : []),
-        'Level&nbsp;&nbsp;&nbsp;&nbsp;',
+        'Level',
     ];
 
     const header = `| ${columns.join(' | ')} |\n| ${columns.map(() => '---').join(' | ')} |\n`;
 
     const rows = examples.map((example) => {
         const [[ghxName, data]] = Object.entries(example);
-        const ref = `**${ghxName.split('/').at(-1)!.split('-')[0]}**`;
+        const ref = `<span class="ref">${ghxName.split('/').at(-1)!.split('-')[0]}</span>`;
         const resourceCell = hasResources
-            ? [createOptionalLink('📖', data.docLink), createOptionalLink('🎥', data.videoLink)]
+            ? [createOptionalLink('Docs', data.docLink), createOptionalLink('Video', data.videoLink)]
                   .filter(Boolean)
                   .join(' ')
             : null;
         const appUrl = createAppUrl(data.slug, data.appLink);
         const shapeDiverLinks = [
-            data.modelLink ? `[Model](https://www.shapediver.com/app/m/${data.slug})` : '',
-            appUrl ? `[App](${appUrl})` : '',
+            data.modelLink ? chip('Model', `https://www.shapediver.com/app/m/${data.slug}`) : '',
+            appUrl ? chip('App', appUrl) : '',
         ]
             .filter(Boolean)
-            .join(' / ');
+            .join(' ');
         const ghDefinitionCell = [
-            `[Download](${ghxName})`,
-            ...Object.entries(data.ghFiles).map(([name, path]) => `[${name}](${path})`),
-        ].join(' / ');
+            chip('Download', ghxName),
+            ...Object.entries(data.ghFiles).map(([name, path]) => chip(name, path)),
+        ].join(' ');
         const filesCell = Object.entries(data.files)
-            .map(([name, path]) => `[${name}](${path})`)
-            .join(' / ');
+            .map(([name, path]) => chip(name, path))
+            .join(' ');
 
         const cells = [
             ref,
