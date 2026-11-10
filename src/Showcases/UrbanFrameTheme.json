@@ -1,0 +1,245 @@
+{
+  "version": "1.0",
+  "themeOverrides": {
+    "primaryColor": "urbanframe",
+    "primaryShade": {
+      "light": 7,
+      "dark": 5
+    },
+    "colors": {
+      "urbanframe": [
+        "#eef3f9",
+        "#d6e2f0",
+        "#adc5e1",
+        "#83a7d1",
+        "#5d8bc2",
+        "#4576b3",
+        "#3a679f",
+        "#2f5d8c",
+        "#25446b",
+        "#1b3352"
+      ],
+      "slate": [
+        "#f5f6f8",
+        "#e9ecf0",
+        "#d3d8df",
+        "#b4bcc7",
+        "#8e98a6",
+        "#6b7684",
+        "#525c69",
+        "#3f4752",
+        "#2c323a",
+        "#1c2026"
+      ]
+    },
+    "fontFamily": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+    "fontFamilyMonospace": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+    "defaultRadius": "md",
+    "autoContrast": true,
+    "cursorType": "pointer",
+    "headings": {
+      "fontFamily": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+      "fontWeight": "650",
+      "textWrap": "balance",
+      "sizes": {
+        "h1": {
+          "fontSize": "1.75rem",
+          "lineHeight": "1.25"
+        },
+        "h2": {
+          "fontSize": "1.4rem",
+          "lineHeight": "1.3"
+        },
+        "h3": {
+          "fontSize": "1.1rem",
+          "lineHeight": "1.35"
+        },
+        "h4": {
+          "fontSize": "1rem",
+          "lineHeight": "1.4"
+        },
+        "h5": {
+          "fontSize": "0.9rem",
+          "lineHeight": "1.4"
+        },
+        "h6": {
+          "fontSize": "0.8rem",
+          "lineHeight": "1.4"
+        }
+      }
+    },
+    "shadows": {
+      "xs": "0 1px 2px rgba(28, 32, 38, 0.06)",
+      "sm": "0 1px 3px rgba(28, 32, 38, 0.08), 0 1px 2px rgba(28, 32, 38, 0.04)",
+      "md": "0 4px 12px rgba(28, 32, 38, 0.10), 0 2px 4px rgba(28, 32, 38, 0.05)",
+      "lg": "0 10px 24px rgba(28, 32, 38, 0.12), 0 4px 8px rgba(28, 32, 38, 0.06)",
+      "xl": "0 20px 40px rgba(28, 32, 38, 0.16)"
+    },
+    "components": {
+      "AppBuilderTemplateSelector": {
+        "defaultProps": {
+          "template": "appshell",
+          "showContainerButtons": false
+        }
+      },
+      "AppBuilderAppShellTemplatePage": {
+        "defaultProps": {
+          "headerHeight": {
+            "base": "4em",
+            "md": "4.25em"
+          },
+          "headerBorder": false,
+          "columns": 4,
+          "rightColumns": 1
+        }
+      },
+      "Button": {
+        "defaultProps": {
+          "variant": "filled",
+          "fw": 600
+        }
+      },
+      "ViewportBranding": {
+        "defaultProps": {
+          "light": {
+            "backgroundColor": "#eef1f4",
+            "logo": null
+          },
+          "dark": {
+            "backgroundColor": "#1c2026",
+            "logo": null
+          }
+        }
+      },
+      "AppBuilderToolbarIconButton": {
+        "defaultProps": {
+          "iconProps": {
+            "color": "var(--mantine-primary-color-filled)"
+          }
+        }
+      },
+      "AppBuilderToolbarButton": {
+        "defaultProps": {
+          "iconProps": {
+            "color": "var(--mantine-primary-color-filled)"
+          }
+        }
+      },
+      "ViewportIconButton": {
+        "defaultProps": {
+          "iconProps": {
+            "color": "var(--mantine-primary-color-filled)"
+          }
+        }
+      },
+      "AppBuilderContainerWrapper": {
+        "defaultProps": {
+          "containerThemeOverrides": {
+            "appshell": {
+              "top": {
+                "components": {
+                  "AppBuilderHorizontalContainer": {
+                    "defaultProps": {
+                      "h": "100%",
+                      "w": "calc(100% + 2 * var(--mantine-spacing-xs))",
+                      "gap": "lg",
+                      "style": {
+                        "marginInline": "calc(var(--mantine-spacing-xs) * -1)",
+                        "paddingInline": "var(--mantine-spacing-md)",
+                        "background": "linear-gradient(100deg, var(--mantine-color-urbanframe-9) 0%, var(--mantine-color-urbanframe-7) 60%, var(--mantine-color-urbanframe-5) 100%)",
+                        "color": "var(--mantine-color-white)",
+                        "--mantine-color-text": "var(--mantine-color-white)",
+                        "--mantine-color-anchor": "var(--mantine-color-white)"
+                      }
+                    }
+                  },
+                  "Paper": {
+                    "defaultProps": {
+                      "styles": {
+                        "root": {
+                          "backgroundColor": "transparent",
+                          "color": "inherit"
+                        }
+                      }
+                    }
+                  },
+                  "AppBuilderTextWidgetComponent": {
+                    "defaultProps": {
+                      "styles": {
+                        "root": {
+                          "backgroundColor": "transparent",
+                          "color": "inherit"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "right": {
+                "components": {
+                  "AppBuilderVerticalContainer": {
+                    "defaultProps": {
+                      "gap": "md",
+                      "p": "md"
+                    }
+                  },
+                  "AppBuilderTextWidgetComponent": {
+                    "defaultProps": {
+                      "withBorder": false,
+                      "p": "md",
+                      "styles": {
+                        "root": {
+                          "backgroundColor": "var(--mantine-primary-color-light)",
+                          "color": "var(--mantine-primary-color-light-color)",
+                          "borderInlineStart": "4px solid var(--mantine-primary-color-filled)",
+                          "borderRadius": "var(--mantine-radius-md)",
+                          "--mantine-color-text": "var(--mantine-primary-color-light-color)"
+                        }
+                      }
+                    }
+                  },
+                  "Paper": {
+                    "defaultProps": {
+                      "withBorder": true,
+                      "shadow": "sm"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "AppBuilderTextWidgetComponent": {
+        "defaultProps": {
+          "styles": {
+            "root": {
+              "backgroundColor": "transparent"
+            }
+          }
+        }
+      },
+      "ViewportAnchor2d": {
+        "defaultProps": {
+          "anchorPaperProps": {
+            "pt": 0,
+            "px": 4,
+            "py": 4,
+            "shadow": "md",
+            "style": {
+              "display": "flex",
+              "gap": "0.25rem",
+              "alignItems": "center",
+              "flexDirection": "row",
+              "border": "none",
+              "backgroundColor": "color-mix(in srgb, var(--mantine-color-body), transparent 50%)",
+              "backdropFilter": "blur(10px)",
+              "color": "var(--mantine-primary-color-filled)",
+              "--mantine-color-text": "var(--mantine-primary-color-filled)"
+            }
+          }
+        }
+      }
+    }
+  }
+}

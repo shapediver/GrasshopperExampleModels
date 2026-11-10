@@ -85,5 +85,21 @@
         "thumbnail": "",
         "ghFiles": {},
         "files": {}
+    },
+    "DEMO-ModularCabinets.ghx": {
+        "anchor": "advanced",
+        "slug": "demo-urbanframe",
+        "title": "Demo - Urban Frame",
+        "description": "A urbanism App for district planning with an AI Agent supporting design space exploration.",
+        "modelLink": "https://www.shapediver.com/app/builder/v1/main/latest/?slug=demo-urbanframe&redirect=0&g=https://shapediverdownloads.s3.us-east-1.amazonaws.com/themes/UrbanFrame-theme.json",
+        "appLink": true,
+        "rating": 3,
+        "docLink": false,
+        "videoLink": false,
+        "thumbnail": "",
+        "ghFiles": {},
+        "files": {
+            "Theme": "UrbanFrameTheme.json"
+        }
     }
 }
