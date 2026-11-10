@@ -90,7 +90,7 @@
         "anchor": "advanced",
         "slug": "demo-urbanframe",
         "title": "Demo - Urban Frame",
-        "description": "A urbanism App for district planning with an AI Agent supporting design space exploration.",
+        "description": "A district planning App with an AI Agent supporting design space exploration.",
         "modelLink": false,
         "appLink": "https://www.shapediver.com/app/builder/v1/main/latest/?slug=demo-urbanframe&redirect=0&g=https://shapediverdownloads.s3.us-east-1.amazonaws.com/themes/UrbanFrame-theme.json",
         "rating": 3,
