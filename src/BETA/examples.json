@@ -127,20 +127,6 @@
         "ghFiles": {},
         "files": {}
     },
-    "BETA-ExportWithScreenshot.ghx": {
-        "anchor": "beta",
-        "slug": "beta-exportwithscreenshot",
-        "title": "Beta - Loop Screenshots",
-        "description": "Beta - Loop Screenshot back to Grasshopper",
-        "modelLink": false,
-        "appLink": true,
-        "rating": 1,
-        "docLink": false,
-        "videoLink": false,
-        "thumbnail": "",
-        "ghFiles": {},
-        "files": {}
-    },
     "BETA-FormWidget.ghx": {
         "anchor": "beta",
         "slug": "beta-formwidget",
@@ -149,20 +135,6 @@
         "modelLink": false,
         "appLink": true,
         "rating": 1,
-        "docLink": false,
-        "videoLink": false,
-        "thumbnail": "",
-        "ghFiles": {},
-        "files": {}
-    },
-    "BETA-CameraAction.ghx": {
-        "anchor": "beta",
-        "slug": "beta-cameraaction",
-        "title": "Beta - Camera Action",
-        "description": "Beta - Camera Action",
-        "modelLink": false,
-        "appLink": true,
-        "rating": 2,
         "docLink": false,
         "videoLink": false,
         "thumbnail": "",
