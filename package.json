@@ -7,6 +7,7 @@
         "docs:create-tables": "node ./scripts/run-docs-cli.cjs create-tables",
         "docs:validate": "node ./scripts/run-docs-cli.cjs validate",
         "docs:process-models": "node ./scripts/run-docs-cli.cjs process-models",
+        "docs:list-denied-models": "node ./scripts/run-docs-cli.cjs list-denied-models",
         "docs:newsfeed-body": "tsx tools/docs-cli/src/newsfeedBody.ts"
     },
     "devDependencies": {

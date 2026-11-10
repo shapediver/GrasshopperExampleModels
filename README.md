@@ -43,6 +43,16 @@ The source of truth for example metadata is `src/**/examples.json`. Markdown tab
     - `GITHUB_SHA` — defaults to `git rev-parse HEAD`
     - `PROCESS_MODELS_CHAPTER` — limits processing to a single chapter
 
+- `pnpm run docs:list-denied-models` lists example models whose current ShapeDiver Platform status is `denied`, including an open `{slug}--wip` model. The command only reads models.
+
+    Required environment variables:
+    - `SHAPEDIVER_ACCESS_KEY_ID`
+    - `SHAPEDIVER_ACCESS_KEY_SECRET`
+
+    Optional environment variables:
+    - `SHAPEDIVER_PLATFORM_URL` — defaults to `https://app.shapediver.com`
+    - `PROCESS_MODELS_CHAPTER` — limits the list to a single chapter
+
 - `mdbook serve .` starts a local preview server for the documentation.
 
 ### Local testing
