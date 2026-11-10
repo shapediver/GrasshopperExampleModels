@@ -8,7 +8,7 @@
 [Images](./05-Images/definitions.md)
 [JSON](./06-JSON/definitions.md)
 [Attributes](./07-Attributes/definitions.md)
-[Plugins](./08-Plugins/definitions.md)
+[Plugins and Integrations](./08-Plugins/definitions.md)
 [App Builder](./11-AppBuilder/definitions.md)
 [Desktop Clients](./12-DesktopClients/definitions.md)
 [Showcases](./Showcases/definitions.md)
