@@ -10,7 +10,7 @@ You can clone this repository to download all models at once.
 
 ### Overview
 
-This repository uses [mdBook](https://rust-lang.github.io/mdBook/) to auto-generate documentation based on [Markdown](https://rust-lang.github.io/mdBook/format/markdown.html). A [GitHub action](.github/workflows/static.yml) is used to deploy to [GitHub pages](https://shapediver.github.io/GrasshopperExampleModels/).
+This repository uses [mdBook](https://rust-lang.github.io/mdBook/) to auto-generate documentation based on [Markdown](https://rust-lang.github.io/mdBook/format/markdown.html). A [GitHub action](.github/workflows/dynamic.yml) is used to deploy to [GitHub pages](https://shapediver.github.io/GrasshopperExampleModels/).
 
 The source of truth for example metadata is `src/**/examples.json`. Markdown tables in `src/**/definitions.md` are generated from these JSON files and should not be created or edited manually.
 
