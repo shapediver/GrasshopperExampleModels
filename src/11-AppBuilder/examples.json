@@ -143,6 +143,20 @@
         "ghFiles": {},
         "files": {}
     },
+    "11K-CameraAction.ghx": {
+        "anchor": "components",
+        "slug": "2m-cameraaction",
+        "title": "Camera Action",
+        "description": "Camera Action - Preset, Custom View, Camera Path and Zoom",
+        "modelLink": false,
+        "appLink": true,
+        "rating": 2,
+        "docLink": false,
+        "videoLink": false,
+        "thumbnail": "",
+        "ghFiles": {},
+        "files": {}
+    },
     "../02-Inputs/2D-SelectionInput_Basic.ghx": {
         "anchor": "interaction",
         "slug": "2d-selectioninput-tutorial1",
