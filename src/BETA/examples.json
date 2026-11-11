@@ -44,7 +44,7 @@
     "BETA-AgentSetup.ghx": {
         "anchor": "agent",
         "slug": "beta-agentsetup",
-        "title": "Beta -AI Agent Setup",
+        "title": "Beta - AI Agent Setup",
         "description": "Beta - AI Agent Setup",
         "modelLink": false,
         "appLink": true,
